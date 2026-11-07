@@ -1,0 +1,97 @@
+{
+  "audit_timestamp": "2026-09-12T17:16:03.285495+00:00",
+  "q01_development_studies_available": {
+    "count": 4349,
+    "description": "Total non-Gold development studies across frozen 5-fold CV splits."
+  },
+  "q02_studies_per_slot": {
+    "Slot 0": 4094,
+    "Slot 1": 4191,
+    "Slot 2": 4348,
+    "Slot 3": 0,
+    "Slot 4": 3361,
+    "Slot 5": 4209
+  },
+  "q03_per_slot_coverage_pct": {
+    "Slot 0 (SAG_FLUID_FS)": "94.14%",
+    "Slot 1 (COR_FLUID_FS)": "96.37%",
+    "Slot 2 (AX_FLUID_FS)": "99.98%",
+    "Slot 3 (SAG_FLUID_NOFS)": "0.0%",
+    "Slot 4 (COR_T1)": "77.28%",
+    "Slot 5 (SAG_T1)": "96.78%"
+  },
+  "q04_slot_collisions": {
+    "total_collisions_logged": 5227,
+    "studies_with_collisions": 1737,
+    "collision_policy": "highest_slice_count_then_deterministic_lexicographic_tie_break"
+  },
+  "q05_unresolved_sequences": {
+    "count": 0,
+    "rate_pct": 0.0,
+    "status": "PASS (100% resolved)"
+  },
+  "q06_requiring_metadata_fallback": {
+    "raw_dicom_tr_te_fallback_count": 73,
+    "raw_dicom_tr_te_fallback_pct": 21.73,
+    "dev_cohort_train_series_fallback_count": 0,
+    "dev_cohort_train_series_fallback_pct": 0.0
+  },
+  "q07_slice_counts_per_selected_series": {
+    "preprocessed_c1_volumes": "Fixed 32 slices resampled to 3.0 mm depth spacing",
+    "raw_dicom_series_stats": {
+      "min": 11,
+      "median": 30.0,
+      "mean": 31.33,
+      "max": 320
+    }
+  },
+  "q08_pixel_spacing_distribution": {
+    "preprocessed_c1_volumes": "[3.0, 0.5, 0.5] mm (constant resampled)",
+    "raw_dicom_pixel_spacing_stats": {
+      "min": 0.1465,
+      "mean": 0.3472,
+      "max": 0.7813
+    }
+  },
+  "q09_physical_crop_dimensions": {
+    "target_specification": "130.0 mm physical extent",
+    "c1_preprocessed_in_plane_fov": "256 x 0.5 mm = 128.0 mm physical extent (matches 130mm specification within 1.5%)",
+    "model_input_resolution": "224 x 224 pixels"
+  },
+  "q10_usable_3_slice_groups": {
+    "slice_band": "(0.2, 0.8) of acquired volume depth",
+    "central_band_indices": "slices 7 to 24 out of 32 slices",
+    "sampled_groups_per_slot": 12,
+    "total_slice_groups_per_study": 72,
+    "group_formation": "triplet grouping [slice[i-1], slice[i], slice[i+1]] stacked to (3, H, W)"
+  },
+  "q11_expected_tensor_storage_size": {
+    "total_2p5d_image_instances": 313128,
+    "storage_fp16_gb": 87.79,
+    "storage_fp32_gb": 175.59,
+    "recommended_storage_strategy": "On-the-fly dynamic 2.5D extraction from existing 73.66 GB C1 volumes (0 additional disk GB)"
+  },
+  "q12_expected_dino_feature_cache_size": {
+    "feature_dimension": 768,
+    "cache_per_slice_group_gb": 0.896,
+    "cache_pooled_per_slot_mb": 76.45,
+    "feasibility": "Highly feasible; pooled feature cache requires only ~76.5 MB total."
+  },
+  "q13_missing_slots_per_study": {
+    "distribution": {
+      "1_missing_slots": 3038,
+      "2_missing_slots": 1080,
+      "3_missing_slots": 231
+    },
+    "studies_with_5_slots": 3038,
+    "studies_with_4_slots": 1080,
+    "studies_with_3_slots": 231,
+    "missing_slot_policy": "Explicit zero tensor with slot_mask = 0 (Section 13)"
+  },
+  "q14_studies_affected_by_ambiguous_metadata": {
+    "count": 0,
+    "percentage": 0.0,
+    "reason": "100% of the 4,349 development studies in train_series.csv have unambiguous Anatomical_Plane, Fluid_Sensitive, and Fat_Suppression."
+  },
+  "audit_verdict": "PASS"
+}

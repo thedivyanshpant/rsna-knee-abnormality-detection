@@ -1,0 +1,12 @@
+{
+  "gold_studies_count": 58,
+  "dev_studies_count": 4349,
+  "leakage_count": 0,
+  "sha256_gold_studies_csv": "a3ca7df32d43ee7c683091162b1839ea8308d802bea3f2b437f4908d9cbcb079",
+  "sha256_train_series_csv": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3",
+  "sha256_splits_json": "648ab88d9bb2484ed49dcfae826cfb51efdc7b8f56bdf218803ee46f1d451db8",
+  "sha256_predictions_rank": "7a5107276df02de0ce595448f006ec84df1a884c200c0b34dc48ae73064cc4de",
+  "sha256_predictions_score": "32a332496e0eda6646379f40026496681274494ad4bbe53be20aa3b967246d85",
+  "sha256_evaluation_summary": "92142a3b10a80a11070bbd4624d9f5831c9999b1fd0289b5b760dce3dcbb2d0f",
+  "sha256_per_target_metrics": "9f98d1eeafd9fb360fe94d21691d2f22d62c3a9d2ff20b87d2df727e4f974a96"
+}

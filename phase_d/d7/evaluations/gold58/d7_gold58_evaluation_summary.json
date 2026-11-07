@@ -1,0 +1,414 @@
+{
+  "timestamp": "2026-09-15T07:35:08Z",
+  "cohort": "Gold-58 (58 Clinical Studies, csv/gold_studies.csv)",
+  "d6_gold_champion": {
+    "macro_roc_auc": 0.6331,
+    "macro_pr_auc": 0.5125
+  },
+  "results": {
+    "d7a": {
+      "model_name": "d7a",
+      "rank_ensemble": {
+        "macro_roc_auc": 0.6362,
+        "macro_pr_auc": 0.5249,
+        "delta_vs_d6_gold": 0.0031,
+        "delta_vs_d1_2_gold": 0.0188,
+        "delta_vs_phase_c_gold": 0.0376
+      },
+      "score_ensemble": {
+        "macro_roc_auc": 0.6363,
+        "macro_pr_auc": 0.524
+      },
+      "per_target": {
+        "ACL": {
+          "roc_auc": 0.6311,
+          "pr_auc": 0.6059,
+          "positives": 24,
+          "negatives": 34,
+          "prevalence_pct": 41.4
+        },
+        "MCL": {
+          "roc_auc": 0.7041,
+          "pr_auc": 0.4636,
+          "positives": 9,
+          "negatives": 49,
+          "prevalence_pct": 15.5
+        },
+        "Medial Meniscus": {
+          "roc_auc": 0.6334,
+          "pr_auc": 0.6485,
+          "positives": 26,
+          "negatives": 32,
+          "prevalence_pct": 44.8
+        },
+        "Lateral Meniscus": {
+          "roc_auc": 0.6031,
+          "pr_auc": 0.4896,
+          "positives": 23,
+          "negatives": 35,
+          "prevalence_pct": 39.7
+        },
+        "Medial OA": {
+          "roc_auc": 0.5791,
+          "pr_auc": 0.3417,
+          "positives": 15,
+          "negatives": 43,
+          "prevalence_pct": 25.9
+        },
+        "Lateral OA": {
+          "roc_auc": 0.617,
+          "pr_auc": 0.4221,
+          "positives": 11,
+          "negatives": 47,
+          "prevalence_pct": 19.0
+        },
+        "PF OA": {
+          "roc_auc": 0.6268,
+          "pr_auc": 0.4731,
+          "positives": 21,
+          "negatives": 37,
+          "prevalence_pct": 36.2
+        },
+        "Effusion": {
+          "roc_auc": 0.6466,
+          "pr_auc": 0.7009,
+          "positives": 35,
+          "negatives": 23,
+          "prevalence_pct": 60.3
+        },
+        "Synovitis": {
+          "roc_auc": 0.5597,
+          "pr_auc": 0.5265,
+          "positives": 27,
+          "negatives": 31,
+          "prevalence_pct": 46.6
+        },
+        "Baker's": {
+          "roc_auc": 0.7563,
+          "pr_auc": 0.603,
+          "positives": 12,
+          "negatives": 46,
+          "prevalence_pct": 20.7
+        },
+        "Contusion": {
+          "roc_auc": 0.5405,
+          "pr_auc": 0.4314,
+          "positives": 19,
+          "negatives": 39,
+          "prevalence_pct": 32.8
+        },
+        "Fracture": {
+          "roc_auc": 0.7361,
+          "pr_auc": 0.5928,
+          "positives": 18,
+          "negatives": 40,
+          "prevalence_pct": 31.0
+        }
+      },
+      "prediction_file": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/predictions/gold58/d7a_gold58_rank_averaged_predictions.csv"
+    },
+    "d7b": {
+      "model_name": "d7b",
+      "rank_ensemble": {
+        "macro_roc_auc": 0.6428,
+        "macro_pr_auc": 0.5201,
+        "delta_vs_d6_gold": 0.0097,
+        "delta_vs_d1_2_gold": 0.0254,
+        "delta_vs_phase_c_gold": 0.0442
+      },
+      "score_ensemble": {
+        "macro_roc_auc": 0.647,
+        "macro_pr_auc": 0.5288
+      },
+      "per_target": {
+        "ACL": {
+          "roc_auc": 0.655,
+          "pr_auc": 0.6394,
+          "positives": 24,
+          "negatives": 34,
+          "prevalence_pct": 41.4
+        },
+        "MCL": {
+          "roc_auc": 0.7302,
+          "pr_auc": 0.4519,
+          "positives": 9,
+          "negatives": 49,
+          "prevalence_pct": 15.5
+        },
+        "Medial Meniscus": {
+          "roc_auc": 0.6298,
+          "pr_auc": 0.6487,
+          "positives": 26,
+          "negatives": 32,
+          "prevalence_pct": 44.8
+        },
+        "Lateral Meniscus": {
+          "roc_auc": 0.5863,
+          "pr_auc": 0.4716,
+          "positives": 23,
+          "negatives": 35,
+          "prevalence_pct": 39.7
+        },
+        "Medial OA": {
+          "roc_auc": 0.5202,
+          "pr_auc": 0.2809,
+          "positives": 15,
+          "negatives": 43,
+          "prevalence_pct": 25.9
+        },
+        "Lateral OA": {
+          "roc_auc": 0.6422,
+          "pr_auc": 0.4202,
+          "positives": 11,
+          "negatives": 47,
+          "prevalence_pct": 19.0
+        },
+        "PF OA": {
+          "roc_auc": 0.603,
+          "pr_auc": 0.4691,
+          "positives": 21,
+          "negatives": 37,
+          "prevalence_pct": 36.2
+        },
+        "Effusion": {
+          "roc_auc": 0.6199,
+          "pr_auc": 0.6853,
+          "positives": 35,
+          "negatives": 23,
+          "prevalence_pct": 60.3
+        },
+        "Synovitis": {
+          "roc_auc": 0.644,
+          "pr_auc": 0.589,
+          "positives": 27,
+          "negatives": 31,
+          "prevalence_pct": 46.6
+        },
+        "Baker's": {
+          "roc_auc": 0.7726,
+          "pr_auc": 0.5784,
+          "positives": 12,
+          "negatives": 46,
+          "prevalence_pct": 20.7
+        },
+        "Contusion": {
+          "roc_auc": 0.5769,
+          "pr_auc": 0.4493,
+          "positives": 19,
+          "negatives": 39,
+          "prevalence_pct": 32.8
+        },
+        "Fracture": {
+          "roc_auc": 0.7333,
+          "pr_auc": 0.5573,
+          "positives": 18,
+          "negatives": 40,
+          "prevalence_pct": 31.0
+        }
+      },
+      "prediction_file": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/predictions/gold58/d7b_gold58_rank_averaged_predictions.csv"
+    },
+    "d7c": {
+      "model_name": "d7c",
+      "rank_ensemble": {
+        "macro_roc_auc": 0.6474,
+        "macro_pr_auc": 0.529,
+        "delta_vs_d6_gold": 0.0143,
+        "delta_vs_d1_2_gold": 0.03,
+        "delta_vs_phase_c_gold": 0.0488
+      },
+      "score_ensemble": {
+        "macro_roc_auc": 0.6496,
+        "macro_pr_auc": 0.5294
+      },
+      "per_target": {
+        "ACL": {
+          "roc_auc": 0.6471,
+          "pr_auc": 0.6485,
+          "positives": 24,
+          "negatives": 34,
+          "prevalence_pct": 41.4
+        },
+        "MCL": {
+          "roc_auc": 0.737,
+          "pr_auc": 0.4792,
+          "positives": 9,
+          "negatives": 49,
+          "prevalence_pct": 15.5
+        },
+        "Medial Meniscus": {
+          "roc_auc": 0.643,
+          "pr_auc": 0.6549,
+          "positives": 26,
+          "negatives": 32,
+          "prevalence_pct": 44.8
+        },
+        "Lateral Meniscus": {
+          "roc_auc": 0.5863,
+          "pr_auc": 0.4727,
+          "positives": 23,
+          "negatives": 35,
+          "prevalence_pct": 39.7
+        },
+        "Medial OA": {
+          "roc_auc": 0.5907,
+          "pr_auc": 0.3477,
+          "positives": 15,
+          "negatives": 43,
+          "prevalence_pct": 25.9
+        },
+        "Lateral OA": {
+          "roc_auc": 0.6306,
+          "pr_auc": 0.4345,
+          "positives": 11,
+          "negatives": 47,
+          "prevalence_pct": 19.0
+        },
+        "PF OA": {
+          "roc_auc": 0.6486,
+          "pr_auc": 0.4965,
+          "positives": 21,
+          "negatives": 37,
+          "prevalence_pct": 36.2
+        },
+        "Effusion": {
+          "roc_auc": 0.6646,
+          "pr_auc": 0.722,
+          "positives": 35,
+          "negatives": 23,
+          "prevalence_pct": 60.3
+        },
+        "Synovitis": {
+          "roc_auc": 0.5962,
+          "pr_auc": 0.541,
+          "positives": 27,
+          "negatives": 31,
+          "prevalence_pct": 46.6
+        },
+        "Baker's": {
+          "roc_auc": 0.7509,
+          "pr_auc": 0.5445,
+          "positives": 12,
+          "negatives": 46,
+          "prevalence_pct": 20.7
+        },
+        "Contusion": {
+          "roc_auc": 0.5445,
+          "pr_auc": 0.4092,
+          "positives": 19,
+          "negatives": 39,
+          "prevalence_pct": 32.8
+        },
+        "Fracture": {
+          "roc_auc": 0.7292,
+          "pr_auc": 0.5974,
+          "positives": 18,
+          "negatives": 40,
+          "prevalence_pct": 31.0
+        }
+      },
+      "prediction_file": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/predictions/gold58/d7c_gold58_rank_averaged_predictions.csv"
+    },
+    "d7d": {
+      "model_name": "d7d",
+      "rank_ensemble": {
+        "macro_roc_auc": 0.6208,
+        "macro_pr_auc": 0.5138,
+        "delta_vs_d6_gold": -0.0123,
+        "delta_vs_d1_2_gold": 0.0034,
+        "delta_vs_phase_c_gold": 0.0222
+      },
+      "score_ensemble": {
+        "macro_roc_auc": 0.6205,
+        "macro_pr_auc": 0.5098
+      },
+      "per_target": {
+        "ACL": {
+          "roc_auc": 0.6299,
+          "pr_auc": 0.607,
+          "positives": 24,
+          "negatives": 34,
+          "prevalence_pct": 41.4
+        },
+        "MCL": {
+          "roc_auc": 0.6905,
+          "pr_auc": 0.5414,
+          "positives": 9,
+          "negatives": 49,
+          "prevalence_pct": 15.5
+        },
+        "Medial Meniscus": {
+          "roc_auc": 0.619,
+          "pr_auc": 0.6598,
+          "positives": 26,
+          "negatives": 32,
+          "prevalence_pct": 44.8
+        },
+        "Lateral Meniscus": {
+          "roc_auc": 0.5466,
+          "pr_auc": 0.4516,
+          "positives": 23,
+          "negatives": 35,
+          "prevalence_pct": 39.7
+        },
+        "Medial OA": {
+          "roc_auc": 0.5357,
+          "pr_auc": 0.2787,
+          "positives": 15,
+          "negatives": 43,
+          "prevalence_pct": 25.9
+        },
+        "Lateral OA": {
+          "roc_auc": 0.6199,
+          "pr_auc": 0.4086,
+          "positives": 11,
+          "negatives": 47,
+          "prevalence_pct": 19.0
+        },
+        "PF OA": {
+          "roc_auc": 0.6107,
+          "pr_auc": 0.496,
+          "positives": 21,
+          "negatives": 37,
+          "prevalence_pct": 36.2
+        },
+        "Effusion": {
+          "roc_auc": 0.6385,
+          "pr_auc": 0.6929,
+          "positives": 35,
+          "negatives": 23,
+          "prevalence_pct": 60.3
+        },
+        "Synovitis": {
+          "roc_auc": 0.5902,
+          "pr_auc": 0.5214,
+          "positives": 27,
+          "negatives": 31,
+          "prevalence_pct": 46.6
+        },
+        "Baker's": {
+          "roc_auc": 0.6957,
+          "pr_auc": 0.5147,
+          "positives": 12,
+          "negatives": 46,
+          "prevalence_pct": 20.7
+        },
+        "Contusion": {
+          "roc_auc": 0.5391,
+          "pr_auc": 0.4181,
+          "positives": 19,
+          "negatives": 39,
+          "prevalence_pct": 32.8
+        },
+        "Fracture": {
+          "roc_auc": 0.7333,
+          "pr_auc": 0.5748,
+          "positives": 18,
+          "negatives": 40,
+          "prevalence_pct": 31.0
+        }
+      },
+      "prediction_file": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/predictions/gold58/d7d_gold58_rank_averaged_predictions.csv"
+    }
+  }
+}

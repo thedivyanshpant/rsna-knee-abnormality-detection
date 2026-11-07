@@ -1,0 +1,23 @@
+{
+  "execution_timestamp": "2026-09-12 17:21:47",
+  "total_gold_studies": 58,
+  "total_series": 336,
+  "successful_series": 336,
+  "failed_series": 0,
+  "validation_failures": 0,
+  "total_stored_bytes": 1096058175,
+  "total_stored_mb": 1045.282530784607,
+  "wall_time_sec": 33.52166414260864,
+  "target_spacing_mm": [
+    3.0,
+    0.5,
+    0.5
+  ],
+  "target_shape": [
+    32,
+    256,
+    256
+  ],
+  "dtype": "float16",
+  "output_directory": "/scratch/deepanthpcu/RSNA_Code/phase_c/c1/processed_gold"
+}

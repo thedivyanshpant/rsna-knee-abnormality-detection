@@ -1,0 +1,62 @@
+{
+  "experiment_id": "D1.1-DINOV2-SLOTHEAD",
+  "timestamp": "2026-09-12T17:17:29.606160+00:00",
+  "fold": 0,
+  "epochs_completed": 2,
+  "best_val_macro_auc": 0.7143,
+  "total_wall_sec": 9.18,
+  "parameter_summary": {
+    "total_parameters": 22262668,
+    "trainable_parameters": 10858252,
+    "frozen_parameters": 11404416,
+    "trainable_percentage": 48.77
+  },
+  "best_checkpoint": "/scratch/deepanthpcu/RSNA_Code/phase_d/d1/checkpoints/fold_0/best_model.pt",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.684,
+      "val_loss": 0.5429,
+      "macro_roc_auc": 0.5714,
+      "best_macro_roc_auc": 0.5714,
+      "elapsed_sec": 6.32,
+      "per_target_auc": {
+        "ACL": null,
+        "MCL": null,
+        "Medial Meniscus": 0.5714,
+        "Lateral Meniscus": null,
+        "Medial OA": null,
+        "Lateral OA": null,
+        "PF OA": null,
+        "Effusion": null,
+        "Synovitis": null,
+        "Baker's": null,
+        "Contusion": null,
+        "Fracture": null
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5652,
+      "val_loss": 0.4935,
+      "macro_roc_auc": 0.7143,
+      "best_macro_roc_auc": 0.7143,
+      "elapsed_sec": 2.16,
+      "per_target_auc": {
+        "ACL": null,
+        "MCL": null,
+        "Medial Meniscus": 0.7143,
+        "Lateral Meniscus": null,
+        "Medial OA": null,
+        "Lateral OA": null,
+        "PF OA": null,
+        "Effusion": null,
+        "Synovitis": null,
+        "Baker's": null,
+        "Contusion": null,
+        "Fracture": null
+      }
+    }
+  ],
+  "sanity_check": true
+}

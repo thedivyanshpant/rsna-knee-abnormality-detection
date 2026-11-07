@@ -1,0 +1,51 @@
+{
+  "Pipeline A (Minimal)": {
+    "pilot_raw_gb": 10.1808,
+    "pilot_processed_stored_gb": 5.5339,
+    "reduction_ratio": 1.8397,
+    "space_saving_pct": 45.64,
+    "mean_study_stored_mb": 70.83,
+    "median_study_stored_mb": 43.37,
+    "mean_decoded_ram_mb_per_study": 260.07,
+    "extrapolated_full_dataset_stored_gb": 284.58,
+    "extrapolated_full_dataset_ram_gb": 1044.81,
+    "dominant_dtype": "float32",
+    "dominant_shapes": {
+      "(30, 640, 640)": 18,
+      "(30, 320, 320)": 13,
+      "(30, 512, 512)": 13
+    }
+  },
+  "Pipeline B (Standardized)": {
+    "pilot_raw_gb": 10.1808,
+    "pilot_processed_stored_gb": 5.015,
+    "reduction_ratio": 2.0301,
+    "space_saving_pct": 50.74,
+    "mean_study_stored_mb": 64.19,
+    "median_study_stored_mb": 58.7,
+    "mean_decoded_ram_mb_per_study": 82.69,
+    "extrapolated_full_dataset_stored_gb": 257.89,
+    "extrapolated_full_dataset_ram_gb": 332.19,
+    "dominant_dtype": "float32",
+    "dominant_shapes": {
+      "(33, 320, 320)": 31,
+      "(35, 320, 320)": 28,
+      "(36, 320, 320)": 20
+    }
+  },
+  "Pipeline C (Training-Ready)": {
+    "pilot_raw_gb": 10.1808,
+    "pilot_processed_stored_gb": 1.3715,
+    "reduction_ratio": 7.423,
+    "space_saving_pct": 86.53,
+    "mean_study_stored_mb": 17.56,
+    "median_study_stored_mb": 16.27,
+    "mean_decoded_ram_mb_per_study": 22.75,
+    "extrapolated_full_dataset_stored_gb": 70.53,
+    "extrapolated_full_dataset_ram_gb": 91.4,
+    "dominant_dtype": "float16",
+    "dominant_shapes": {
+      "(32, 256, 256)": 455
+    }
+  }
+}

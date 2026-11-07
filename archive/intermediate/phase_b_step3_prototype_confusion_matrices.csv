@@ -1,0 +1,13 @@
+target,TN,FP,FN,TP
+ACL,32,2,0,24
+MCL,46,3,1,8
+Medial Meniscus,30,2,3,23
+Lateral Meniscus,31,4,4,19
+Medial OA,35,8,1,14
+Lateral OA,39,8,2,9
+PF OA,25,12,4,17
+Effusion,10,13,0,35
+Synovitis,21,10,5,22
+Baker's,40,6,2,10
+Contusion,31,8,2,17
+Fracture,38,2,4,14

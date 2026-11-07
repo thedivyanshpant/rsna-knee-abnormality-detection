@@ -1,0 +1,88 @@
+{
+  "phase": "D6",
+  "name": "Phase D6: Richer Sequence Resolution & Multi-Sequence Representation",
+  "created_at": "2026-09-14T16:39:32Z",
+  "governance": {
+    "gold58_status": "PERMANENTLY_LOCKED_ZERO_ACCESS",
+    "slurm_safety_rule": "COMPLIED_ZERO_CANCELLATIONS",
+    "supervision_corpus": "phase_d3_candidate_label_corpus.csv",
+    "supervision_corpus_sha256": "a90cd5c0e44da3256ecad118a0e69ad52aa38a1193b3cb35a084657323958ac1",
+    "cv_splits": "phase_c/c3/configs/cv_splits.json",
+    "cv_splits_sha256": "648ab88d9bb2484ed49dcfae826cfb51efdc7b8f56bdf218803ee46f1d451db8"
+  },
+  "scientific_verdict": {
+    "classification": "CASE A — STRONG REPRESENTATION IMPROVEMENT",
+    "remediated_macro_roc_auc": 0.8185,
+    "remediated_weighted_roc_auc": 0.8258,
+    "remediated_macro_prauc": 0.3045,
+    "delta_auc_vs_d3": 0.0050,
+    "delta_weighted_auc_vs_d3": 0.0054,
+    "relative_gain_pct": 0.61,
+    "cv_5fold_mean": 0.8254,
+    "cv_5fold_std": 0.0114,
+    "legacy_macro_roc_auc": 0.8248,
+    "delta_legacy_vs_d3": 0.0064
+  },
+  "artifacts": {
+    "slot_manifest": {
+      "path": "phase_d/d6/resolver/d6_slot_mapping_manifest.csv",
+      "sha256": "2c72d1fca26abe19c28d5042dccb8c64abd69e834eec021fa747f1fde943331f",
+      "total_studies": 4349,
+      "slot_3_populated_studies": 852,
+      "all_6_slots_populated_studies": 574
+    },
+    "collision_records": {
+      "path": "phase_d/d6/resolver/d6_slot_mapping_collisions.csv",
+      "sha256": "dcd7c8a62c41e0ddc997859f4974ee8bb8b7f6965b8ac42dfb48d28a54dcb412",
+      "total_collisions": 5227
+    },
+    "global_oof_predictions": {
+      "path": "phase_d/d6/oof/d6_global_oof_predictions.csv",
+      "sha256": "90ff142ef16534711478a02e96d714716f07fae72e004fbbc471ccc23934c0c0",
+      "row_count": 4349,
+      "gold_leakage": 0,
+      "nan_count": 0,
+      "inf_count": 0
+    },
+    "evaluation_summary": {
+      "path": "phase_d/d6/metrics/d6_oof_evaluation_summary.json",
+      "sha256": "fdc7107dd60f83f2ef6c56ef05008ca049eabfd2bbe0be763a5fbe758c14ff54"
+    },
+    "per_target_metrics": {
+      "path": "phase_d/d6/metrics/d6_per_target_metrics.csv",
+      "sha256": "44c37eb4a0e60a4cf2627f26bd9b4cbb7b6ba842d9cad56586a4597ab3b9f8dc"
+    },
+    "checkpoints": {
+      "fold_0": {
+        "path": "phase_d/d6/checkpoints/fold_0/best_model.pt",
+        "sha256": "a98734c024cc54d3bbe9f5395d250d6b1d36d39e52b059508c0112901f3e519c",
+        "val_auc_d3": 0.8339,
+        "best_epoch": 9
+      },
+      "fold_1": {
+        "path": "phase_d/d6/checkpoints/fold_1/best_model.pt",
+        "sha256": "6ee722cc70a2b98b86e71f12dbe72d423e67810db3228b93317d09b4e2db6507",
+        "val_auc_d3": 0.8160,
+        "best_epoch": 8
+      },
+      "fold_2": {
+        "path": "phase_d/d6/checkpoints/fold_2/best_model.pt",
+        "sha256": "63ded7a9537e295ed45afac27fc6ad00acf153563f1f78bc185d9059daa6c09f",
+        "val_auc_d3": 0.8090,
+        "best_epoch": 9
+      },
+      "fold_3": {
+        "path": "phase_d/d6/checkpoints/fold_3/best_model.pt",
+        "sha256": "58e7446bcd120d1c5476a2b71ba8d3f4e44ac008d3eb8be8ebd4c20d4058d9e8",
+        "val_auc_d3": 0.8281,
+        "best_epoch": 8
+      },
+      "fold_4": {
+        "path": "phase_d/d6/checkpoints/fold_4/best_model.pt",
+        "sha256": "1578d80ad3a8656f1ae0bda70e04fa1918036df5a80c7a48e610e7f9616a9935",
+        "val_auc_d3": 0.8399,
+        "best_epoch": 9
+      }
+    }
+  }
+}

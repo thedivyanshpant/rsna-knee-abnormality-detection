@@ -1,0 +1,11 @@
+case_id,target,category,expected_abstain,actual_abstain,sample_weight,label_prob,rule_applied,test_passed
+ABSTAIN_01,ACL,Intra-report polar collision (tear vs intact),1,1,0.0,0.5,RULE_ABSTAIN_POLAR_CONTRADICTION,1
+ABSTAIN_02,Fracture,Explicit hedge ('cannot rule out fracture'),1,1,0.0,0.5,RULE_ABSTAIN_HEDGE_EQUIVOCAL,1
+ABSTAIN_03,Medial Meniscus,Explicit equivocation ('questionable tear vs artifact'),1,1,0.0,0.5,RULE_ABSTAIN_HEDGE_EQUIVOCAL,1
+ABSTAIN_04,Fracture,Hedge ('suspicious for fracture'),1,1,0.0,0.5,RULE_ABSTAIN_HEDGE_EQUIVOCAL,1
+ABSTAIN_05,Synovitis,Hedge ('cannot rule out synovitis'),1,1,0.0,0.5,RULE_ABSTAIN_HEDGE_EQUIVOCAL,1
+ABSTAIN_06,MCL,Hedge ('equivocal MCL injury'),1,1,0.0,0.5,RULE_ABSTAIN_HEDGE_EQUIVOCAL,1
+ABSTAIN_07,Baker's,Hedge ('questionable Baker cyst'),1,1,0.0,0.5,RULE_ABSTAIN_HEDGE_EQUIVOCAL,1
+ABSTAIN_08,ACL,German hedge ('nicht sicher auszuschließende Läsion'),1,1,0.0,0.5,RULE_ABSTAIN_HEDGE_EQUIVOCAL,1
+ABSTAIN_09,Lateral Meniscus,Spanish hedge ('no se puede descartar rotura'),1,1,0.0,0.5,RULE_ABSTAIN_HEDGE_EQUIVOCAL,1
+ABSTAIN_10,ACL,Turkish hedge ('değerlendirilemedi / şüpheli rüptür'),1,1,0.0,0.5,RULE_ABSTAIN_HEDGE_EQUIVOCAL,1

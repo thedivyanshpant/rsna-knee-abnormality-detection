@@ -1,0 +1,566 @@
+{
+  "D1.2-D1_4STREAM_PROB": {
+    "experiment_id": "D1.2-D1_COMBINED_4STREAM_PROB",
+    "audit_passed": true,
+    "total_studies": 4349,
+    "unique_studies": 4349,
+    "gold_leakage": 0,
+    "nan_count": 0,
+    "inf_count": 0,
+    "global_macro_roc_auc_unweighted": 0.7525,
+    "global_macro_roc_auc_weighted": 0.7591,
+    "global_macro_pr_auc": 0.2226,
+    "delta_unweighted_vs_d1_1": 0.0015,
+    "delta_weighted_vs_d1_1": 0.0018,
+    "relative_gain_unweighted_pct": 0.2,
+    "per_fold": {
+      "fold_0": {
+        "study_count": 872,
+        "macro_roc_auc_unweighted": 0.7488,
+        "macro_roc_auc_weighted": 0.7552
+      },
+      "fold_1": {
+        "study_count": 871,
+        "macro_roc_auc_unweighted": 0.7309,
+        "macro_roc_auc_weighted": 0.7353
+      },
+      "fold_2": {
+        "study_count": 870,
+        "macro_roc_auc_unweighted": 0.8036,
+        "macro_roc_auc_weighted": 0.8085
+      },
+      "fold_3": {
+        "study_count": 869,
+        "macro_roc_auc_unweighted": 0.8167,
+        "macro_roc_auc_weighted": 0.8314
+      },
+      "fold_4": {
+        "study_count": 867,
+        "macro_roc_auc_unweighted": 0.8281,
+        "macro_roc_auc_weighted": 0.8365
+      }
+    },
+    "per_target": {
+      "ACL": {
+        "pos_count": 137,
+        "neg_count": 4212,
+        "roc_auc_unweighted": 0.7653,
+        "roc_auc_weighted": 0.7568,
+        "pr_auc": 0.1303,
+        "delta_vs_d1_1": 0.1557
+      },
+      "MCL": {
+        "pos_count": 109,
+        "neg_count": 4240,
+        "roc_auc_unweighted": 0.619,
+        "roc_auc_weighted": 0.6244,
+        "pr_auc": 0.0488,
+        "delta_vs_d1_1": 0.1064
+      },
+      "Medial Meniscus": {
+        "pos_count": 206,
+        "neg_count": 4143,
+        "roc_auc_unweighted": 0.818,
+        "roc_auc_weighted": 0.8329,
+        "pr_auc": 0.2368,
+        "delta_vs_d1_1": 0.1341
+      },
+      "Lateral Meniscus": {
+        "pos_count": 99,
+        "neg_count": 4250,
+        "roc_auc_unweighted": 0.7255,
+        "roc_auc_weighted": 0.7177,
+        "pr_auc": 0.064,
+        "delta_vs_d1_1": 0.1394
+      },
+      "Medial OA": {
+        "pos_count": 15,
+        "neg_count": 4334,
+        "roc_auc_unweighted": 0.8519,
+        "roc_auc_weighted": 0.8519,
+        "pr_auc": 0.065,
+        "delta_vs_d1_1": 0.2948
+      },
+      "Lateral OA": {
+        "pos_count": 3,
+        "neg_count": 4346,
+        "roc_auc_unweighted": 0.8863,
+        "roc_auc_weighted": 0.8863,
+        "pr_auc": 0.0076,
+        "delta_vs_d1_1": 0.2444
+      },
+      "PF OA": {
+        "pos_count": 1,
+        "neg_count": 4348,
+        "roc_auc_unweighted": 0.2594,
+        "roc_auc_weighted": 0.2594,
+        "pr_auc": 0.0003,
+        "delta_vs_d1_1": -0.1855
+      },
+      "Effusion": {
+        "pos_count": 489,
+        "neg_count": 3860,
+        "roc_auc_unweighted": 0.8979,
+        "roc_auc_weighted": 0.9053,
+        "pr_auc": 0.6991,
+        "delta_vs_d1_1": 0.1313
+      },
+      "Synovitis": {
+        "pos_count": 413,
+        "neg_count": 3936,
+        "roc_auc_unweighted": 0.8783,
+        "roc_auc_weighted": 0.8815,
+        "pr_auc": 0.5886,
+        "delta_vs_d1_1": 0.1385
+      },
+      "Baker's": {
+        "pos_count": 385,
+        "neg_count": 3964,
+        "roc_auc_unweighted": 0.8464,
+        "roc_auc_weighted": 0.8545,
+        "pr_auc": 0.4437,
+        "delta_vs_d1_1": 0.1687
+      },
+      "Contusion": {
+        "pos_count": 387,
+        "neg_count": 3962,
+        "roc_auc_unweighted": 0.7707,
+        "roc_auc_weighted": 0.7933,
+        "pr_auc": 0.2993,
+        "delta_vs_d1_1": 0.1342
+      },
+      "Fracture": {
+        "pos_count": 101,
+        "neg_count": 4248,
+        "roc_auc_unweighted": 0.7114,
+        "roc_auc_weighted": 0.7447,
+        "pr_auc": 0.0873,
+        "delta_vs_d1_1": 0.1303
+      }
+    },
+    "method": "4-Stream Arithmetic Probability Mean (Baseline + HFlip + WinAnt + WinPost)"
+  },
+  "D1.2-D2_4STREAM_RANK": {
+    "experiment_id": "D1.2-D2_COMBINED_4STREAM_RANK",
+    "audit_passed": true,
+    "total_studies": 4349,
+    "unique_studies": 4349,
+    "gold_leakage": 0,
+    "nan_count": 0,
+    "inf_count": 0,
+    "global_macro_roc_auc_unweighted": 0.7521,
+    "global_macro_roc_auc_weighted": 0.7586,
+    "global_macro_pr_auc": 0.2218,
+    "delta_unweighted_vs_d1_1": 0.0011,
+    "delta_weighted_vs_d1_1": 0.0013,
+    "relative_gain_unweighted_pct": 0.14,
+    "per_fold": {
+      "fold_0": {
+        "study_count": 872,
+        "macro_roc_auc_unweighted": 0.7478,
+        "macro_roc_auc_weighted": 0.7542
+      },
+      "fold_1": {
+        "study_count": 871,
+        "macro_roc_auc_unweighted": 0.7306,
+        "macro_roc_auc_weighted": 0.735
+      },
+      "fold_2": {
+        "study_count": 870,
+        "macro_roc_auc_unweighted": 0.8034,
+        "macro_roc_auc_weighted": 0.8082
+      },
+      "fold_3": {
+        "study_count": 869,
+        "macro_roc_auc_unweighted": 0.815,
+        "macro_roc_auc_weighted": 0.8298
+      },
+      "fold_4": {
+        "study_count": 867,
+        "macro_roc_auc_unweighted": 0.8275,
+        "macro_roc_auc_weighted": 0.8359
+      }
+    },
+    "per_target": {
+      "ACL": {
+        "pos_count": 137,
+        "neg_count": 4212,
+        "roc_auc_unweighted": 0.7656,
+        "roc_auc_weighted": 0.757,
+        "pr_auc": 0.1309,
+        "delta_vs_d1_1": 0.156
+      },
+      "MCL": {
+        "pos_count": 109,
+        "neg_count": 4240,
+        "roc_auc_unweighted": 0.6191,
+        "roc_auc_weighted": 0.6245,
+        "pr_auc": 0.0491,
+        "delta_vs_d1_1": 0.1065
+      },
+      "Medial Meniscus": {
+        "pos_count": 206,
+        "neg_count": 4143,
+        "roc_auc_unweighted": 0.8177,
+        "roc_auc_weighted": 0.8325,
+        "pr_auc": 0.238,
+        "delta_vs_d1_1": 0.1338
+      },
+      "Lateral Meniscus": {
+        "pos_count": 99,
+        "neg_count": 4250,
+        "roc_auc_unweighted": 0.7251,
+        "roc_auc_weighted": 0.7175,
+        "pr_auc": 0.0639,
+        "delta_vs_d1_1": 0.139
+      },
+      "Medial OA": {
+        "pos_count": 15,
+        "neg_count": 4334,
+        "roc_auc_unweighted": 0.8504,
+        "roc_auc_weighted": 0.8504,
+        "pr_auc": 0.0594,
+        "delta_vs_d1_1": 0.2933
+      },
+      "Lateral OA": {
+        "pos_count": 3,
+        "neg_count": 4346,
+        "roc_auc_unweighted": 0.8851,
+        "roc_auc_weighted": 0.8851,
+        "pr_auc": 0.0078,
+        "delta_vs_d1_1": 0.2432
+      },
+      "PF OA": {
+        "pos_count": 1,
+        "neg_count": 4348,
+        "roc_auc_unweighted": 0.2615,
+        "roc_auc_weighted": 0.2615,
+        "pr_auc": 0.0003,
+        "delta_vs_d1_1": -0.1834
+      },
+      "Effusion": {
+        "pos_count": 489,
+        "neg_count": 3860,
+        "roc_auc_unweighted": 0.8967,
+        "roc_auc_weighted": 0.904,
+        "pr_auc": 0.6982,
+        "delta_vs_d1_1": 0.1301
+      },
+      "Synovitis": {
+        "pos_count": 413,
+        "neg_count": 3936,
+        "roc_auc_unweighted": 0.8776,
+        "roc_auc_weighted": 0.8807,
+        "pr_auc": 0.5862,
+        "delta_vs_d1_1": 0.1378
+      },
+      "Baker's": {
+        "pos_count": 385,
+        "neg_count": 3964,
+        "roc_auc_unweighted": 0.8439,
+        "roc_auc_weighted": 0.8519,
+        "pr_auc": 0.4392,
+        "delta_vs_d1_1": 0.1662
+      },
+      "Contusion": {
+        "pos_count": 387,
+        "neg_count": 3962,
+        "roc_auc_unweighted": 0.771,
+        "roc_auc_weighted": 0.7936,
+        "pr_auc": 0.3005,
+        "delta_vs_d1_1": 0.1345
+      },
+      "Fracture": {
+        "pos_count": 101,
+        "neg_count": 4248,
+        "roc_auc_unweighted": 0.7111,
+        "roc_auc_weighted": 0.7441,
+        "pr_auc": 0.0884,
+        "delta_vs_d1_1": 0.13
+      }
+    },
+    "method": "4-Stream Equal Rank Average (Baseline + HFlip + WinAnt + WinPost)"
+  },
+  "D1.2-D3_4STREAM_HYBRID": {
+    "experiment_id": "D1.2-D3_COMBINED_4STREAM_HYBRID",
+    "audit_passed": true,
+    "total_studies": 4349,
+    "unique_studies": 4349,
+    "gold_leakage": 0,
+    "nan_count": 0,
+    "inf_count": 0,
+    "global_macro_roc_auc_unweighted": 0.7523,
+    "global_macro_roc_auc_weighted": 0.7588,
+    "global_macro_pr_auc": 0.2223,
+    "delta_unweighted_vs_d1_1": 0.0013,
+    "delta_weighted_vs_d1_1": 0.0015,
+    "relative_gain_unweighted_pct": 0.17,
+    "per_fold": {
+      "fold_0": {
+        "study_count": 872,
+        "macro_roc_auc_unweighted": 0.7484,
+        "macro_roc_auc_weighted": 0.7548
+      },
+      "fold_1": {
+        "study_count": 871,
+        "macro_roc_auc_unweighted": 0.7308,
+        "macro_roc_auc_weighted": 0.7352
+      },
+      "fold_2": {
+        "study_count": 870,
+        "macro_roc_auc_unweighted": 0.8035,
+        "macro_roc_auc_weighted": 0.8083
+      },
+      "fold_3": {
+        "study_count": 869,
+        "macro_roc_auc_unweighted": 0.8159,
+        "macro_roc_auc_weighted": 0.8307
+      },
+      "fold_4": {
+        "study_count": 867,
+        "macro_roc_auc_unweighted": 0.8279,
+        "macro_roc_auc_weighted": 0.8363
+      }
+    },
+    "per_target": {
+      "ACL": {
+        "pos_count": 137,
+        "neg_count": 4212,
+        "roc_auc_unweighted": 0.7655,
+        "roc_auc_weighted": 0.757,
+        "pr_auc": 0.1308,
+        "delta_vs_d1_1": 0.1559
+      },
+      "MCL": {
+        "pos_count": 109,
+        "neg_count": 4240,
+        "roc_auc_unweighted": 0.6191,
+        "roc_auc_weighted": 0.6245,
+        "pr_auc": 0.0491,
+        "delta_vs_d1_1": 0.1065
+      },
+      "Medial Meniscus": {
+        "pos_count": 206,
+        "neg_count": 4143,
+        "roc_auc_unweighted": 0.8178,
+        "roc_auc_weighted": 0.8327,
+        "pr_auc": 0.2375,
+        "delta_vs_d1_1": 0.1339
+      },
+      "Lateral Meniscus": {
+        "pos_count": 99,
+        "neg_count": 4250,
+        "roc_auc_unweighted": 0.7253,
+        "roc_auc_weighted": 0.7176,
+        "pr_auc": 0.064,
+        "delta_vs_d1_1": 0.1392
+      },
+      "Medial OA": {
+        "pos_count": 15,
+        "neg_count": 4334,
+        "roc_auc_unweighted": 0.8511,
+        "roc_auc_weighted": 0.8511,
+        "pr_auc": 0.0619,
+        "delta_vs_d1_1": 0.294
+      },
+      "Lateral OA": {
+        "pos_count": 3,
+        "neg_count": 4346,
+        "roc_auc_unweighted": 0.8855,
+        "roc_auc_weighted": 0.8855,
+        "pr_auc": 0.0077,
+        "delta_vs_d1_1": 0.2436
+      },
+      "PF OA": {
+        "pos_count": 1,
+        "neg_count": 4348,
+        "roc_auc_unweighted": 0.2601,
+        "roc_auc_weighted": 0.2601,
+        "pr_auc": 0.0003,
+        "delta_vs_d1_1": -0.1848
+      },
+      "Effusion": {
+        "pos_count": 489,
+        "neg_count": 3860,
+        "roc_auc_unweighted": 0.8974,
+        "roc_auc_weighted": 0.9047,
+        "pr_auc": 0.6987,
+        "delta_vs_d1_1": 0.1308
+      },
+      "Synovitis": {
+        "pos_count": 413,
+        "neg_count": 3936,
+        "roc_auc_unweighted": 0.878,
+        "roc_auc_weighted": 0.8811,
+        "pr_auc": 0.5875,
+        "delta_vs_d1_1": 0.1382
+      },
+      "Baker's": {
+        "pos_count": 385,
+        "neg_count": 3964,
+        "roc_auc_unweighted": 0.8452,
+        "roc_auc_weighted": 0.8533,
+        "pr_auc": 0.442,
+        "delta_vs_d1_1": 0.1675
+      },
+      "Contusion": {
+        "pos_count": 387,
+        "neg_count": 3962,
+        "roc_auc_unweighted": 0.7709,
+        "roc_auc_weighted": 0.7935,
+        "pr_auc": 0.2998,
+        "delta_vs_d1_1": 0.1344
+      },
+      "Fracture": {
+        "pos_count": 101,
+        "neg_count": 4248,
+        "roc_auc_unweighted": 0.7113,
+        "roc_auc_weighted": 0.7444,
+        "pr_auc": 0.0881,
+        "delta_vs_d1_1": 0.1302
+      }
+    },
+    "method": "4-Stream 50/50 Probability-Rank Hybrid Blend"
+  },
+  "D1.2-D4_3STREAM_RANK": {
+    "experiment_id": "D1.2-D4_COMBINED_3STREAM_RANK",
+    "audit_passed": true,
+    "total_studies": 4349,
+    "unique_studies": 4349,
+    "gold_leakage": 0,
+    "nan_count": 0,
+    "inf_count": 0,
+    "global_macro_roc_auc_unweighted": 0.7518,
+    "global_macro_roc_auc_weighted": 0.7584,
+    "global_macro_pr_auc": 0.2209,
+    "delta_unweighted_vs_d1_1": 0.0008,
+    "delta_weighted_vs_d1_1": 0.0011,
+    "relative_gain_unweighted_pct": 0.11,
+    "per_fold": {
+      "fold_0": {
+        "study_count": 872,
+        "macro_roc_auc_unweighted": 0.7484,
+        "macro_roc_auc_weighted": 0.755
+      },
+      "fold_1": {
+        "study_count": 871,
+        "macro_roc_auc_unweighted": 0.7295,
+        "macro_roc_auc_weighted": 0.7338
+      },
+      "fold_2": {
+        "study_count": 870,
+        "macro_roc_auc_unweighted": 0.8015,
+        "macro_roc_auc_weighted": 0.8064
+      },
+      "fold_3": {
+        "study_count": 869,
+        "macro_roc_auc_unweighted": 0.8133,
+        "macro_roc_auc_weighted": 0.8283
+      },
+      "fold_4": {
+        "study_count": 867,
+        "macro_roc_auc_unweighted": 0.827,
+        "macro_roc_auc_weighted": 0.8355
+      }
+    },
+    "per_target": {
+      "ACL": {
+        "pos_count": 137,
+        "neg_count": 4212,
+        "roc_auc_unweighted": 0.7627,
+        "roc_auc_weighted": 0.7543,
+        "pr_auc": 0.1287,
+        "delta_vs_d1_1": 0.1531
+      },
+      "MCL": {
+        "pos_count": 109,
+        "neg_count": 4240,
+        "roc_auc_unweighted": 0.6179,
+        "roc_auc_weighted": 0.6233,
+        "pr_auc": 0.0489,
+        "delta_vs_d1_1": 0.1053
+      },
+      "Medial Meniscus": {
+        "pos_count": 206,
+        "neg_count": 4143,
+        "roc_auc_unweighted": 0.8158,
+        "roc_auc_weighted": 0.8309,
+        "pr_auc": 0.2354,
+        "delta_vs_d1_1": 0.1319
+      },
+      "Lateral Meniscus": {
+        "pos_count": 99,
+        "neg_count": 4250,
+        "roc_auc_unweighted": 0.7218,
+        "roc_auc_weighted": 0.7143,
+        "pr_auc": 0.0636,
+        "delta_vs_d1_1": 0.1357
+      },
+      "Medial OA": {
+        "pos_count": 15,
+        "neg_count": 4334,
+        "roc_auc_unweighted": 0.8459,
+        "roc_auc_weighted": 0.8459,
+        "pr_auc": 0.0561,
+        "delta_vs_d1_1": 0.2888
+      },
+      "Lateral OA": {
+        "pos_count": 3,
+        "neg_count": 4346,
+        "roc_auc_unweighted": 0.8864,
+        "roc_auc_weighted": 0.8864,
+        "pr_auc": 0.0072,
+        "delta_vs_d1_1": 0.2445
+      },
+      "PF OA": {
+        "pos_count": 1,
+        "neg_count": 4348,
+        "roc_auc_unweighted": 0.2723,
+        "roc_auc_weighted": 0.2723,
+        "pr_auc": 0.0003,
+        "delta_vs_d1_1": -0.1726
+      },
+      "Effusion": {
+        "pos_count": 489,
+        "neg_count": 3860,
+        "roc_auc_unweighted": 0.8961,
+        "roc_auc_weighted": 0.9034,
+        "pr_auc": 0.6979,
+        "delta_vs_d1_1": 0.1295
+      },
+      "Synovitis": {
+        "pos_count": 413,
+        "neg_count": 3936,
+        "roc_auc_unweighted": 0.8773,
+        "roc_auc_weighted": 0.8805,
+        "pr_auc": 0.584,
+        "delta_vs_d1_1": 0.1375
+      },
+      "Baker's": {
+        "pos_count": 385,
+        "neg_count": 3964,
+        "roc_auc_unweighted": 0.8421,
+        "roc_auc_weighted": 0.8502,
+        "pr_auc": 0.4418,
+        "delta_vs_d1_1": 0.1644
+      },
+      "Contusion": {
+        "pos_count": 387,
+        "neg_count": 3962,
+        "roc_auc_unweighted": 0.7695,
+        "roc_auc_weighted": 0.7922,
+        "pr_auc": 0.2969,
+        "delta_vs_d1_1": 0.133
+      },
+      "Fracture": {
+        "pos_count": 101,
+        "neg_count": 4248,
+        "roc_auc_unweighted": 0.7139,
+        "roc_auc_weighted": 0.7473,
+        "pr_auc": 0.0893,
+        "delta_vs_d1_1": 0.1328
+      }
+    },
+    "method": "3-Stream Equal Rank Average (Baseline + HFlip + WinAnt)"
+  }
+}

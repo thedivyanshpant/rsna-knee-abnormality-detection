@@ -1,0 +1,19 @@
+{
+  "stage": "C3.9_single_a100_sanity",
+  "timestamp": "2026-09-12T09:36:11.562073+00:00",
+  "gpu_name": "NVIDIA A100 80GB PCIe",
+  "device": "cuda:0",
+  "train_cohort_size": 32,
+  "val_cohort_size": 16,
+  "parameters": 2052828,
+  "precision": "bfloat16 (AMP)",
+  "batch_size": 2,
+  "peak_vram_mb": 691.36474609375,
+  "mean_epoch_time_sec": 5.581395069758098,
+  "mean_throughput_studies_per_sec": 5.7333336200096126,
+  "checkpoint_saved": true,
+  "checkpoint_size_bytes": 24723805,
+  "resume_successful": true,
+  "wall_clock_sec": 22.834776878356934,
+  "decision": "PASS"
+}

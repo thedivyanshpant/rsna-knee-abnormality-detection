@@ -1,0 +1,63 @@
+{
+  "code_leakage_audit": {
+    "files_scanned": [
+      "phase_b/remediation/parser.py",
+      "phase_b/remediation/lexicon.py",
+      "phase_b/remediation/severity_gates.py",
+      "phase_b/remediation/soft_targets.py",
+      "phase_b/remediation/pipeline.py",
+      "phase_b/remediation/export_production_corpus.py"
+    ],
+    "hardcoded_uid_count": 0,
+    "findings": [],
+    "leakage_status": "PASSED_ZERO_LEAKAGE"
+  },
+  "schema_provenance_audit": {
+    "total_rows": 52884,
+    "total_columns": 20,
+    "required_columns": [
+      "StudyInstanceUID",
+      "target",
+      "gold_label",
+      "baseline_predicted_label",
+      "baseline_confidence",
+      "step1_predicted_label",
+      "step1_rule_applied",
+      "step2_predicted_label",
+      "step2_rule_applied",
+      "step3_predicted_label",
+      "step3_rule_applied",
+      "final_predicted_label",
+      "label_probability",
+      "confidence_score",
+      "sample_weight",
+      "abstain_flag",
+      "matched_canonical_concept",
+      "detected_language",
+      "evidence_char_span",
+      "evidence_text"
+    ],
+    "null_counts_non_gold": {
+      "StudyInstanceUID": 0,
+      "target": 0,
+      "baseline_predicted_label": 0,
+      "baseline_confidence": 0,
+      "step1_predicted_label": 0,
+      "step1_rule_applied": 0,
+      "step2_predicted_label": 0,
+      "step2_rule_applied": 0,
+      "step3_predicted_label": 0,
+      "step3_rule_applied": 0,
+      "final_predicted_label": 0,
+      "label_probability": 0,
+      "confidence_score": 0,
+      "sample_weight": 0,
+      "abstain_flag": 0,
+      "matched_canonical_concept": 0,
+      "detected_language": 0,
+      "evidence_char_span": 0,
+      "evidence_text": 0
+    },
+    "schema_completeness_pct": 100.0
+  }
+}

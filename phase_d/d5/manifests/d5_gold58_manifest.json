@@ -1,0 +1,93 @@
+{
+  "benchmark": "Phase D5 Locked Gold-58 Benchmark",
+  "timestamp": "2026-09-14 19:50:21",
+  "host": "rpgpu007",
+  "hardware": "NVIDIA A100 80GB PCIe",
+  "cohort_size": 58,
+  "isolation_verified": true,
+  "development_leakage": 0,
+  "results": {
+    "d5_b2_primary_rank_auc": 0.6307,
+    "d5_b2_primary_rank_prauc": 0.5285,
+    "d5_b_score_auc": 0.6335,
+    "d5_b_score_prauc": 0.5311,
+    "d5_a_std_score_auc": 0.6244,
+    "d5_a_std_rank_auc": 0.6243,
+    "phase_c_baseline_auc": 0.5986,
+    "phase_d1_2_b2_auc": 0.6174,
+    "delta_vs_phase_c": 0.0321,
+    "delta_vs_d1_2_b2": 0.0133
+  },
+  "artifacts": {
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/predictions/gold58/d5_gold58_rank_averaged_predictions.csv": {
+      "size_bytes": 17003,
+      "sha256": "334f8d88b5e144ec5c1a4f3fca958a364f09f85c17d65e817cfdfb63332a560e",
+      "mtime": 1789395677.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/predictions/gold58/d5_gold58_score_averaged_predictions.csv": {
+      "size_bytes": 17573,
+      "sha256": "eed8a09b17c86cff78de415865c15fbdf6b80a0f8570d1b0a12d982c623d2ccf",
+      "mtime": 1789395677.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/predictions/gold58/d5_gold58_std_rank_averaged_predictions.csv": {
+      "size_bytes": 17058,
+      "sha256": "5c07f1b51b057ef3a34692c95d764a6a15cd0dc466c233dbb0ef4944b8eceeeb",
+      "mtime": 1789395677.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/predictions/gold58/d5_gold58_std_score_averaged_predictions.csv": {
+      "size_bytes": 17564,
+      "sha256": "bcbf260ff87fc599ba4b27138eee10fe643ff1d3b5e13c26b3b55dfd8d8be932",
+      "mtime": 1789395677.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/predictions/gold58/fold_0_gold58_predictions.csv": {
+      "size_bytes": 30026,
+      "sha256": "bea31bea02ae0d7eedf37a59e3bfed7fe4dd2d6f4f394229da2ed8e2eab34479",
+      "mtime": 1789395647.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/predictions/gold58/fold_1_gold58_predictions.csv": {
+      "size_bytes": 30070,
+      "sha256": "609a5780f0af7d2895c99429d99fc3bda2151ce77a21ae1c75d68e7d2119ab74",
+      "mtime": 1789395655.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/predictions/gold58/fold_2_gold58_predictions.csv": {
+      "size_bytes": 30055,
+      "sha256": "272c30dc6ce3493dd23ac3e0e86196c9a09eb23ffce0ac17b1c3c640081b7421",
+      "mtime": 1789395662.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/predictions/gold58/fold_3_gold58_predictions.csv": {
+      "size_bytes": 30112,
+      "sha256": "cac20996e520d40fe635d1de8379b0a3824116c6e5de1a1a6406be553994ca76",
+      "mtime": 1789395670.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/predictions/gold58/fold_4_gold58_predictions.csv": {
+      "size_bytes": 30056,
+      "sha256": "a76fa1d710b379a0e4dc01da737f4785415630498027dfeeeaf816be3bc0e7d9",
+      "mtime": 1789395677.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/evaluations/gold58/d5_gold58_evaluation_summary.json": {
+      "size_bytes": 44679,
+      "sha256": "d54b14d5a26ab8a9927dcd7bcf7f5237f7e49199c0839ca6127f09f980d4c013",
+      "mtime": 1789395677.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/evaluations/gold58/d5_gold58_per_target_metrics.csv": {
+      "size_bytes": 2117,
+      "sha256": "5fee528cdab893fbc497151607e421fc47bc8c0dda01efe42cc8f5c5c6ca893d",
+      "mtime": 1789395677.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/evaluations/gold58/d5_gold58_integrity_audit.json": {
+      "size_bytes": 587,
+      "sha256": "2b7ac2e8ed3c2d3509e5df4484edb9d9347500816e6db0d6668b5fe5665b7620",
+      "mtime": 1789395677.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/scripts/run_d5_gold58_benchmark.py": {
+      "size_bytes": 27130,
+      "sha256": "69df36815b2a0a99e0b5c66c3ae56e1323ba7e991ad197625f99ece9c5c22daa",
+      "mtime": 1789395595.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/csv/gold_studies.csv": {
+      "size_bytes": 6685,
+      "sha256": "a3ca7df32d43ee7c683091162b1839ea8308d802bea3f2b437f4908d9cbcb079",
+      "mtime": 1789200569.0
+    }
+  }
+}

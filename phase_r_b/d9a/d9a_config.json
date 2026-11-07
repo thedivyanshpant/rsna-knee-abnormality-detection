@@ -1,0 +1,50 @@
+{
+  "experiment": "D9-A",
+  "architecture": "PhaseD9AModel_FullDepthHybrid (DINOv2 ViT-S/14 + Local Depthwise Conv Stem + SlotHead)",
+  "total_parameters": 22391436,
+  "trainable_parameters": 10987020,
+  "frozen_parameters": 11404416,
+  "depth_sampling": {
+    "slice_band": [
+      0.0,
+      1.0
+    ],
+    "num_groups": 12,
+    "slices_per_group": 3,
+    "group_centers": [
+      1,
+      3,
+      6,
+      8,
+      11,
+      14,
+      16,
+      19,
+      22,
+      24,
+      27,
+      30
+    ],
+    "total_depth_spanned": 32,
+    "boundary_handling": "Triplet bounds [idx-1, idx, idx+1]"
+  },
+  "resolution": [
+    224,
+    224
+  ],
+  "physical_fov_mm": 130.0,
+  "optimizer": {
+    "type": "AdamW",
+    "backbone_lr": 8e-06,
+    "head_lr": 0.001,
+    "weight_decay": 0.02
+  },
+  "scheduler": {
+    "type": "OneCycleLR",
+    "epochs": 10,
+    "pct_start": 0.15,
+    "effective_batch_size": 8
+  },
+  "supervision": "/scratch/deepanthpcu/RSNA_Code/phase_d/d3/labels/phase_d3_candidate_label_corpus.csv",
+  "cv_splits": "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/configs/cv_splits.json"
+}

@@ -1,0 +1,183 @@
+{
+  "timestamp": "2026-09-15T10:27:17Z",
+  "experiment_id": "PHASE_D8A",
+  "d6_control": {
+    "remediated_macro_roc_auc_unweighted": 0.8185,
+    "remediated_macro_prauc": 0.3045,
+    "legacy_macro_roc_auc_unweighted": 0.8248
+  },
+  "results": {
+    "remediated_macro_roc_auc_unweighted": 0.7736,
+    "remediated_macro_roc_auc_weighted": 0.7809,
+    "remediated_macro_prauc": 0.2516,
+    "remediated_fold_mean": 0.7831,
+    "remediated_fold_std": 0.0252,
+    "legacy_macro_roc_auc_unweighted": 0.7868,
+    "legacy_macro_roc_auc_weighted": 0.794,
+    "legacy_macro_prauc": 0.1774,
+    "delta_vs_d6": -0.0449,
+    "delta_prauc_vs_d6": -0.0529,
+    "relative_gain_pct": -5.49
+  },
+  "per_fold": {
+    "fold_0": {
+      "study_count": 872,
+      "macro_roc_auc_unweighted": 0.7925,
+      "macro_roc_auc_weighted": 0.7978
+    },
+    "fold_1": {
+      "study_count": 871,
+      "macro_roc_auc_unweighted": 0.7611,
+      "macro_roc_auc_weighted": 0.772
+    },
+    "fold_2": {
+      "study_count": 870,
+      "macro_roc_auc_unweighted": 0.7507,
+      "macro_roc_auc_weighted": 0.7524
+    },
+    "fold_3": {
+      "study_count": 869,
+      "macro_roc_auc_unweighted": 0.8221,
+      "macro_roc_auc_weighted": 0.8389
+    },
+    "fold_4": {
+      "study_count": 867,
+      "macro_roc_auc_unweighted": 0.7892,
+      "macro_roc_auc_weighted": 0.7938
+    }
+  },
+  "per_target": {
+    "ACL": {
+      "target": "ACL",
+      "d6_roc_auc": 0.7646,
+      "exp_roc_auc": 0.7039,
+      "delta_roc_auc": -0.0607,
+      "d6_pr_auc": 0.1507,
+      "exp_pr_auc": 0.08,
+      "delta_pr_auc": -0.0707,
+      "pos_count": 137,
+      "neg_count": 4212
+    },
+    "MCL": {
+      "target": "MCL",
+      "d6_roc_auc": 0.6216,
+      "exp_roc_auc": 0.5514,
+      "delta_roc_auc": -0.0702,
+      "d6_pr_auc": 0.0553,
+      "exp_pr_auc": 0.0347,
+      "delta_pr_auc": -0.0206,
+      "pos_count": 109,
+      "neg_count": 4240
+    },
+    "Medial Meniscus": {
+      "target": "Medial Meniscus",
+      "d6_roc_auc": 0.8292,
+      "exp_roc_auc": 0.8075,
+      "delta_roc_auc": -0.0217,
+      "d6_pr_auc": 0.2248,
+      "exp_pr_auc": 0.2061,
+      "delta_pr_auc": -0.0187,
+      "pos_count": 206,
+      "neg_count": 4143
+    },
+    "Lateral Meniscus": {
+      "target": "Lateral Meniscus",
+      "d6_roc_auc": 0.778,
+      "exp_roc_auc": 0.6774,
+      "delta_roc_auc": -0.1006,
+      "d6_pr_auc": 0.1345,
+      "exp_pr_auc": 0.0449,
+      "delta_pr_auc": -0.0896,
+      "pos_count": 99,
+      "neg_count": 4250
+    },
+    "Medial OA": {
+      "target": "Medial OA",
+      "d6_roc_auc": 0.8621,
+      "exp_roc_auc": 0.8337,
+      "delta_roc_auc": -0.0284,
+      "d6_pr_auc": 0.2466,
+      "exp_pr_auc": 0.2202,
+      "delta_pr_auc": -0.0264,
+      "pos_count": 123,
+      "neg_count": 4226
+    },
+    "Lateral OA": {
+      "target": "Lateral OA",
+      "d6_roc_auc": 0.849,
+      "exp_roc_auc": 0.8498,
+      "delta_roc_auc": 0.0008,
+      "d6_pr_auc": 0.1593,
+      "exp_pr_auc": 0.1859,
+      "delta_pr_auc": 0.0266,
+      "pos_count": 78,
+      "neg_count": 4271
+    },
+    "PF OA": {
+      "target": "PF OA",
+      "d6_roc_auc": 0.9455,
+      "exp_roc_auc": 0.9299,
+      "delta_roc_auc": -0.0156,
+      "d6_pr_auc": 0.5505,
+      "exp_pr_auc": 0.5302,
+      "delta_pr_auc": -0.0203,
+      "pos_count": 292,
+      "neg_count": 4057
+    },
+    "Effusion": {
+      "target": "Effusion",
+      "d6_roc_auc": 0.9102,
+      "exp_roc_auc": 0.9018,
+      "delta_roc_auc": -0.0084,
+      "d6_pr_auc": 0.7145,
+      "exp_pr_auc": 0.629,
+      "delta_pr_auc": -0.0855,
+      "pos_count": 489,
+      "neg_count": 3860
+    },
+    "Synovitis": {
+      "target": "Synovitis",
+      "d6_roc_auc": 0.8827,
+      "exp_roc_auc": 0.8273,
+      "delta_roc_auc": -0.0554,
+      "d6_pr_auc": 0.5832,
+      "exp_pr_auc": 0.4862,
+      "delta_pr_auc": -0.097,
+      "pos_count": 413,
+      "neg_count": 3936
+    },
+    "Baker's": {
+      "target": "Baker's",
+      "d6_roc_auc": 0.8567,
+      "exp_roc_auc": 0.8045,
+      "delta_roc_auc": -0.0522,
+      "d6_pr_auc": 0.4505,
+      "exp_pr_auc": 0.3355,
+      "delta_pr_auc": -0.115,
+      "pos_count": 385,
+      "neg_count": 3964
+    },
+    "Contusion": {
+      "target": "Contusion",
+      "d6_roc_auc": 0.7818,
+      "exp_roc_auc": 0.7335,
+      "delta_roc_auc": -0.0483,
+      "d6_pr_auc": 0.2829,
+      "exp_pr_auc": 0.2186,
+      "delta_pr_auc": -0.0643,
+      "pos_count": 387,
+      "neg_count": 3962
+    },
+    "Fracture": {
+      "target": "Fracture",
+      "d6_roc_auc": 0.7403,
+      "exp_roc_auc": 0.6631,
+      "delta_roc_auc": -0.0772,
+      "d6_pr_auc": 0.1008,
+      "exp_pr_auc": 0.0478,
+      "delta_pr_auc": -0.053,
+      "pos_count": 101,
+      "neg_count": 4248
+    }
+  }
+}

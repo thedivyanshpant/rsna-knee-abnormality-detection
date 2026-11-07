@@ -1,0 +1,41 @@
+case_id,lang,target,report,expected,predicted,passed,rule_applied,rationale
+ADV_01,ES,Fracture,Sin evidencia de fractura ni desplazamiento óseo.,0,0,1,STEP2_PRESERVED,Spanish: 'Sin evidencia de fractura ni desplazamiento óseo.' -> Fracture = 0
+ADV_02_MM,DE,Medial Meniscus,"Keine Meniskusläsion, unauffälliger VKB.",0,0,1,STEP2_PRESERVED,"German: 'Keine Meniskusläsion, unauffälliger VKB.' -> Medial Meniscus = 0"
+ADV_02_LM,DE,Lateral Meniscus,"Keine Meniskusläsion, unauffälliger VKB.",0,0,1,STEP2_PRESERVED,"German: 'Keine Meniskusläsion, unauffälliger VKB.' -> Lateral Meniscus = 0"
+ADV_02_ACL,DE,ACL,"Keine Meniskusläsion, unauffälliger VKB.",0,0,1,STEP2_PRESERVED,"German: 'Keine Meniskusläsion, unauffälliger VKB.' -> ACL = 0"
+ADV_03,DE,PF OA,Geringe Chondropathia patellae Grad 1 ohne Zeichen einer Arthrose.,0,0,1,RULE_REMEDIATED_NEGATIVE_PF_MILD_CHONDROMALACIA_NEGATIVE,German: 'Geringe Chondropathia patellae Grad 1 ohne Zeichen einer Arthrose.' -> PF OA = 0
+ADV_04,GR,ACL,Δεν παρατηρείται ρήξη πρόσθιου χιαστού.,0,0,1,RULE_REMEDIATED_NEGATIVE_ACL_INTACT_NEGATIVE,Greek: 'Δεν παρατηρείται ρήξη πρόσθιου χιαστού.' -> ACL = 0
+ADV_05,BG,Fracture,"МР данни за фрактура в областта на латералното тибиално плато, без дислокация.",1,1,1,RULE_REMEDIATED_CORTICAL_FRACTURE,Bulgarian: Fracture with non-displacement -> Fracture = 1
+ADV_06,DE,Fracture,Nicht dislozierte Fraktur des medialen Tibiaplateaus.,1,1,1,RULE_REMEDIATED_CORTICAL_FRACTURE,German: 'Nicht dislozierte Fraktur' -> Fracture = 1
+ADV_07,DE,Fracture,Keine Fraktur oder Dislokation nachweisbar.,0,0,1,RULE_REMEDIATED_NEGATIVE_CORTICAL_FRACTURE_NEGATIVE,German: 'Keine Fraktur oder Dislokation' -> Fracture = 0
+ADV_08,DE,Fracture,Ohne Fissur oder Dislokation der knöchernen Strukturen.,0,0,1,RULE_REMEDIATED_NEGATIVE_CORTICAL_FRACTURE_NEGATIVE,German: 'Ohne Fissur oder Dislokation' -> Fracture = 0
+ADV_09,HR/SR,Medial Meniscus,Degeneracija medijalnog meniska bez znakova rupture.,0,0,1,STEP2_PRESERVED,Croatian: 'Degeneracija medijalnog meniska bez znakova rupture' -> Medial Meniscus = 0
+ADV_10,DE,Medial Meniscus,Degenerativer Innenmeniskusriss im Hinterhorn.,1,1,1,RULE_REMEDIATED_MEDIAL_MENISCUS_TEAR,German: 'Degenerativer Innenmeniskusriss' -> Medial Meniscus = 1
+ADV_11,TR,Medial Meniscus,Medial menisküs posterior hornda grade 1 sinyal artışı izlenmektedir.,0,0,1,RULE_REMEDIATED_NEGATIVE_MENISCUS_DEGENERATION_NEGATIVE,Turkish: Grade 1 meniscal signal -> Medial Meniscus = 0
+ADV_12,ES,Medial Meniscus,Meniscopatía grado II en cuerno posterior de menisco interno.,0,0,1,RULE_REMEDIATED_NEGATIVE_MENISCUS_DEGENERATION_NEGATIVE,Spanish: Grade 2 meniscal signal -> Medial Meniscus = 0
+ADV_13,TR,Medial Meniscus,Medial menisküs posterior hornda eklem yüzüne uzanan grade 3 yırtık.,1,1,1,RULE_REMEDIATED_MEDIAL_MENISCUS_TEAR,Turkish: Grade 3 surface-reaching tear -> Medial Meniscus = 1
+ADV_14,ES,PF OA,Condromalacia rotuliana grado 1 sin signos de artrosis patelofemoral.,0,0,1,RULE_REMEDIATED_NEGATIVE_PF_OA_NEGATIVE,Spanish: Grade 1 chondromalacia without OA -> PF OA = 0
+ADV_15,ES,PF OA,Artrosis patelofemoral severa con pérdida completa del cartílago rotuliano.,1,1,1,RULE_REMEDIATED_PF_OA,Spanish: Severe PF OA with complete cartilage loss -> PF OA = 1
+ADV_16,DE,ACL,Das vordere Kreuzband zeigt sich durchgehend intakt und regelrecht.,0,0,1,STEP2_PRESERVED,German: Intact ACL -> ACL = 0
+ADV_17,NL,ACL,Volledige scheur van de voorste kruisband met oedeem.,1,1,1,RULE_REMEDIATED_ACL_TEAR,Dutch: Full ACL tear -> ACL = 1
+ADV_18,GR,Effusion,Χωρίς συλλογή υγρού στο γόνατο.,0,0,1,STEP2_PRESERVED,Greek: 'Χωρίς συλλογή υγρού' -> Effusion = 0
+ADV_19,ES,Medial Meniscus,Rotura compleja del menisco externo. Menisco interno conservado.,0,0,1,RULE_REMEDIATED_NEGATIVE_MEDIAL_MENISCUS_INTACT_NEGATIVE,Spanish: Lateral tear only -> Medial Meniscus = 0
+ADV_20_Cont,NL,Contusion,"Impactiefractuur op centraal dragende deel van de laterale femorale condylen, gepaard gaand met uitgebreid botoedeem.",1,1,1,RULE_REMEDIATED_BONE_CONTUSION,Dutch: 'Impactiefractuur' with botoedeem -> Contusion = 1
+ADV_20_Frac,NL,Fracture,"Impactiefractuur op centraal dragende deel van de laterale femorale condylen, gepaard gaand met uitgebreid botoedeem.",0,0,1,STEP2_PRESERVED,Dutch: Subchondral 'Impactiefractuur' gated from cortical Fracture -> Fracture = 0
+ADV_21,TR,Medial Meniscus,Lateral menisküste kova sapı yırtığı izlendi. Medial menisküs doğaldır.,0,0,1,RULE_REMEDIATED_NEGATIVE_MEDIAL_MENISCUS_INTACT_NEGATIVE,Turkish: Lateral bucket-handle tear only -> Medial Meniscus = 0
+ADV_22,HR/SR,Baker's,U poplitealnoj jami vidi se manja Bakerova cista promera 12 mm.,1,1,1,RULE_REMEDIATED_BAKERS_CYST,Croatian: Bakerova cista -> Baker's = 1
+ADV_EXP_01,ES,Effusion,Sin derrame ni sinovitis articular en los recesos suprapatelar ni parapatelar.,0,0,1,STEP2_PRESERVED,Coordinated negative assertion (sin derrame ni sinovitis) -> Effusion = 0
+ADV_EXP_02,ES,Synovitis,Sin derrame ni sinovitis articular en los recesos suprapatelar ni parapatelar.,0,0,1,STEP2_PRESERVED,Coordinated negative assertion (sin derrame ni sinovitis) -> Synovitis = 0
+ADV_EXP_03,DE,Medial Meniscus,Weder Meniskusriss noch Bandläsion im medialen und lateralen Kompartiment.,0,0,1,STEP2_PRESERVED,German correlative negation (weder ... noch) -> Medial Meniscus = 0
+ADV_EXP_04,DE,ACL,Weder Meniskusriss noch Bandläsion im medialen und lateralen Kompartiment.,0,0,1,STEP2_PRESERVED,German correlative negation (weder ... noch) -> ACL = 0
+ADV_EXP_05,ES,Medial Meniscus,Menisco medial de morfología normal. Rotura radial compleja del cuerno posterior del menisco lateral.,0,0,1,STEP2_PRESERVED,Cross-clause scoping: normal medial meniscus is not polluted by lateral tear
+ADV_EXP_06,ES,Lateral Meniscus,Menisco medial de morfología normal. Rotura radial compleja del cuerno posterior del menisco lateral.,1,1,1,RULE_REMEDIATED_LATERAL_MENISCUS_TEAR,Cross-clause scoping: lateral tear correctly extracted
+ADV_EXP_07,DE,Medial OA,Knorpelschaden Grad II der medialen Femurkondyle ohne begleitende Arthrosezeichen.,0,0,1,STEP2_PRESERVED,Grade 2 cartilage loss without osteoarthritis features gated to Medial OA = 0
+ADV_EXP_08,DE,Medial OA,Fortgeschrittene mediale Gonarthrose Grad IV mit vollständiger Knorpeldenudation und Osteophyten.,1,1,1,RULE_REMEDIATED_MEDIAL_TF_OA,Grade 4 severe osteoarthritis correctly identified as Medial OA = 1
+ADV_EXP_09,TR,Medial Meniscus,Medial menisküs gövdesinde grade 2 intrameniskal miksoid dejenerasyon.,0,0,1,STEP2_PRESERVED,Grade 2 mucoid degeneration without surface tear gated to Medial Meniscus = 0
+ADV_EXP_10,TR,Medial Meniscus,Medial menisküs arka boynuzda artiküler yüzeye uzanan komplet horizontal yırtık.,1,1,1,RULE_REMEDIATED_MEDIAL_MENISCUS_TEAR,Complete horizontal tear reaching articular surface -> Medial Meniscus = 1
+ADV_EXP_11,GR,Fracture,Δεν αναδεικνύεται οστικό οίδημα ή κάταγμα των οστικών δομών του γόνατος.,0,0,1,STEP2_PRESERVED,Greek negative assertion (Δεν αναδεικνύεται) -> Fracture = 0
+ADV_EXP_12,GR,Contusion,Δεν αναδεικνύεται οστικό οίδημα ή κάταγμα των οστικών δομών του γόνατος.,0,0,1,STEP2_PRESERVED,Greek negative assertion (Δεν αναδεικνύεται) -> Contusion = 0
+ADV_EXP_13,TR,MCL,Kollateral ligamanlar normal trase ve sinyal intensitesindedir.,0,0,1,STEP2_PRESERVED,Turkish normal collateral ligament statement -> MCL = 0
+ADV_EXP_14,DE,Contusion,"Subchondrale Spongiosaeinblutung des lateralen Tibiaplateaus, ohne Kortikalisunterbrechung.",1,1,1,RULE_REMEDIATED_BONE_CONTUSION,Subchondral cancellous impaction/edema -> Contusion = 1
+ADV_EXP_15,DE,Fracture,"Subchondrale Spongiosaeinblutung des lateralen Tibiaplateaus, ohne Kortikalisunterbrechung.",0,0,1,STEP2_PRESERVED,Subchondral cancellous impaction without cortical disruption gated to Fracture = 0

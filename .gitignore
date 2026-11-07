@@ -1,0 +1,157 @@
+# ==============================================================================
+# RSNA Knee Abnormality Detection — Git Ignore Rules
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Model Weights & Checkpoints (Binary weight files excluded from VCS)
+# ------------------------------------------------------------------------------
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.safetensors
+*.onnx
+*.engine
+checkpoints/
+**/checkpoints/
+*/checkpoints/
+*.h5
+
+# ------------------------------------------------------------------------------
+# 2. Medical Imaging Datasets & Raw DICOMs
+# ------------------------------------------------------------------------------
+# Raw medical imaging formats
+*.dcm
+*.dicom
+*.mha
+*.nii
+*.nii.gz
+
+# Preprocessed NumPy volumes & array caches (e.g. 74+ GB processed volumes)
+*.npz
+*.npy
+processed/
+processed_gold/
+**/processed/
+**/processed_gold/
+
+# External data mirrors & staging directories
+data/
+datasets/
+RSNA_Knee_Data/
+marked_train_series/
+**/visual_samples/
+
+# ------------------------------------------------------------------------------
+# 3. Competition Datasets & Large Clinical Text Corpora
+# ------------------------------------------------------------------------------
+# Raw competition data files (acquire separately per Kaggle competition rules)
+csv/train.csv
+csv/train_series.csv
+csv/test.csv
+csv/test_series.csv
+csv/sample_submission.csv
+csv/golden_reports.csv
+
+# Large generated training label corpora (>20MB each, containing full report text)
+labels/production/*.csv
+phase_d/d3/labels/*.csv
+
+# ------------------------------------------------------------------------------
+# 4. Python Bytecode & Compilation Artifacts
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ------------------------------------------------------------------------------
+# 5. Virtual Environments & Package Managers
+# ------------------------------------------------------------------------------
+venv/
+.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# ------------------------------------------------------------------------------
+# 6. Testing, Auditing & Coverage
+# ------------------------------------------------------------------------------
+.cache
+.pytest_cache/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+htmlcov/
+
+# ------------------------------------------------------------------------------
+# 7. Jupyter Notebooks & Interactive Artifacts
+# ------------------------------------------------------------------------------
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# ------------------------------------------------------------------------------
+# 8. IDE, Editor & OS Artifacts
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# Editors & IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+.~lock.*#
+
+# ------------------------------------------------------------------------------
+# 9. Logs, Profiling & Run Telemetry
+# ------------------------------------------------------------------------------
+*.log
+slurm-*.out
+slurm-*.err
+wandb/
+runs/
+lightning_logs/
+
+# ------------------------------------------------------------------------------
+# 10. Secrets & Local Environment Overrides
+# ------------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.cert

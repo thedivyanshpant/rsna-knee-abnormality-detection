@@ -1,0 +1,119 @@
+{
+  "fold": 2,
+  "best_epoch": 9,
+  "best_d3_unweighted_auc": 0.809,
+  "best_d3_prauc": 0.3266,
+  "best_prod_unweighted_auc": 0.812,
+  "best_prod_prauc": 0.2648,
+  "per_target_d3": {
+    "ACL": 0.757,
+    "MCL": 0.6729,
+    "Medial Meniscus": 0.8255,
+    "Lateral Meniscus": 0.7587,
+    "Medial OA": 0.8524,
+    "Lateral OA": 0.8359,
+    "PF OA": 0.9389,
+    "Effusion": 0.8581,
+    "Synovitis": 0.8769,
+    "Baker's": 0.8874,
+    "Contusion": 0.7712,
+    "Fracture": 0.6732
+  },
+  "per_target_prauc_d3": {
+    "ACL": 0.1718,
+    "MCL": 0.1093,
+    "Medial Meniscus": 0.1962,
+    "Lateral Meniscus": 0.1279,
+    "Medial OA": 0.3455,
+    "Lateral OA": 0.3318,
+    "PF OA": 0.4284,
+    "Effusion": 0.6636,
+    "Synovitis": 0.5786,
+    "Baker's": 0.5346,
+    "Contusion": 0.3001,
+    "Fracture": 0.1317
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.4929,
+      "d3_unweighted_auc": 0.7196,
+      "d3_weighted_auc": 0.7196,
+      "d3_prauc": 0.159,
+      "prod_unweighted_auc": 0.7727,
+      "prod_prauc": 0.1737
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.4756,
+      "d3_unweighted_auc": 0.7649,
+      "d3_weighted_auc": 0.7648,
+      "d3_prauc": 0.2184,
+      "prod_unweighted_auc": 0.7863,
+      "prod_prauc": 0.1909
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.4639,
+      "d3_unweighted_auc": 0.7673,
+      "d3_weighted_auc": 0.7672,
+      "d3_prauc": 0.2538,
+      "prod_unweighted_auc": 0.7772,
+      "prod_prauc": 0.2104
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.4568,
+      "d3_unweighted_auc": 0.7594,
+      "d3_weighted_auc": 0.7594,
+      "d3_prauc": 0.2503,
+      "prod_unweighted_auc": 0.7934,
+      "prod_prauc": 0.2219
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.4534,
+      "d3_unweighted_auc": 0.7904,
+      "d3_weighted_auc": 0.7903,
+      "d3_prauc": 0.287,
+      "prod_unweighted_auc": 0.8046,
+      "prod_prauc": 0.2348
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.4456,
+      "d3_unweighted_auc": 0.7973,
+      "d3_weighted_auc": 0.7973,
+      "d3_prauc": 0.2996,
+      "prod_unweighted_auc": 0.8112,
+      "prod_prauc": 0.2555
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.4445,
+      "d3_unweighted_auc": 0.8062,
+      "d3_weighted_auc": 0.8061,
+      "d3_prauc": 0.3143,
+      "prod_unweighted_auc": 0.808,
+      "prod_prauc": 0.2565
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.4336,
+      "d3_unweighted_auc": 0.8062,
+      "d3_weighted_auc": 0.8061,
+      "d3_prauc": 0.3224,
+      "prod_unweighted_auc": 0.8087,
+      "prod_prauc": 0.2633
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.428,
+      "d3_unweighted_auc": 0.809,
+      "d3_weighted_auc": 0.8089,
+      "d3_prauc": 0.3266,
+      "prod_unweighted_auc": 0.812,
+      "prod_prauc": 0.2648
+    }
+  ]
+}

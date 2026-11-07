@@ -1,0 +1,163 @@
+{
+  "stage": "C3.12_Stage_A_OOF_Audit",
+  "total_studies": 4349,
+  "unique_studies": 4349,
+  "gold_leakage": 0,
+  "global_macro_roc_auc": 0.6189897442712096,
+  "evaluable_targets_count": 12,
+  "historical_c311_fold_mean_macro_auc": 0.6333,
+  "historical_c311_fold_std_macro_auc": 0.0326,
+  "per_target_metrics": {
+    "ACL": {
+      "global_oof_roc_auc": 0.619970920761675,
+      "spearman_rho": 0.39009958248203763,
+      "pearson_r": 0.22710318863391876,
+      "positives_count": 137,
+      "negatives_count": 4212,
+      "prevalence_pct": 3.1501494596458954,
+      "mean_pred": 0.16516728699207306,
+      "std_pred": 0.04133891686797142,
+      "mean_soft_y": 0.16806162893772125,
+      "std_soft_y": 0.15545108914375305
+    },
+    "MCL": {
+      "global_oof_roc_auc": 0.5098375021637528,
+      "spearman_rho": 0.3907610408964719,
+      "pearson_r": 0.20079603791236877,
+      "positives_count": 109,
+      "negatives_count": 4240,
+      "prevalence_pct": 2.506323292710968,
+      "mean_pred": 0.15605007112026215,
+      "std_pred": 0.03173895925283432,
+      "mean_soft_y": 0.16216371953487396,
+      "std_soft_y": 0.14504265785217285
+    },
+    "Medial Meniscus": {
+      "global_oof_roc_auc": 0.6771879811308816,
+      "spearman_rho": 0.2992464680498128,
+      "pearson_r": 0.23729786276817322,
+      "positives_count": 206,
+      "negatives_count": 4143,
+      "prevalence_pct": 4.736721085306967,
+      "mean_pred": 0.1826818585395813,
+      "std_pred": 0.04893413558602333,
+      "mean_soft_y": 0.18965280055999756,
+      "std_soft_y": 0.1779875010251999
+    },
+    "Lateral Meniscus": {
+      "global_oof_roc_auc": 0.5963731431966726,
+      "spearman_rho": 0.396619152634971,
+      "pearson_r": 0.2437770813703537,
+      "positives_count": 99,
+      "negatives_count": 4250,
+      "prevalence_pct": 2.276385375948494,
+      "mean_pred": 0.15950235724449158,
+      "std_pred": 0.03545259311795235,
+      "mean_soft_y": 0.163681298494339,
+      "std_soft_y": 0.1355612725019455
+    },
+    "Medial OA": {
+      "global_oof_roc_auc": 0.5571219812336564,
+      "spearman_rho": 0.3554986046045037,
+      "pearson_r": 0.2966122031211853,
+      "positives_count": 15,
+      "negatives_count": 4334,
+      "prevalence_pct": 0.34490687514371116,
+      "mean_pred": 0.14966197311878204,
+      "std_pred": 0.03193374350667,
+      "mean_soft_y": 0.15519660711288452,
+      "std_soft_y": 0.08391238003969193
+    },
+    "Lateral OA": {
+      "global_oof_roc_auc": 0.6418929283632459,
+      "spearman_rho": 0.39782791620329017,
+      "pearson_r": 0.3821651339530945,
+      "positives_count": 3,
+      "negatives_count": 4346,
+      "prevalence_pct": 0.06898137502874224,
+      "mean_pred": 0.1425923854112625,
+      "std_pred": 0.03155708685517311,
+      "mean_soft_y": 0.14726373553276062,
+      "std_soft_y": 0.07479940354824066
+    },
+    "PF OA": {
+      "global_oof_roc_auc": 0.4449172033118675,
+      "spearman_rho": 0.3838684440814056,
+      "pearson_r": 0.3725639283657074,
+      "positives_count": 1,
+      "negatives_count": 4348,
+      "prevalence_pct": 0.022993791676247415,
+      "mean_pred": 0.13779355585575104,
+      "std_pred": 0.032357096672058105,
+      "mean_soft_y": 0.14495286345481873,
+      "std_soft_y": 0.07336274534463882
+    },
+    "Effusion": {
+      "global_oof_roc_auc": 0.7623737775093508,
+      "spearman_rho": 0.21794291789679043,
+      "pearson_r": 0.3340620696544647,
+      "positives_count": 489,
+      "negatives_count": 3860,
+      "prevalence_pct": 11.243964129684986,
+      "mean_pred": 0.24714620411396027,
+      "std_pred": 0.07333461940288544,
+      "mean_soft_y": 0.24725225567817688,
+      "std_soft_y": 0.255606085062027
+    },
+    "Synovitis": {
+      "global_oof_roc_auc": 0.7410609706883994,
+      "spearman_rho": 0.4472823665640248,
+      "pearson_r": 0.35778114199638367,
+      "positives_count": 413,
+      "negatives_count": 3936,
+      "prevalence_pct": 9.496435962290182,
+      "mean_pred": 0.21332626044750214,
+      "std_pred": 0.08965664356946945,
+      "mean_soft_y": 0.2145550698041916,
+      "std_soft_y": 0.24639905989170074
+    },
+    "Baker's": {
+      "global_oof_roc_auc": 0.6714121902315646,
+      "spearman_rho": 0.32632727697117525,
+      "pearson_r": 0.24872423708438873,
+      "positives_count": 385,
+      "negatives_count": 3964,
+      "prevalence_pct": 8.852609795355255,
+      "mean_pred": 0.21468296647071838,
+      "std_pred": 0.06391597539186478,
+      "mean_soft_y": 0.21707290410995483,
+      "std_soft_y": 0.23566259443759918
+    },
+    "Contusion": {
+      "global_oof_roc_auc": 0.6352082509942646,
+      "spearman_rho": 0.3559393442242589,
+      "pearson_r": 0.22927315533161163,
+      "positives_count": 387,
+      "negatives_count": 3962,
+      "prevalence_pct": 8.898597378707748,
+      "mean_pred": 0.19762878119945526,
+      "std_pred": 0.05461348220705986,
+      "mean_soft_y": 0.20624279975891113,
+      "std_soft_y": 0.2296903133392334
+    },
+    "Fracture": {
+      "global_oof_roc_auc": 0.5705200816691839,
+      "spearman_rho": 0.4172673657677596,
+      "pearson_r": 0.26786932349205017,
+      "positives_count": 101,
+      "negatives_count": 4248,
+      "prevalence_pct": 2.3223729593009885,
+      "mean_pred": 0.1501123309135437,
+      "std_pred": 0.037832111120224,
+      "mean_soft_y": 0.15712808072566986,
+      "std_soft_y": 0.1324278712272644
+    }
+  },
+  "partition_counts": {
+    "0": 872,
+    "1": 871,
+    "2": 870,
+    "3": 869,
+    "4": 867
+  }
+}

@@ -1,0 +1,779 @@
+<USER_REQUEST>
+# RSNA KNEE ABNORMALITY DETECTION
+
+# PHASE R/B — HPC-ONLY REPRESENTATION & BOTTLENECK FORENSIC AUDIT
+
+## MISSION
+
+We are starting **Phase R/B: Representation & Bottleneck Forensic Audit**.
+
+The purpose is to determine **why the project has plateaued around ~0.81–0.83 development Macro ROC-AUC** and identify where useful information is being lost.
+
+This phase is an **analysis/forensics phase, NOT a model-training phase**.
+
+Everything below must be performed using **existing HPC assets only**.
+
+### HARD CONSTRAINTS
+
+1. **DO NOT access, request, download, or transfer raw development DICOM from the workstation.**
+2. **DO NOT train any new neural network.**
+3. **DO NOT modify existing checkpoints.**
+4. **DO NOT modify the frozen C1 processed corpus.**
+5. **DO NOT modify the D3 supervision corpus.**
+6. **DO NOT modify `train_series.csv`.**
+7. **DO NOT modify `cv_splits.json`.**
+8. **DO NOT modify Gold-58 assets.**
+9. **DO NOT tune a model against Gold-58.**
+10. Gold-58 may only be used for **already-authorized historical benchmark comparison**, never for discovering/tuning a new method.
+11. Do not delete project data.
+12. Do not launch long-running training jobs.
+13. Prefer deterministic Python/NumPy/Pandas/PyTorch analysis over expensive GPU computation.
+14. Reuse existing OOF predictions and existing checkpoints wherever possible.
+15. Every conclusion must distinguish between:
+
+* measured evidence
+* correlation
+* hypothesis.
+
+---
+
+# 1. AUTHORITATIVE PROJECT ROOT
+
+Use:
+
+```text
+/scratch/deepanthpcu/RSNA_Code/
+```
+
+Important existing assets:
+
+```text
+phase_c/c1/processed/
+phase_c/c3/
+phase_d/
+csv/train_series.csv
+phase_c/c3/configs/cv_splits.json
+phase_d/d3/labels/phase_d3_candidate_label_corpus.csv
+phase_b_step3_remediated_training_corpus.csv
+```
+
+Use the actual paths discovered in the current filesystem rather than assuming relative paths if they differ.
+
+---
+
+# 2. PROTECTED ASSETS
+
+The following are READ-ONLY for this entire phase:
+
+```text
+phase_c/c1/processed/
+processed_gold/
+csv/train_series.csv
+cv_splits.json
+phase_d/d3/labels/phase_d3_candidate_label_corpus.csv
+phase_b_step3_remediated_training_corpus.csv
+```
+
+All checkpoints are READ-ONLY.
+
+All Gold-58 data is READ-ONLY.
+
+Do not overwrite existing results.
+
+Create a new directory:
+
+```text
+/scratch/deepanthpcu/RSNA_Code/phase_r_b/
+```
+
+All new R/B outputs go there.
+
+---
+
+# 3. FIRST: BUILD AN AUTHORITATIVE INVENTORY
+
+Before analysis, inspect and record:
+
+### Dataset
+
+* 4,349 development studies
+* 24,033 processed `.npz` volumes
+* 5-slot C1 representation
+* D6 six-slot representation where applicable
+* study/series mapping
+* slot occupancy
+* missing-slot frequency
+* collision frequency
+* sequence metadata
+
+### Existing predictions
+
+Locate all authoritative OOF prediction files from:
+
+```text
+D1
+D2
+D3
+D4
+D5
+D6
+D7
+D8
+```
+
+Record:
+
+* path
+* study count
+* target columns
+* fold information
+* label source
+* model/variant
+* whether predictions are rank-normalized or raw probabilities.
+
+Do not assume filenames; inspect them.
+
+Create:
+
+```text
+phase_r_b/RB_INVENTORY_20260916.md
+```
+
+---
+
+# 4. R/B-A — SUPERVISION / LABEL CEILING FORENSICS
+
+## Objective
+
+Determine whether the apparent ~0.81–0.83 ceiling is substantially caused by the supervision itself.
+
+Use only existing labels and existing OOF predictions.
+
+Do NOT train anything.
+
+### Analyze
+
+For all 12 targets:
+
+* prevalence under D3 labels
+* prevalence under Phase B labels
+* positive/negative/soft-target distribution where available
+* D3 vs legacy-label disagreement
+* target-wise agreement
+* target-wise disagreement
+* number of changed labels
+* percentage of changed labels
+* relationship between label remediation and D3 OOF performance.
+
+Use existing D3 and legacy OOF results.
+
+Calculate:
+
+```text
+label prevalence
+label disagreement rate
+target-wise prevalence
+target-wise OOF AUC
+target-wise OOF PR-AUC
+```
+
+### Important
+
+Do not treat Gold-58 as a tunable validation set.
+
+Historical Gold results may be reported only as previously locked benchmarks.
+
+### Deliverable
+
+```text
+phase_r_b/RB_A_SUPERVISION_CEILING.md
+```
+
+Include a table:
+
+| Target | D3 prevalence | Legacy prevalence | Disagreement | D3 AUC | Interpretation |
+| ------ | ------------: | ----------------: | -----------: | -----: | -------------- |
+
+Conclude whether each target appears:
+
+* supervision-limited
+* representation-limited
+* ambiguous.
+
+Do not claim causality without evidence.
+
+---
+
+# 5. R/B-B — REPRESENTATION / SLOT UTILIZATION FORENSICS
+
+## Objective
+
+Determine whether the six-slot representation is actually providing useful information or whether the model is effectively operating from a small subset of slots.
+
+Use the existing D6 representation and existing D6 checkpoints.
+
+### Determine
+
+For all 4,349 development studies:
+
+* occupancy of each slot
+* percentage present
+* percentage missing
+* number of studies with 6/6 slots
+* number with 5/6
+* number with 4/6
+* number with 3/6
+* number with fewer if present.
+
+Specifically quantify:
+
+```text
+SAG_FLUID_FS
+COR_FLUID_FS
+AX_FLUID_FS
+SAG_FLUID_NOFS
+COR_T1
+SAG_T1
+```
+
+Also analyze the D6 resolver:
+
+* number of collisions
+* number resolved by intensity/tissue evidence
+* slot activation attributable to D6
+* studies gaining Slot 3
+* studies achieving complete 6-slot representation.
+
+### Then perform an EXISTING-MODEL inference ablation if computationally feasible.
+
+Using frozen D6 checkpoints:
+
+* baseline six-slot prediction
+* mask Slot 0
+* mask Slot 1
+* mask Slot 2
+* mask Slot 3
+* mask Slot 4
+* mask Slot 5
+
+Do not retrain.
+
+Use the same frozen OOF fold structure.
+
+Measure target-wise AUC changes.
+
+If exact inference through existing checkpoints is not feasible because the checkpoint architecture does not support this cleanly, STOP that subtest and report why rather than modifying the architecture.
+
+### Deliverable
+
+```text
+phase_r_b/RB_B_SLOT_FORENSICS.md
+```
+
+Include:
+
+| Slot | Coverage | Missing | Mean ablation ΔAUC | Interpretation |
+| ---- | -------: | ------: | -----------------: | -------------- |
+
+Identify:
+
+* high-value slots
+* low-value slots
+* redundant slots
+* underrepresented slots
+* potentially harmful slots.
+
+---
+
+# 6. R/B-C — SLICE DENSITY / CONTEXT FORENSICS
+
+## Objective
+
+Test whether the current representation is throwing away useful 3D context.
+
+Existing processed tensors are:
+
+```text
+32 × 256 × 256
+```
+
+Do NOT regenerate them.
+
+Do NOT access raw DICOM.
+
+Analyze the existing tensors only.
+
+### First perform a data-only analysis
+
+For the 24,033 volumes determine:
+
+* actual depth
+* slice statistics
+* central-band coverage
+* intensity variation across depth
+* how much anatomy exists outside the currently emphasized central region.
+
+Quantify the amount of usable anatomical content outside the central band.
+
+### Then analyze existing model behavior where possible.
+
+Do NOT train.
+
+If existing D6/D7/D8 checkpoints permit controlled inference with altered slice sampling, test:
+
+* 1 representative slice
+* 3-slice context
+* 5-slice context
+* 7-slice context
+
+using deterministic sampling from the existing 32-slice tensor.
+
+The purpose is diagnostic, not to establish a deployable model.
+
+If this requires architectural retraining, do not do it.
+
+### Deliverable
+
+```text
+phase_r_b/RB_C_SLICE_CONTEXT.md
+```
+
+Answer:
+
+> Is there evidence that the current 3-slice/central-band representation discards potentially useful information?
+
+---
+
+# 7. R/B-D — RESOLUTION INFORMATION FORENSICS
+
+## Objective
+
+Determine whether 256×256 preprocessing may be a bottleneck.
+
+Raw DICOM is NOT available for this phase.
+
+Therefore:
+
+### Perform only what is possible from HPC data.
+
+For the existing 256×256 corpus calculate:
+
+* original recorded PixelSpacing from `train_series.csv`
+* distribution of PixelSpacing
+* minimum/median/maximum
+* physical field of view represented by 256 pixels
+* distribution by sequence/slot
+* distribution by target where possible.
+
+Determine how much spatial resolution was lost by the fixed 256×256 preprocessing.
+
+Do NOT pretend that upsampling 256→384 or 512 creates new information.
+
+If a higher-resolution reconstruction cannot be performed from existing HPC data, explicitly mark it:
+
+```text
+RAW-DICOM REQUIRED
+```
+
+### Deliverable
+
+```text
+phase_r_b/RB_D_RESOLUTION_FORENSICS.md
+```
+
+---
+
+# 8. R/B-E — TARGET-WISE ERROR FORENSICS
+
+## Objective
+
+Determine whether the plateau is global or concentrated in specific pathologies.
+
+Use existing D3/D6/D7/D8 OOF predictions.
+
+For every target calculate:
+
+* AUC
+* PR-AUC
+* prevalence
+* fold mean
+* fold standard deviation
+* best fold
+* worst fold
+* model-to-model agreement
+* model-to-model disagreement.
+
+Group targets into:
+
+### Strong
+
+Approximately:
+
+```text
+PF OA
+Effusion
+Synovitis
+```
+
+### Intermediate
+
+Examples:
+
+```text
+Medial OA
+Lateral OA
+Baker
+ACL
+Menisci
+```
+
+### Weak
+
+Examples:
+
+```text
+MCL
+Fracture
+Lateral Meniscus
+```
+
+Do not hard-code these classifications; calculate them from the actual results.
+
+### Key question
+
+Determine whether weak targets share representation characteristics:
+
+* poor slot coverage
+* subtle pathology
+* low prevalence
+* high label uncertainty
+* high model disagreement
+* dependence on fine spatial detail.
+
+### Deliverable
+
+```text
+phase_r_b/RB_E_TARGET_BOTTLENECKS.md
+```
+
+---
+
+# 9. R/B-F — MODEL DISAGREEMENT / ERROR CORRELATION
+
+## Objective
+
+Determine whether the existing architectures are learning genuinely complementary information.
+
+Use existing OOF predictions only.
+
+Compare:
+
+```text
+D3
+D5
+D6
+D7-A
+D7-B
+D7-C
+D7-D
+D8-A
+D8-B
+D8-C
+D8-D
+```
+
+where corresponding predictions exist.
+
+Calculate:
+
+* Pearson correlation
+* Spearman correlation
+* rank correlation
+* prediction disagreement
+* pairwise error overlap where possible.
+
+For each pair determine:
+
+```text
+HIGHLY REDUNDANT
+MODERATELY DIFFERENT
+STRONGLY COMPLEMENTARY
+```
+
+Do not infer complementarity merely because AUCs differ.
+
+### Important
+
+We already observed that D4 CNN blending did not provide meaningful complementarity under D3 supervision.
+
+Use this analysis to quantify that phenomenon across the broader D1–D8 family.
+
+### Deliverable
+
+```text
+phase_r_b/RB_F_MODEL_DISAGREEMENT.md
+```
+
+---
+
+# 10. R/B-G — FOLD STABILITY FORENSICS
+
+Analyze existing five-fold results.
+
+For each model and target:
+
+* mean AUC
+* standard deviation
+* min
+* max
+* fold range.
+
+Identify:
+
+* stable targets
+* unstable targets
+* models with unusually high fold variance.
+
+Compare:
+
+```text
+D3
+D6
+D7
+D8-C
+```
+
+especially because D8-C showed unusually stable Gold fold performance historically.
+
+Do not use Gold to optimize anything.
+
+### Deliverable
+
+```text
+phase_r_b/RB_G_FOLD_STABILITY.md
+```
+
+---
+
+# 11. R/B-H — INFORMATION LOSS CHAIN
+
+Construct an explicit forensic chain:
+
+```text
+RAW DICOM
+   ↓
+series selection
+   ↓
+sequence resolution
+   ↓
+collision resolution
+   ↓
+32-slice resampling
+   ↓
+central-band selection
+   ↓
+3-slice/group representation
+   ↓
+256×256 resize
+   ↓
+slot aggregation
+   ↓
+pathology classifier
+```
+
+For every stage classify the potential information loss as:
+
+```text
+LOW
+MEDIUM
+HIGH
+UNKNOWN
+```
+
+The classification must be based on measured HPC evidence where possible.
+
+Do not invent evidence.
+
+### Deliverable
+
+```text
+phase_r_b/RB_H_INFORMATION_LOSS_CHAIN.md
+```
+
+---
+
+# 12. R/B-I — BOTTLENECK SCORECARD
+
+Build a final evidence table:
+
+| Candidate Bottleneck     | Evidence | Severity | Confidence | Raw DICOM Needed? |
+| ------------------------ | -------- | -------- | ---------- | ----------------- |
+| Label ceiling            | ...      | ...      | ...        | No                |
+| Sequence loss            | ...      | ...      | ...        | No                |
+| Slot coverage            | ...      | ...      | ...        | No                |
+| Slice context            | ...      | ...      | ...        | No                |
+| Resolution               | ...      | ...      | ...        | Yes/No            |
+| Spatial localization     | ...      | ...      | ...        | No                |
+| Target-specific mismatch | ...      | ...      | ...        | No                |
+| Model redundancy         | ...      | ...      | ...        | No                |
+
+Rank the bottlenecks.
+
+---
+
+# 13. R/B-J — RAW-DICOM DECISION
+
+At the end, explicitly answer:
+
+## Can we continue Phase R/B without raw DICOM?
+
+Choose one:
+
+```text
+YES — raw DICOM not currently justified
+```
+
+or
+
+```text
+PARTIALLY — specific targeted raw-DICOM audit justified
+```
+
+or
+
+```text
+NO — raw DICOM is essential for the next experiment
+```
+
+If raw DICOM is justified, specify the **smallest possible targeted subset** and exactly why.
+
+Do NOT request the entire ~523 GB corpus.
+
+---
+
+# 14. NO NEW TRAINING
+
+This phase must NOT train:
+
+* new DINO
+* new ViT
+* new CNN
+* new ensemble
+* new head
+* new checkpoints.
+
+Inference-only experiments are acceptable only when they can be performed cleanly using existing checkpoints and existing data.
+
+If an analysis requires training, record:
+
+```text
+TRAINING REQUIRED — DEFERRED
+```
+
+and move on.
+
+---
+
+# 15. COMPUTE POLICY
+
+Prefer CPU/Pandas/NumPy for:
+
+* metadata statistics
+* label analysis
+* prediction correlation
+* fold statistics
+* prevalence
+* file inventory.
+
+Use GPU only for short inference analyses that materially answer a bottleneck question.
+
+Do not launch multi-node training.
+
+Do not consume large amounts of scratch space with derived copies of the 73.66 GB corpus.
+
+All derived outputs should be small.
+
+---
+
+# 16. FINAL MASTER REPORT
+
+Create:
+
+```text
+phase_r_b/RB_MASTER_FORENSIC_REPORT_20260916.md
+```
+
+It must contain:
+
+1. Executive summary.
+2. Current performance ceiling.
+3. Supervision findings.
+4. Slot/sequence findings.
+5. Slice-context findings.
+6. Resolution findings.
+7. Target-wise bottlenecks.
+8. Model redundancy/complementarity.
+9. Fold stability.
+10. Information-loss chain.
+11. Ranked bottleneck scorecard.
+12. Raw-DICOM decision.
+13. Recommended next experiment(s).
+14. Experiments explicitly rejected and why.
+
+---
+
+# 17. FINAL RECOMMENDATION FORMAT
+
+End the report with exactly:
+
+```text
+============================================================
+PHASE R/B FINAL DECISION
+============================================================
+
+CURRENT DEVELOPMENT CHAMPION:
+...
+
+PRIMARY BOTTLENECK:
+...
+
+SECONDARY BOTTLENECK:
+...
+
+STRONGEST EVIDENCE:
+...
+
+RAW DICOM REQUIRED NOW:
+YES / NO / TARGETED ONLY
+
+NEXT EXPERIMENT:
+...
+
+WHY:
+...
+
+DO NOT DO:
+...
+
+============================================================
+```
+
+## ABSOLUTE RULE
+
+This is a forensic audit.
+
+**Do not try to make the numbers look better.**
+
+If an experiment is inconclusive, say so.
+
+If the existing representation is adequate, say so.
+
+If the bottleneck is supervision rather than architecture, say so.
+
+If raw DICOM is genuinely necessary, specify exactly what information is missing.
+
+**No Gold-58 tuning. No new training. No raw-DICOM transfer. No destructive filesystem operations.**
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-16T01:33:05+05:30.
+</ADDITIONAL_METADATA>

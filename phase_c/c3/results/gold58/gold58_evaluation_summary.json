@@ -1,0 +1,1012 @@
+{
+  "metadata": {
+    "timestamp": "2026-09-12 17:25:13",
+    "host": "rpgpu018",
+    "python_version": "3.11.16",
+    "torch_version": "2.7.0+cu126",
+    "device": "cuda:0",
+    "gpu_name": "NVIDIA A100 80GB PCIe",
+    "gold_studies_count": 58,
+    "gold_truth_path": "/scratch/deepanthpcu/RSNA_Code/csv/gold_studies.csv",
+    "gold_truth_sha256": "a3ca7df32d43ee7c683091162b1839ea8308d802bea3f2b437f4908d9cbcb079",
+    "processed_gold_dir": "/scratch/deepanthpcu/RSNA_Code/phase_c/c1/processed_gold",
+    "ensemble_method": "predetermined_normalized_rank_averaging",
+    "rank_formula": "mean(rankdata(p_fold, method='average') / 58.0)"
+  },
+  "locked_gold_rank_ensemble": {
+    "macro_roc_auc": 0.5985835809242693,
+    "macro_pr_auc": 0.45260481028762994,
+    "macro_f1": 0.46735908740873205,
+    "macro_accuracy": 0.5488505747126436,
+    "per_target": {
+      "ACL": {
+        "roc_auc": 0.5410539215686274,
+        "pr_auc": 0.5256218830335873,
+        "accuracy": 0.5172413793103449,
+        "f1": 0.4814814814814815,
+        "precision": 0.43333333333333335,
+        "recall": 0.5416666666666666,
+        "positives_true": 24,
+        "positives_pred": 30,
+        "total_samples": 58
+      },
+      "MCL": {
+        "roc_auc": 0.5782312925170068,
+        "pr_auc": 0.22635286238227414,
+        "accuracy": 0.4827586206896552,
+        "f1": 0.25,
+        "precision": 0.16129032258064516,
+        "recall": 0.5555555555555556,
+        "positives_true": 9,
+        "positives_pred": 31,
+        "total_samples": 58
+      },
+      "Medial Meniscus": {
+        "roc_auc": 0.6646634615384616,
+        "pr_auc": 0.6549590933852163,
+        "accuracy": 0.6379310344827587,
+        "f1": 0.631578947368421,
+        "precision": 0.5806451612903226,
+        "recall": 0.6923076923076923,
+        "positives_true": 26,
+        "positives_pred": 31,
+        "total_samples": 58
+      },
+      "Lateral Meniscus": {
+        "roc_auc": 0.5925465838509317,
+        "pr_auc": 0.49376632070063214,
+        "accuracy": 0.5517241379310345,
+        "f1": 0.5185185185185185,
+        "precision": 0.45161290322580644,
+        "recall": 0.6086956521739131,
+        "positives_true": 23,
+        "positives_pred": 31,
+        "total_samples": 58
+      },
+      "Medial OA": {
+        "roc_auc": 0.5751937984496124,
+        "pr_auc": 0.2952769564506676,
+        "accuracy": 0.5,
+        "f1": 0.3829787234042553,
+        "precision": 0.28125,
+        "recall": 0.6,
+        "positives_true": 15,
+        "positives_pred": 32,
+        "total_samples": 58
+      },
+      "Lateral OA": {
+        "roc_auc": 0.6063829787234043,
+        "pr_auc": 0.2557351821432849,
+        "accuracy": 0.5689655172413793,
+        "f1": 0.41860465116279066,
+        "precision": 0.28125,
+        "recall": 0.8181818181818182,
+        "positives_true": 11,
+        "positives_pred": 32,
+        "total_samples": 58
+      },
+      "PF OA": {
+        "roc_auc": 0.5347490347490348,
+        "pr_auc": 0.38288018529499585,
+        "accuracy": 0.5,
+        "f1": 0.4313725490196078,
+        "precision": 0.36666666666666664,
+        "recall": 0.5238095238095238,
+        "positives_true": 21,
+        "positives_pred": 30,
+        "total_samples": 58
+      },
+      "Effusion": {
+        "roc_auc": 0.7130434782608696,
+        "pr_auc": 0.7517153878703128,
+        "accuracy": 0.6206896551724138,
+        "f1": 0.65625,
+        "precision": 0.7241379310344828,
+        "recall": 0.6,
+        "positives_true": 35,
+        "positives_pred": 29,
+        "total_samples": 58
+      },
+      "Synovitis": {
+        "roc_auc": 0.6583034647550776,
+        "pr_auc": 0.631611568855913,
+        "accuracy": 0.5689655172413793,
+        "f1": 0.5454545454545454,
+        "precision": 0.5357142857142857,
+        "recall": 0.5555555555555556,
+        "positives_true": 27,
+        "positives_pred": 28,
+        "total_samples": 58
+      },
+      "Baker's": {
+        "roc_auc": 0.6105072463768116,
+        "pr_auc": 0.2897655593227181,
+        "accuracy": 0.5517241379310345,
+        "f1": 0.4090909090909091,
+        "precision": 0.28125,
+        "recall": 0.75,
+        "positives_true": 12,
+        "positives_pred": 32,
+        "total_samples": 58
+      },
+      "Contusion": {
+        "roc_auc": 0.47638326585695007,
+        "pr_auc": 0.38043554885417386,
+        "accuracy": 0.5,
+        "f1": 0.3829787234042553,
+        "precision": 0.32142857142857145,
+        "recall": 0.47368421052631576,
+        "positives_true": 19,
+        "positives_pred": 28,
+        "total_samples": 58
+      },
+      "Fracture": {
+        "roc_auc": 0.6319444444444444,
+        "pr_auc": 0.5431371751577838,
+        "accuracy": 0.5862068965517241,
+        "f1": 0.5,
+        "precision": 0.4,
+        "recall": 0.6666666666666666,
+        "positives_true": 18,
+        "positives_pred": 30,
+        "total_samples": 58
+      }
+    }
+  },
+  "locked_gold_score_ensemble_reference": {
+    "macro_roc_auc": 0.5985128139743507,
+    "macro_pr_auc": 0.45183404394007504,
+    "per_target": {
+      "ACL": {
+        "roc_auc": 0.5422794117647058,
+        "pr_auc": 0.5174601500956395,
+        "accuracy": 0.5862068965517241,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "positives_true": 24,
+        "positives_pred": 0,
+        "total_samples": 58
+      },
+      "MCL": {
+        "roc_auc": 0.5748299319727891,
+        "pr_auc": 0.22520230605344957,
+        "accuracy": 0.8448275862068966,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "positives_true": 9,
+        "positives_pred": 0,
+        "total_samples": 58
+      },
+      "Medial Meniscus": {
+        "roc_auc": 0.6664663461538461,
+        "pr_auc": 0.6590510586144156,
+        "accuracy": 0.5517241379310345,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "positives_true": 26,
+        "positives_pred": 0,
+        "total_samples": 58
+      },
+      "Lateral Meniscus": {
+        "roc_auc": 0.5925465838509317,
+        "pr_auc": 0.49218172585230735,
+        "accuracy": 0.603448275862069,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "positives_true": 23,
+        "positives_pred": 0,
+        "total_samples": 58
+      },
+      "Medial OA": {
+        "roc_auc": 0.57984496124031,
+        "pr_auc": 0.2984976657329598,
+        "accuracy": 0.7413793103448276,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "positives_true": 15,
+        "positives_pred": 0,
+        "total_samples": 58
+      },
+      "Lateral OA": {
+        "roc_auc": 0.6150870406189555,
+        "pr_auc": 0.2636086030080088,
+        "accuracy": 0.8103448275862069,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "positives_true": 11,
+        "positives_pred": 0,
+        "total_samples": 58
+      },
+      "PF OA": {
+        "roc_auc": 0.5296010296010296,
+        "pr_auc": 0.3830540314661883,
+        "accuracy": 0.6379310344827587,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "positives_true": 21,
+        "positives_pred": 0,
+        "total_samples": 58
+      },
+      "Effusion": {
+        "roc_auc": 0.7111801242236024,
+        "pr_auc": 0.749260614844542,
+        "accuracy": 0.39655172413793105,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "positives_true": 35,
+        "positives_pred": 0,
+        "total_samples": 58
+      },
+      "Synovitis": {
+        "roc_auc": 0.6565113500597372,
+        "pr_auc": 0.6313193012019773,
+        "accuracy": 0.5344827586206896,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "positives_true": 27,
+        "positives_pred": 0,
+        "total_samples": 58
+      },
+      "Baker's": {
+        "roc_auc": 0.6086956521739131,
+        "pr_auc": 0.2899822965950264,
+        "accuracy": 0.7931034482758621,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "positives_true": 12,
+        "positives_pred": 0,
+        "total_samples": 58
+      },
+      "Contusion": {
+        "roc_auc": 0.4676113360323887,
+        "pr_auc": 0.3640108360195383,
+        "accuracy": 0.6724137931034483,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "positives_true": 19,
+        "positives_pred": 0,
+        "total_samples": 58
+      },
+      "Fracture": {
+        "roc_auc": 0.6375,
+        "pr_auc": 0.5483799377968482,
+        "accuracy": 0.6896551724137931,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "positives_true": 18,
+        "positives_pred": 0,
+        "total_samples": 58
+      }
+    }
+  },
+  "individual_checkpoints": {
+    "fold_0": {
+      "macro_roc_auc": 0.5934558413532801,
+      "macro_pr_auc": 0.4475711390555615,
+      "per_target": {
+        "ACL": {
+          "roc_auc": 0.5306372549019608,
+          "pr_auc": 0.5001495000123849,
+          "accuracy": 0.5862068965517241,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 24,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "MCL": {
+          "roc_auc": 0.5759637188208617,
+          "pr_auc": 0.25125511454013866,
+          "accuracy": 0.8448275862068966,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 9,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Medial Meniscus": {
+          "roc_auc": 0.6466346153846154,
+          "pr_auc": 0.6204626719813219,
+          "accuracy": 0.5517241379310345,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 26,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Lateral Meniscus": {
+          "roc_auc": 0.5807453416149069,
+          "pr_auc": 0.49511290487747583,
+          "accuracy": 0.603448275862069,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 23,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Medial OA": {
+          "roc_auc": 0.5852713178294574,
+          "pr_auc": 0.3019191105934499,
+          "accuracy": 0.7413793103448276,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 15,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Lateral OA": {
+          "roc_auc": 0.6247582205029013,
+          "pr_auc": 0.2478918680499708,
+          "accuracy": 0.8103448275862069,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 11,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "PF OA": {
+          "roc_auc": 0.5463320463320464,
+          "pr_auc": 0.38468534009139455,
+          "accuracy": 0.6379310344827587,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 21,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Effusion": {
+          "roc_auc": 0.7186335403726708,
+          "pr_auc": 0.7581347854796618,
+          "accuracy": 0.39655172413793105,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 35,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Synovitis": {
+          "roc_auc": 0.6553166069295101,
+          "pr_auc": 0.6048006326082971,
+          "accuracy": 0.5344827586206896,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 27,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Baker's": {
+          "roc_auc": 0.5670289855072463,
+          "pr_auc": 0.2669319744074549,
+          "accuracy": 0.7931034482758621,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 12,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Contusion": {
+          "roc_auc": 0.45681511470985153,
+          "pr_auc": 0.37903572665389534,
+          "accuracy": 0.6724137931034483,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 19,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Fracture": {
+          "roc_auc": 0.6333333333333333,
+          "pr_auc": 0.5604740393712929,
+          "accuracy": 0.6896551724137931,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 18,
+          "positives_pred": 0,
+          "total_samples": 58
+        }
+      }
+    },
+    "fold_1": {
+      "macro_roc_auc": 0.5977029922203623,
+      "macro_pr_auc": 0.4647774608237549,
+      "per_target": {
+        "ACL": {
+          "roc_auc": 0.5367647058823529,
+          "pr_auc": 0.4979471891639734,
+          "accuracy": 0.5862068965517241,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 24,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "MCL": {
+          "roc_auc": 0.5113378684807256,
+          "pr_auc": 0.17285290293856764,
+          "accuracy": 0.8448275862068966,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 9,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Medial Meniscus": {
+          "roc_auc": 0.6622596153846154,
+          "pr_auc": 0.6950644858862377,
+          "accuracy": 0.5517241379310345,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 26,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Lateral Meniscus": {
+          "roc_auc": 0.606832298136646,
+          "pr_auc": 0.5471369617843516,
+          "accuracy": 0.603448275862069,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 23,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Medial OA": {
+          "roc_auc": 0.5248062015503876,
+          "pr_auc": 0.2819195937646994,
+          "accuracy": 0.7413793103448276,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 15,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Lateral OA": {
+          "roc_auc": 0.6305609284332688,
+          "pr_auc": 0.29934379468954425,
+          "accuracy": 0.8103448275862069,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 11,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "PF OA": {
+          "roc_auc": 0.5727155727155727,
+          "pr_auc": 0.4387084013684915,
+          "accuracy": 0.6379310344827587,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 21,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Effusion": {
+          "roc_auc": 0.6633540372670808,
+          "pr_auc": 0.6993837405132968,
+          "accuracy": 0.39655172413793105,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 35,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Synovitis": {
+          "roc_auc": 0.6762246117084827,
+          "pr_auc": 0.6581205467545566,
+          "accuracy": 0.5344827586206896,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 27,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Baker's": {
+          "roc_auc": 0.6847826086956522,
+          "pr_auc": 0.40621990967933946,
+          "accuracy": 0.7931034482758621,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 12,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Contusion": {
+          "roc_auc": 0.4993252361673414,
+          "pr_auc": 0.34768730979899853,
+          "accuracy": 0.6724137931034483,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 19,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Fracture": {
+          "roc_auc": 0.6034722222222222,
+          "pr_auc": 0.5329446935430024,
+          "accuracy": 0.6896551724137931,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 18,
+          "positives_pred": 0,
+          "total_samples": 58
+        }
+      }
+    },
+    "fold_2": {
+      "macro_roc_auc": 0.59836189823462,
+      "macro_pr_auc": 0.44885637763065295,
+      "per_target": {
+        "ACL": {
+          "roc_auc": 0.5006127450980392,
+          "pr_auc": 0.47238303601211057,
+          "accuracy": 0.5862068965517241,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 24,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "MCL": {
+          "roc_auc": 0.5873015873015873,
+          "pr_auc": 0.20922659444314315,
+          "accuracy": 0.8448275862068966,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 9,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Medial Meniscus": {
+          "roc_auc": 0.6466346153846154,
+          "pr_auc": 0.6590388603496591,
+          "accuracy": 0.5517241379310345,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 26,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Lateral Meniscus": {
+          "roc_auc": 0.6043478260869565,
+          "pr_auc": 0.4844742517914382,
+          "accuracy": 0.603448275862069,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 23,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Medial OA": {
+          "roc_auc": 0.6193798449612403,
+          "pr_auc": 0.3329858929032362,
+          "accuracy": 0.7413793103448276,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 15,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Lateral OA": {
+          "roc_auc": 0.6247582205029013,
+          "pr_auc": 0.27763445329572145,
+          "accuracy": 0.8103448275862069,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 11,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "PF OA": {
+          "roc_auc": 0.5688545688545689,
+          "pr_auc": 0.41563153717537277,
+          "accuracy": 0.6379310344827587,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 21,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Effusion": {
+          "roc_auc": 0.6950310559006211,
+          "pr_auc": 0.7224888042152497,
+          "accuracy": 0.39655172413793105,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 35,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Synovitis": {
+          "roc_auc": 0.6266427718040621,
+          "pr_auc": 0.5946008980883404,
+          "accuracy": 0.5344827586206896,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 27,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Baker's": {
+          "roc_auc": 0.6059782608695652,
+          "pr_auc": 0.35740674028244335,
+          "accuracy": 0.7931034482758621,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 12,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Contusion": {
+          "roc_auc": 0.44871794871794873,
+          "pr_auc": 0.318556734270787,
+          "accuracy": 0.6724137931034483,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 19,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Fracture": {
+          "roc_auc": 0.6520833333333333,
+          "pr_auc": 0.5418487287403326,
+          "accuracy": 0.6896551724137931,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 18,
+          "positives_pred": 0,
+          "total_samples": 58
+        }
+      }
+    },
+    "fold_3": {
+      "macro_roc_auc": 0.5827414953630083,
+      "macro_pr_auc": 0.44432102219493813,
+      "per_target": {
+        "ACL": {
+          "roc_auc": 0.5784313725490197,
+          "pr_auc": 0.5719178656682032,
+          "accuracy": 0.5862068965517241,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 24,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "MCL": {
+          "roc_auc": 0.6201814058956916,
+          "pr_auc": 0.25125790933244346,
+          "accuracy": 0.8448275862068966,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 9,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Medial Meniscus": {
+          "roc_auc": 0.6598557692307693,
+          "pr_auc": 0.6282058663858491,
+          "accuracy": 0.5517241379310345,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 26,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Lateral Meniscus": {
+          "roc_auc": 0.5583850931677019,
+          "pr_auc": 0.46903868477954924,
+          "accuracy": 0.603448275862069,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 23,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Medial OA": {
+          "roc_auc": 0.5589147286821705,
+          "pr_auc": 0.273960831572346,
+          "accuracy": 0.7413793103448276,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 15,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Lateral OA": {
+          "roc_auc": 0.558027079303675,
+          "pr_auc": 0.22044788930662015,
+          "accuracy": 0.8103448275862069,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 11,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "PF OA": {
+          "roc_auc": 0.4305019305019305,
+          "pr_auc": 0.3345829240085799,
+          "accuracy": 0.6379310344827587,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 21,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Effusion": {
+          "roc_auc": 0.6937888198757765,
+          "pr_auc": 0.7606253575993362,
+          "accuracy": 0.3793103448275862,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 35,
+          "positives_pred": 1,
+          "total_samples": 58
+        },
+        "Synovitis": {
+          "roc_auc": 0.6648745519713262,
+          "pr_auc": 0.6231665410746692,
+          "accuracy": 0.5344827586206896,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 27,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Baker's": {
+          "roc_auc": 0.532608695652174,
+          "pr_auc": 0.24914391788454757,
+          "accuracy": 0.7931034482758621,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 12,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Contusion": {
+          "roc_auc": 0.529689608636977,
+          "pr_auc": 0.4355739153192931,
+          "accuracy": 0.6724137931034483,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 19,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Fracture": {
+          "roc_auc": 0.6076388888888888,
+          "pr_auc": 0.5139305634078212,
+          "accuracy": 0.6896551724137931,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 18,
+          "positives_pred": 0,
+          "total_samples": 58
+        }
+      }
+    },
+    "fold_4": {
+      "macro_roc_auc": 0.5907999311464197,
+      "macro_pr_auc": 0.43993169597441856,
+      "per_target": {
+        "ACL": {
+          "roc_auc": 0.5373774509803921,
+          "pr_auc": 0.5285706079150787,
+          "accuracy": 0.5862068965517241,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 24,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "MCL": {
+          "roc_auc": 0.6065759637188208,
+          "pr_auc": 0.28557279067865876,
+          "accuracy": 0.8448275862068966,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 9,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Medial Meniscus": {
+          "roc_auc": 0.6502403846153846,
+          "pr_auc": 0.623251873790702,
+          "accuracy": 0.5517241379310345,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 26,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Lateral Meniscus": {
+          "roc_auc": 0.5577639751552795,
+          "pr_auc": 0.45766518533285616,
+          "accuracy": 0.603448275862069,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 23,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Medial OA": {
+          "roc_auc": 0.5519379844961241,
+          "pr_auc": 0.2826360566222809,
+          "accuracy": 0.7413793103448276,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 15,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Lateral OA": {
+          "roc_auc": 0.5909090909090909,
+          "pr_auc": 0.24733330665023714,
+          "accuracy": 0.8103448275862069,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 11,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "PF OA": {
+          "roc_auc": 0.5392535392535392,
+          "pr_auc": 0.39249059870897407,
+          "accuracy": 0.6379310344827587,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 21,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Effusion": {
+          "roc_auc": 0.6962732919254658,
+          "pr_auc": 0.728619238344889,
+          "accuracy": 0.3793103448275862,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 35,
+          "positives_pred": 1,
+          "total_samples": 58
+        },
+        "Synovitis": {
+          "roc_auc": 0.6463560334528077,
+          "pr_auc": 0.6201919292757377,
+          "accuracy": 0.5517241379310345,
+          "f1": 0.07142857142857142,
+          "precision": 1.0,
+          "recall": 0.037037037037037035,
+          "positives_true": 27,
+          "positives_pred": 1,
+          "total_samples": 58
+        },
+        "Baker's": {
+          "roc_auc": 0.6059782608695652,
+          "pr_auc": 0.263205903998866,
+          "accuracy": 0.7931034482758621,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 12,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Contusion": {
+          "roc_auc": 0.45276653171390013,
+          "pr_auc": 0.33017230915978263,
+          "accuracy": 0.6724137931034483,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 19,
+          "positives_pred": 0,
+          "total_samples": 58
+        },
+        "Fracture": {
+          "roc_auc": 0.6541666666666667,
+          "pr_auc": 0.5194705512149602,
+          "accuracy": 0.6896551724137931,
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "positives_true": 18,
+          "positives_pred": 0,
+          "total_samples": 58
+        }
+      }
+    }
+  },
+  "integrity_audit": {
+    "audit_timestamp": "2026-09-12 17:25:13",
+    "gold_studies_evaluated": 58,
+    "gold_studies_duplicated": 0,
+    "gold_studies_missing": 0,
+    "development_studies_included": 0,
+    "gold_labels_used_in_training": false,
+    "gold_labels_used_for_threshold_tuning": false,
+    "gold_labels_used_for_checkpoint_selection": false,
+    "gold_labels_used_for_model_selection": false,
+    "rank_averaging_pre_specified": true,
+    "nan_inf_predictions": 0,
+    "integrity_verdict": "PASS - 100% UNCOMPROMISED LOCKED EVALUATION"
+  },
+  "artifacts": {
+    "rank_averaged_predictions": "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/results/gold58/gold58_rank_averaged_predictions.csv",
+    "score_averaged_predictions": "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/results/gold58/gold58_score_averaged_predictions.csv",
+    "per_fold_predictions": [
+      "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/results/gold58/fold_0_predictions.csv",
+      "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/results/gold58/fold_1_predictions.csv",
+      "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/results/gold58/fold_2_predictions.csv",
+      "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/results/gold58/fold_3_predictions.csv",
+      "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/results/gold58/fold_4_predictions.csv"
+    ],
+    "integrity_audit": "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/results/gold58/gold58_integrity_audit.json"
+  }
+}

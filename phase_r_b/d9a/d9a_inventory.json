@@ -1,0 +1,16 @@
+{
+  "development_studies": 4349,
+  "total_series_found": 21055,
+  "total_series_missing": 0,
+  "mean_depth": 32.0,
+  "number_full_32_slices": 21055,
+  "checkpoints_created": [
+    "checkpoints/fold_0/best_model.pt",
+    "checkpoints/fold_1/best_model.pt",
+    "checkpoints/fold_2/best_model.pt",
+    "checkpoints/fold_3/best_model.pt",
+    "checkpoints/fold_4/best_model.pt"
+  ],
+  "oof_predictions_path": "phase_r_b/d9a/d9a_oof.csv",
+  "gold_58_exposure": "STRICT ZERO LEAKAGE (SEALED)"
+}

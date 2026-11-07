@@ -1,0 +1,211 @@
+{
+  "timestamp": "2026-09-15T00:37:54Z",
+  "total_artifacts": 41,
+  "artifacts": [
+    {
+      "path": "phase_d/d7/d7a/checkpoints/fold_0/best_model.pt",
+      "sha256": "c2ae11c4c7bd8bf1e80a68145888f41fd25032749ef58553fb9d7289a2e23589",
+      "size_bytes": 691671963
+    },
+    {
+      "path": "phase_d/d7/d7a/predictions/val/fold_0_val_predictions.csv",
+      "sha256": "73b21cb22b285ba5f2c4772d787c8c1fe1dcc0fb4c9484601508e791063f5cd9",
+      "size_bytes": 670665
+    },
+    {
+      "path": "phase_d/d7/d7a/checkpoints/fold_1/best_model.pt",
+      "sha256": "270e6b615339518f6dcc1f4cb67d95f703829c53b99a354649a883baa5f769a2",
+      "size_bytes": 691671899
+    },
+    {
+      "path": "phase_d/d7/d7a/predictions/val/fold_1_val_predictions.csv",
+      "sha256": "565541e50bf738761b2439520999717f5f78fae2e3eee2a9bfd2a7d8b4cdc0c5",
+      "size_bytes": 670526
+    },
+    {
+      "path": "phase_d/d7/d7a/checkpoints/fold_2/best_model.pt",
+      "sha256": "adcd843d2b516c3f7bc0f051a2f80f5c23016b8ef4d9a7e3ea247a28b3373746",
+      "size_bytes": 691672155
+    },
+    {
+      "path": "phase_d/d7/d7a/predictions/val/fold_2_val_predictions.csv",
+      "sha256": "4c25aa5a5667c872b0da8320094552d3319b389197d6cb313a2e39be21e8ef56",
+      "size_bytes": 668861
+    },
+    {
+      "path": "phase_d/d7/d7a/checkpoints/fold_3/best_model.pt",
+      "sha256": "12c43f390529e19d267ad2a71a9c55c55b59164d29189e0a508dce8e458e0d8d",
+      "size_bytes": 691672091
+    },
+    {
+      "path": "phase_d/d7/d7a/predictions/val/fold_3_val_predictions.csv",
+      "sha256": "b0ba155567f599bd2bf1d88c4fa61a3ef71c1611619bc6873d52abe0ee6aed40",
+      "size_bytes": 668783
+    },
+    {
+      "path": "phase_d/d7/d7a/checkpoints/fold_4/best_model.pt",
+      "sha256": "dce6f0a42ac965bd74ea58f057c8bcd863a3d341cff3df00a6d6fc7f5a05b998",
+      "size_bytes": 691672155
+    },
+    {
+      "path": "phase_d/d7/d7a/predictions/val/fold_4_val_predictions.csv",
+      "sha256": "cdce1d266302c890dbc2cb7e249f4f96ea1d8279bc05b581c4bb6cec7a6546ae",
+      "size_bytes": 667357
+    },
+    {
+      "path": "phase_d/d7/oof/d7a_global_oof_predictions.csv",
+      "sha256": "0ecdf8561fba1eaf8ae44eecaaf5a085829f0621da3f16dc4dcb6a383eddd152",
+      "size_bytes": 3214735
+    },
+    {
+      "path": "phase_d/d7/metrics/d7a_oof_evaluation_summary.json",
+      "sha256": "ed622a0b049a66efe55caea4a6790dfaa39fe1db493eea658d3b1cac9bb7dca9",
+      "size_bytes": 4781
+    },
+    {
+      "path": "phase_d/d7/metrics/d7a_per_target_metrics.csv",
+      "sha256": "c138e92576dd9bbfaae1081426049e96d3e166577c137f49bdb576a3484f4b71",
+      "size_bytes": 704
+    },
+    {
+      "path": "phase_d/d7/d7b/checkpoints/fold_0/best_model.pt",
+      "sha256": "553045955069dfad88ca211c037bd6a7fc72742be810ce01103b807d2d3444e0",
+      "size_bytes": 177299627
+    },
+    {
+      "path": "phase_d/d7/d7b/predictions/val/fold_0_val_predictions.csv",
+      "sha256": "541d84075684ff9e3ad6fb70e9f6f3eb2904b7f07d07dd43fa21eb82d0983488",
+      "size_bytes": 670622
+    },
+    {
+      "path": "phase_d/d7/d7b/checkpoints/fold_1/best_model.pt",
+      "sha256": "1d75d60ae50159a757f89a452dccfd7ebd80d4c69b6a556dd36c60e9b5100250",
+      "size_bytes": 177300011
+    },
+    {
+      "path": "phase_d/d7/d7b/predictions/val/fold_1_val_predictions.csv",
+      "sha256": "db5b22cb72a18a1c63aeec10ba24217b8b0cfaabae665d0f40a5d686d369e914",
+      "size_bytes": 670531
+    },
+    {
+      "path": "phase_d/d7/d7b/checkpoints/fold_2/best_model.pt",
+      "sha256": "cb96402f352c09078bd51be4faa2aab925450831bd2629a90a326a7b91fe305e",
+      "size_bytes": 177300075
+    },
+    {
+      "path": "phase_d/d7/d7b/predictions/val/fold_2_val_predictions.csv",
+      "sha256": "79664956213001cd331a07828727cdaa832369c302fda943879468dc8d4b0dea",
+      "size_bytes": 669043
+    },
+    {
+      "path": "phase_d/d7/d7b/checkpoints/fold_3/best_model.pt",
+      "sha256": "17e7c431d1bc8072c98a048cb82b89b9e85032024cfc0ea2db06436402bdab30",
+      "size_bytes": 177299627
+    },
+    {
+      "path": "phase_d/d7/d7b/predictions/val/fold_3_val_predictions.csv",
+      "sha256": "0c5cfc5393fb26d4ae9660e3f6596db83a464b8dbc031f3dd516897c03a68523",
+      "size_bytes": 667822
+    },
+    {
+      "path": "phase_d/d7/d7b/checkpoints/fold_4/best_model.pt",
+      "sha256": "fb3f902f67129641cc5ed38a850f18de8525cadce5cd5d7658f9b38e7a4b45ac",
+      "size_bytes": 177299883
+    },
+    {
+      "path": "phase_d/d7/d7b/predictions/val/fold_4_val_predictions.csv",
+      "sha256": "949894de6fa7d56d8d99e5013ad49b06f59b01075292a6974c4849e9d21a5079",
+      "size_bytes": 667118
+    },
+    {
+      "path": "phase_d/d7/oof/d7b_global_oof_predictions.csv",
+      "sha256": "934da7a9f34a1ed3ae0e381c9f9707d76333a9cdf6d4354fdf708b3dc4dd49c0",
+      "size_bytes": 3214747
+    },
+    {
+      "path": "phase_d/d7/metrics/d7b_oof_evaluation_summary.json",
+      "sha256": "10262d57469849147319dafe9a4e6705c991d7188fe867ee096377744a65a5ac",
+      "size_bytes": 4773
+    },
+    {
+      "path": "phase_d/d7/metrics/d7b_per_target_metrics.csv",
+      "sha256": "872fe7c319a4fa30154d1f11126f2a4c76ed783b8098792140da9446e3f38c69",
+      "size_bytes": 704
+    },
+    {
+      "path": "phase_d/d7/d7c/checkpoints/fold_0/best_model.pt",
+      "sha256": "34eb3b71dd2764914b260db1e26f53f11cf896e8f95376e2d4c95e6d32daca57",
+      "size_bytes": 694039211
+    },
+    {
+      "path": "phase_d/d7/d7c/predictions/val/fold_0_val_predictions.csv",
+      "sha256": "766d9ae5b4f9cbc4b8afe913ac8757ef2a65c9d8c90055e3632cdc76dcb275b5",
+      "size_bytes": 670648
+    },
+    {
+      "path": "phase_d/d7/d7c/checkpoints/fold_1/best_model.pt",
+      "sha256": "10b04f27f17f0343551526b32809a25ae1d7afe2e5bc6a64804df481355b5a95",
+      "size_bytes": 694039211
+    },
+    {
+      "path": "phase_d/d7/d7c/predictions/val/fold_1_val_predictions.csv",
+      "sha256": "a37fd7d5bcb31eea08a1cecc935c0b018c1291a287bbd3f4f0c08258a9511dcf",
+      "size_bytes": 670367
+    },
+    {
+      "path": "phase_d/d7/d7c/checkpoints/fold_2/best_model.pt",
+      "sha256": "c4c6b5f419aa0afebfe3110220744ad5b6de703162edfadbb0cb4382fb98e348",
+      "size_bytes": 694039403
+    },
+    {
+      "path": "phase_d/d7/d7c/predictions/val/fold_2_val_predictions.csv",
+      "sha256": "aebdc7d418e06a2d66a89e756a1081ebb0ff0a1d991a06071cb8c9c7ce99515b",
+      "size_bytes": 668637
+    },
+    {
+      "path": "phase_d/d7/d7c/checkpoints/fold_3/best_model.pt",
+      "sha256": "26cc38d074213f705a0fb00d9f2c16ce1e3f2cbd9779457ea9dbfecdc056eb50",
+      "size_bytes": 694039211
+    },
+    {
+      "path": "phase_d/d7/d7c/predictions/val/fold_3_val_predictions.csv",
+      "sha256": "aebe9687aaa47389137620eac52f916bfb14470933dfd7895eb3622709af5c92",
+      "size_bytes": 667829
+    },
+    {
+      "path": "phase_d/d7/d7c/checkpoints/fold_4/best_model.pt",
+      "sha256": "77c017e52a7f3704250a48f30f8bafbdada600e84b7d2de0ff19d5ab288b61b3",
+      "size_bytes": 694039467
+    },
+    {
+      "path": "phase_d/d7/d7c/predictions/val/fold_4_val_predictions.csv",
+      "sha256": "d44b12eddf32f54708cd8773052024f6ca0d86aeb0d1a05cd0803f1c50a70a8b",
+      "size_bytes": 667326
+    },
+    {
+      "path": "phase_d/d7/oof/d7c_global_oof_predictions.csv",
+      "sha256": "c53d5e832632e72851e9c5006a3acdd119323769ec58f9e00c5976009b726dba",
+      "size_bytes": 3214637
+    },
+    {
+      "path": "phase_d/d7/metrics/d7c_oof_evaluation_summary.json",
+      "sha256": "86e50ce113880c5bfe3e6d0d59de31862c6a78020af44c34cfeafaeee485a736",
+      "size_bytes": 4783
+    },
+    {
+      "path": "phase_d/d7/metrics/d7c_per_target_metrics.csv",
+      "sha256": "d1c041f438e6eddd4ea4485212e4e42bd6b35b66747a5844126c5f5cbe786177",
+      "size_bytes": 707
+    },
+    {
+      "path": "phase_d/d7/reports/D7_DEVELOPMENT_REPORT.md",
+      "sha256": "d58903723d012756b233970ce98aef860158f4901ce2cfbafb8d37ffd46fe7a8",
+      "size_bytes": 5023
+    },
+    {
+      "path": "phase_d/d7/reports/D7_EXPERIMENT_LOG.md",
+      "sha256": "b2440c53bf4a40a7d4cbe8fad1a704f85fdbe68ba9e8fab6453237dc3c385521",
+      "size_bytes": 214
+    }
+  ]
+}

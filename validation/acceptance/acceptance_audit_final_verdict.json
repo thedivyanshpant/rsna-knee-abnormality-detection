@@ -1,0 +1,30 @@
+{
+  "verdict": "ACCEPT FOR PHASE C (WITH DOCUMENTED SOFT TARGET SPECIFICATIONS)",
+  "timestamp": "2026-09-11T17:25:21Z",
+  "key_verdict_reasons": [
+    "1. Scientific Safety: The small numerical shift from 84.77% to 83.05% on Gold-58 is proven to be the intentional removal of overbroad regexes and unsafe string mutations (e.g. non-displacement string stripping).",
+    "2. Perfect Adversarial Robustness: 40/40 (100.00%) adversarial perturbation tests pass cleanly across 8 languages with zero leakage.",
+    "3. Decoupled Soft Targets & Calibrated Weights: Continuous label probabilities Y in [0,1], extraction confidence C in [0,1], and sample weights W = 0.25 + 0.75*C cleanly separate extraction confidence from class likelihood.",
+    "4. Complete 20-Field Audit Provenance: All 52,884 production predictions carry exact character spans, rule IDs, detected languages, and step-by-step intermediate predictions.",
+    "5. Zero Hardcoding / Zero Data Leakage: Verified 0 hardcoded StudyInstanceUIDs, 0 gold-specific branching, and 0 missing values across production schema."
+  ],
+  "gold_58_metrics": {
+    "accuracy_pct": 83.05,
+    "macro_f1": 0.7602,
+    "macro_precision": 0.7114,
+    "macro_recall": 0.8303,
+    "exact_study_accuracy_pct": 10.34,
+    "total_errors": 118,
+    "false_positives": 81,
+    "false_negatives": 37
+  },
+  "corpus_52884_metrics": {
+    "total_studies": 4407,
+    "total_predictions": 52884,
+    "mean_label_probability": 0.1833,
+    "mean_confidence_score": 0.8561,
+    "mean_sample_weight": 0.891,
+    "tier_1_sample_weight_pct": 99.74,
+    "total_abstentions": 140
+  }
+}

@@ -1,0 +1,4 @@
+Pipeline,Pilot_Stored_GB,Reduction_Ratio,Space_Saving_Pct,Mean_Study_Stored_MB,Median_Study_Stored_MB,Min_Study_Stored_MB,Max_Study_Stored_MB,Mean_Decoded_RAM_MB_per_Study,Median_Decoded_RAM_MB_per_Study,Total_Decoded_RAM_Pilot_GB,Mean_Proc_Time_sec_per_Study,Median_Proc_Time_sec_per_Study,Extrapolated_Full_Dataset_GB,Dominant_Dtype,Fixed_or_Dynamic_Dimensions
+Pipeline A (Minimal),5.5339,1.84,45.64,70.83,43.37,11.83,301.81,260.07,155.81,20.32,37.77,32.37,284.58,float32,Dynamic (Subject-Specific)
+Pipeline B (Standardized),5.015,2.03,50.74,64.19,58.7,30.03,158.01,82.69,74.7,6.46,39.49,34.19,257.89,float32,Dynamic (Subject-Specific)
+Pipeline C (Training-Ready),1.3715,7.42,86.53,17.56,16.27,12.59,32.52,22.75,20.0,1.78,39.53,34.24,70.53,float16,"Fixed (32, 256, 256)"

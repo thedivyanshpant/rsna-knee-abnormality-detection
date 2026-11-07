@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-09-12T08:31:08.355376+00:00",
+  "total_studies_evaluated": 4349,
+  "total_processed_npz_series": 24033,
+  "total_metadata_rows": 24371,
+  "total_non_gold_metadata_rows": 24035,
+  "gold_series_in_metadata": 336,
+  "matched_series": 24033,
+  "unmatched_processed_series": 0,
+  "metadata_rows_with_no_processed_npz": 2,
+  "missing_series_explanation": {
+    "expected_partial_failures": [
+      "1.2.826.0.1.3680043.8.498.39396636671446532796538574315802928348",
+      "1.2.826.0.1.3680043.8.498.31160785238781353848727311763596115703"
+    ],
+    "unexplained_missing": []
+  },
+  "studies_by_populated_slot_count": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 231,
+    "4": 1080,
+    "5": 3038
+  },
+  "per_slot_population_counts": {
+    "sagittal_fluid_sensitive": 4094,
+    "coronal_fluid_sensitive": 4191,
+    "axial_fluid_sensitive": 4348,
+    "sagittal_non_fs_t1": 4209,
+    "coronal_non_fs_t1": 3361
+  },
+  "per_slot_missing_counts": {
+    "sagittal_fluid_sensitive": 255,
+    "coronal_fluid_sensitive": 158,
+    "axial_fluid_sensitive": 1,
+    "sagittal_non_fs_t1": 140,
+    "coronal_non_fs_t1": 988
+  },
+  "total_collisions": 2669,
+  "colliding_studies_count": 1737,
+  "known_partial_studies_audit": {
+    "1.2.826.0.1.3680043.8.498.34685905030370793639196564723935583035": {
+      "num_available_series": 4,
+      "num_populated_slots": 4,
+      "mask": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "missing_failed_series": "1.2.826.0.1.3680043.8.498.39396636671446532796538574315802928348",
+      "safely_handled": true
+    },
+    "1.2.826.0.1.3680043.8.498.37833587429731221455928642963031995680": {
+      "num_available_series": 4,
+      "num_populated_slots": 4,
+      "mask": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "missing_failed_series": "1.2.826.0.1.3680043.8.498.31160785238781353848727311763596115703",
+      "safely_handled": true
+    }
+  },
+  "unexpected_metadata_values": {
+    "unexpected_planes": [],
+    "unexpected_fluids": []
+  },
+  "pass_status": true
+}

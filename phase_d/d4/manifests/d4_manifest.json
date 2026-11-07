@@ -1,0 +1,101 @@
+{
+  "phase": "Phase D4 (Controlled Multi-Arm ViT-CNN Continuation on Remediated Supervision)",
+  "timestamp": "2026-09-14 11:31:05 UTC",
+  "slurm_job_id": "653724",
+  "cluster_nodes": [
+    "rpgpu007",
+    "rpgpu018",
+    "rpgpu028"
+  ],
+  "gpu_count": 6,
+  "input_artifacts": {
+    "d3_candidate_label_corpus": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d3/labels/phase_d3_candidate_label_corpus.csv",
+      "sha256": "a90cd5c0e44da3256ecad118a0e69ad52aa38a1193b3cb35a084657323958ac1"
+    },
+    "phase_b_production_corpus": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/labels/production/phase_b_step3_remediated_training_corpus.csv",
+      "sha256": "bd064fc882ee9c344fc46adedaef2e592071ab032a632bcba9e2fc699a741c30"
+    },
+    "cv_splits": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/configs/cv_splits.json",
+      "sha256": "648ab88d9bb2484ed49dcfae826cfb51efdc7b8f56bdf218803ee46f1d451db8"
+    },
+    "d3_vit_global_oof": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d3/predictions/d3_global_oof_predictions.csv",
+      "sha256": "348d2512bee28e1ca7b984d0f5eb82a21a55ad1c2658ae9ca6172591da20aad4"
+    }
+  },
+  "output_artifacts": {
+    "checkpoint_fold_0": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/checkpoints/fold_0/best_model.pt",
+      "sha256": "546260b0a9b6b654fa6bb49be8245b43c2773ca8fb5f226f46b5d263ec97e832",
+      "size_bytes": 279700361
+    },
+    "val_predictions_fold_0": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/predictions/val/fold_0_val_predictions.csv",
+      "sha256": "f3e8867a73d13afc82958b4f7fd5d916c62ab9ee5fe4b4a6a9a512a7da2c3a5f",
+      "size_bytes": 170659
+    },
+    "checkpoint_fold_1": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/checkpoints/fold_1/best_model.pt",
+      "sha256": "eb646ea397a416600642ad87cce6c4ad2b95c0120ce7f23fef0eecaf101ecb6e",
+      "size_bytes": 279700361
+    },
+    "val_predictions_fold_1": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/predictions/val/fold_1_val_predictions.csv",
+      "sha256": "54c513b07e6ebb6d398a0cf730a2aab7036d1a9bbe6a86122e9b28a200260420",
+      "size_bytes": 170772
+    },
+    "checkpoint_fold_2": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/checkpoints/fold_2/best_model.pt",
+      "sha256": "94d13febe6e69b9033ff592cb666110463e9db5838bf99df8fe95adaee22352f",
+      "size_bytes": 279700361
+    },
+    "val_predictions_fold_2": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/predictions/val/fold_2_val_predictions.csv",
+      "sha256": "bb4f7a902a3fb632b9987f2897a697e5108a94a902ee6c25bc750b0a8ab4a7f0",
+      "size_bytes": 170138
+    },
+    "checkpoint_fold_3": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/checkpoints/fold_3/best_model.pt",
+      "sha256": "de7477bb5dcccb2a5ba1107d54b620be384483dfbad2430e783d1eee00bd62ae",
+      "size_bytes": 279700297
+    },
+    "val_predictions_fold_3": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/predictions/val/fold_3_val_predictions.csv",
+      "sha256": "56d526caa5ceb928b64a574ae8960f3388a5acc8f2e96d4c2df56906ca4eca97",
+      "size_bytes": 169544
+    },
+    "checkpoint_fold_4": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/checkpoints/fold_4/best_model.pt",
+      "sha256": "066436a24e14d21b9042d829b76e87348885547ca100d29ebd0f85050eb106bf",
+      "size_bytes": 279700297
+    },
+    "val_predictions_fold_4": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/predictions/val/fold_4_val_predictions.csv",
+      "sha256": "57b0bba2df13ccb4d4e17cf5adc3641c5ff3f7b1703a8211fa30752a7d9f9139",
+      "size_bytes": 169593
+    },
+    "d4_cnn_oof_predictions": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/predictions/oof/d4_cnn_oof_predictions.csv",
+      "sha256": "61fc8738b8d0029217f98a75661c7180f01f7a176eaf1cc260bd7330d5283b81",
+      "size_bytes": 1389215
+    },
+    "d4_ensemble_predictions": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/predictions/blends/d4_ensemble_predictions.csv",
+      "sha256": "4a7eed17754ac945dc04a824926f5c748c0cef876ea24390dbfd29e8a20e30c5",
+      "size_bytes": 1822970
+    },
+    "d4_oof_evaluation_summary.json": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/reports/d4_oof_evaluation_summary.json",
+      "sha256": "482b4dc5860420afd9538b5741a7a2166a4ee1c22db4c4cc6c0e941dbed6a8b6",
+      "size_bytes": 7827
+    },
+    "d4_ensemble_summary.json": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/reports/d4_ensemble_summary.json",
+      "sha256": "a96b60717ed2c97c41f137522ba8ab21565c2931811c6abd43f9f44f35425151",
+      "size_bytes": 16809
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "execution_timestamp": "2026-09-12 06:05:01",
+  "total_candidate_studies": 4349,
+  "successful_studies": 4347,
+  "failed_studies": 0,
+  "partial_studies": 2,
+  "total_processed_series": 23548,
+  "total_skipped_series": 485,
+  "total_failed_series": 2,
+  "total_stored_bytes": 79096374846,
+  "total_stored_gb": 73.6642394643277,
+  "mean_stored_mb_per_study": 17.344718604615213,
+  "total_wall_time_sec": 7760.56927895546,
+  "total_wall_time_min": 129.34282131592434,
+  "effective_throughput_studies_per_sec": 0.5603970332167897,
+  "target_spacing_mm": [
+    3.0,
+    0.5,
+    0.5
+  ],
+  "target_tensor_shape": [
+    32,
+    256,
+    256
+  ],
+  "target_dtype": "float16",
+  "gold58_overlap_count": 0
+}

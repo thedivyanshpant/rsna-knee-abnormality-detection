@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-09-12T17:14:41.562065+00:00",
+  "total_studies_inspected": 58,
+  "total_series_inspected": 336,
+  "series_by_weighting": {
+    "PD": 171,
+    "T2": 86,
+    "T1": 79
+  },
+  "fluid_sensitive_count": 257,
+  "fat_suppressed_count": 208,
+  "per_plane_counts": {
+    "Sagittal": 136,
+    "Coronal": 119,
+    "Axial": 81
+  },
+  "classification_paths": {
+    "description_heuristics": 263,
+    "tr_te_fallback": 73
+  },
+  "unresolved_sequences": 0,
+  "slice_sorting_methods": {
+    "physical_normal_projection": 336
+  },
+  "slice_count_distribution": {
+    "min": 11,
+    "median": 30.0,
+    "mean": 31.33,
+    "max": 320
+  },
+  "pixel_spacing_distribution": {
+    "min": 0.1465,
+    "mean": 0.3472,
+    "max": 0.7813
+  },
+  "pass_status": true
+}

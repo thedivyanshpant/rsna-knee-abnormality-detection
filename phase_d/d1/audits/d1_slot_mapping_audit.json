@@ -1,0 +1,62 @@
+{
+  "audit_timestamp": "2026-09-12T17:11:30.438221+00:00",
+  "total_dev_studies": 4349,
+  "total_available_npz_series": 24033,
+  "canonical_slots": [
+    "SAG_FLUID_FS",
+    "COR_FLUID_FS",
+    "AX_FLUID_FS",
+    "SAG_FLUID_NOFS",
+    "COR_T1",
+    "SAG_T1"
+  ],
+  "per_slot_coverage": {
+    "SAG_FLUID_FS": {
+      "populated_studies": 4094,
+      "missing_studies": 255,
+      "coverage_pct": 94.14
+    },
+    "COR_FLUID_FS": {
+      "populated_studies": 4191,
+      "missing_studies": 158,
+      "coverage_pct": 96.37
+    },
+    "AX_FLUID_FS": {
+      "populated_studies": 4348,
+      "missing_studies": 1,
+      "coverage_pct": 99.98
+    },
+    "SAG_FLUID_NOFS": {
+      "populated_studies": 0,
+      "missing_studies": 4349,
+      "coverage_pct": 0.0
+    },
+    "COR_T1": {
+      "populated_studies": 3361,
+      "missing_studies": 988,
+      "coverage_pct": 77.28
+    },
+    "SAG_T1": {
+      "populated_studies": 4209,
+      "missing_studies": 140,
+      "coverage_pct": 96.78
+    }
+  },
+  "populated_slots_histogram": {
+    "0_of_6_slots": 0,
+    "1_of_6_slots": 0,
+    "2_of_6_slots": 0,
+    "3_of_6_slots": 231,
+    "4_of_6_slots": 1080,
+    "5_of_6_slots": 3038,
+    "6_of_6_slots": 0
+  },
+  "collision_statistics": {
+    "total_collision_entries": 5227,
+    "studies_with_collisions": 1737,
+    "collision_rate_pct": 39.94,
+    "policy": "highest_slice_count_then_lexicographic_tie_break"
+  },
+  "missing_slot_policy": "Zero tensor representation with slot_mask=0",
+  "status": "PASS"
+}

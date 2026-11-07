@@ -1,0 +1,57 @@
+{
+  "benchmark": "Gold-58 Locked Clinical Benchmark (Phase D6)",
+  "timestamp": "2026-09-14T17:14:23Z",
+  "evaluated_candidate": "Phase D6 Standalone ViT (Richer 6-Slot Resolution)",
+  "governance": {
+    "authorization": "USER_EXPLICIT_COMMAND_DO_THE_GOLDEN_TEST",
+    "cohort_size": 58,
+    "development_leakage": 0,
+    "gold_csv_sha256": "a3ca7df3f48a58e6e5ec0dbe0ce3eaefcb362f3f90e9ff83b5443a75ea9c6a1e"
+  },
+  "gold58_benchmark_results": {
+    "phase_c_baseline_roc_auc": 0.5986,
+    "phase_d1_2_b2_roc_auc": 0.6174,
+    "phase_d5_b2_roc_auc": 0.6307,
+    "phase_d6_b2_rank_roc_auc": 0.6331,
+    "phase_d6_b_score_roc_auc": 0.6316,
+    "phase_d6_a_rank_roc_auc": 0.6174,
+    "phase_d6_a_score_roc_auc": 0.6204,
+    "phase_d6_b2_prauc": 0.5125,
+    "delta_roc_auc_vs_phase_c": 0.0345,
+    "delta_roc_auc_vs_d1_2_b2": 0.0157,
+    "delta_roc_auc_vs_d5_b2": 0.0024,
+    "relative_gain_vs_phase_c_pct": 5.76,
+    "relative_gain_vs_d1_2_b2_pct": 2.54,
+    "relative_gain_vs_d5_b2_pct": 0.37
+  },
+  "resolution_audit": {
+    "total_studies": 58,
+    "slot_3_activated_studies": 13,
+    "slot_3_activation_rate_pct": 22.4,
+    "complete_6_slot_studies": 12,
+    "complete_6_slot_rate_pct": 20.7,
+    "collisions_resolved": 43
+  },
+  "artifacts": {
+    "d6_gold58_rank_averaged_predictions": {
+      "path": "phase_d/d6/predictions/gold58/d6_gold58_rank_averaged_predictions.csv",
+      "sha256": "7a5107276df02de0ce595448f006ec84df1a884c200c0b34dc48ae73064cc4de"
+    },
+    "d6_gold58_score_averaged_predictions": {
+      "path": "phase_d/d6/predictions/gold58/d6_gold58_score_averaged_predictions.csv",
+      "sha256": "32a332496e0eda6646379f40026496681274494ad4bbe53be20aa3b967246d85"
+    },
+    "d6_gold58_evaluation_summary": {
+      "path": "phase_d/d6/evaluations/gold58/d6_gold58_evaluation_summary.json",
+      "sha256": "92142a3b10a80a11070bbd4624d9f5831c9999b1fd0289b5b760dce3dcbb2d0f"
+    },
+    "d6_gold58_per_target_metrics": {
+      "path": "phase_d/d6/evaluations/gold58/d6_gold58_per_target_metrics.csv",
+      "sha256": "9f98d1eeafd9fb360fe94d21691d2f22d62c3a9d2ff20b87d2df727e4f974a96"
+    },
+    "d6_gold58_integrity_audit": {
+      "path": "phase_d/d6/evaluations/gold58/d6_gold58_integrity_audit.json",
+      "sha256": "b7909f35d69bd870f27a6b3369bf3182bb73cc8d00d08e67e59fd2f9d808d322"
+    }
+  }
+}

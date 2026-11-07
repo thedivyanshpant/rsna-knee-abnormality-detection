@@ -1,0 +1,40 @@
+{
+  "version_id": "PHASE_D3_CANDIDATE_V1",
+  "created_at": "2026-09-13T15:48:23.827701",
+  "sha256": "a90cd5c0e44da3256ecad118a0e69ad52aa38a1193b3cb35a084657323958ac1",
+  "base_corpus": "/scratch/deepanthpcu/RSNA_Code/labels/production/phase_b_step3_remediated_training_corpus.csv",
+  "total_studies": 4349,
+  "total_rows": 52188,
+  "remediation_statistics": {
+    "Lateral OA": {
+      "original_phase_b_positives": 3,
+      "remediated_advanced_positives": 21,
+      "remediated_moderate_positives": 57,
+      "remediated_total_positives": 78,
+      "remediated_explicit_negatives": 0,
+      "original_prevalence_pct": 0.06898137502874224,
+      "remediated_prevalence_pct": 1.7935157507472983,
+      "net_gain_positives": 75
+    },
+    "Medial OA": {
+      "original_phase_b_positives": 15,
+      "remediated_advanced_positives": 26,
+      "remediated_moderate_positives": 95,
+      "remediated_total_positives": 121,
+      "remediated_explicit_negatives": 0,
+      "original_prevalence_pct": 0.34490687514371116,
+      "remediated_prevalence_pct": 2.782248792825937,
+      "net_gain_positives": 106
+    },
+    "PF OA": {
+      "original_phase_b_positives": 1,
+      "remediated_advanced_positives": 82,
+      "remediated_moderate_positives": 210,
+      "remediated_total_positives": 292,
+      "remediated_explicit_negatives": 0,
+      "original_prevalence_pct": 0.022993791676247415,
+      "remediated_prevalence_pct": 6.714187169464244,
+      "net_gain_positives": 291
+    }
+  }
+}

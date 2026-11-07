@@ -1,0 +1,23 @@
+{
+  "stage": "C3.10_2_gpu_ddp_sanity",
+  "timestamp": "2026-09-12T08:38:39.516198+00:00",
+  "world_size": 2,
+  "gpus": [
+    "NVIDIA A100 80GB PCIe",
+    "NVIDIA A100 80GB PCIe"
+  ],
+  "backend": "nccl",
+  "train_cohort_size": 64,
+  "val_cohort_size": 32,
+  "parameters": 2052828,
+  "precision": "bfloat16 (AMP)",
+  "batch_size_per_gpu": 2,
+  "effective_batch_size": 4,
+  "peak_vram_mb_per_gpu": 656.77978515625,
+  "mean_throughput_studies_per_sec": 10.951210174288702,
+  "cross_rank_sync_verified": true,
+  "zero_duplicate_samples_verified": true,
+  "checkpoint_saved": true,
+  "wall_clock_sec": 23.347815990447998,
+  "decision": "PASS"
+}

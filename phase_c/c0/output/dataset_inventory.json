@@ -1,0 +1,76 @@
+{
+  "dataset_root": "/home/blackbook/Data/RSNA_Knee_Data",
+  "train_series_path": "/home/blackbook/Data/RSNA_Knee_Data/train_series",
+  "discovery_timestamp": "2026-09-11T20:35:08Z",
+  "total_study_directories": 4349,
+  "total_non_gold_studies": 4349,
+  "total_gold_studies_in_dir": 0,
+  "total_series_count": 24035,
+  "total_dicom_files": 808550,
+  "total_raw_storage_bytes": 562141717372,
+  "total_raw_storage_gb": 523.535,
+  "per_study_statistics": {
+    "mean_raw_bytes": 129257695.4177972,
+    "median_raw_bytes": 79401256.0,
+    "min_raw_bytes": 13961572,
+    "max_raw_bytes": 768147502,
+    "mean_raw_mb": 123.26974431781501,
+    "median_raw_mb": 75.72293853759766,
+    "mean_series_count": 5.526557829386066,
+    "median_series_count": 5.0,
+    "mean_slices_per_study": 185.91630259829847,
+    "median_slices_per_study": 162.0
+  },
+  "plane_distribution": {
+    "Sagittal": 9864,
+    "Coronal": 8609,
+    "Axial": 5898
+  },
+  "fluid_sensitive_distribution": {
+    "1": 14010,
+    "0": 10361
+  },
+  "fat_suppression_distribution": {
+    "1": 14010,
+    "0": 10361
+  },
+  "sampled_image_dimensions": {
+    "512x512": 117,
+    "640x640": 60,
+    "384x384": 55,
+    "320x320": 54,
+    "1024x1024": 25,
+    "528x528": 20,
+    "480x480": 19,
+    "448x448": 19,
+    "704x704": 17,
+    "256x256": 16
+  },
+  "sampled_pixel_spacing": {
+    "mean_row_col_spacing_mm": [
+      0.3342,
+      0.3342
+    ],
+    "min_spacing_mm": [
+      0.1367,
+      0.1367
+    ],
+    "max_spacing_mm": [
+      1.1719,
+      1.1719
+    ]
+  },
+  "sampled_slice_thickness": {
+    "mean_thickness_mm": 3.08,
+    "median_thickness_mm": 3.0,
+    "min_thickness_mm": 0.6,
+    "max_thickness_mm": 5.04
+  },
+  "sampled_bit_depths": {
+    "16/12": 441,
+    "16/16": 115
+  },
+  "sampled_photometric_interpretations": {
+    "MONOCHROME2": 556
+  }
+}

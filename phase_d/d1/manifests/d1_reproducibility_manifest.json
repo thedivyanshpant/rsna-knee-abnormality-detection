@@ -1,0 +1,388 @@
+{
+  "manifest_metadata": {
+    "experiment_id": "D1.1-DINOV2-SLOTHEAD",
+    "timestamp": "2026-09-12T17:18:00Z",
+    "phase": "Phase D \u2014 AI Calibration",
+    "stage": "D1 \u2014 Target-Notebook-Informed AI Calibration & Architecture Benchmark",
+    "status": "COMPLETED_5FOLD_PRODUCTION",
+    "completion_timestamp": "2026-09-12T22:00:56.199006+00:00"
+  },
+  "environment": {
+    "host": "rpgpu018",
+    "conda_env": "ML_DFT_V2",
+    "python_version": "3.11.16",
+    "pytorch_version": "2.7.0+cu126",
+    "torchvision_version": "0.22.0+cu126",
+    "cuda_version": "12.6",
+    "hardware": "2 \u00d7 NVIDIA A100 PCIe 80GB",
+    "huggingface_transformers": "4.51.3",
+    "pydicom": "3.0.2",
+    "scipy": "1.17.1",
+    "numpy": "2.2.6",
+    "pandas": "3.0.5"
+  },
+  "reproducibility_seeds": {
+    "python_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "cuda_seed": 42
+  },
+  "governance_and_isolation": {
+    "gold58_studies_excluded": 58,
+    "gold58_leakage_detected": 0,
+    "phase_c_control_modified": false,
+    "phase_c_path": "/scratch/deepanthpcu/RSNA_Code/phase_c/c3",
+    "phase_b_labels_path": "/scratch/deepanthpcu/RSNA_Code/labels/production/phase_b_step3_remediated_training_corpus.csv",
+    "cv_splits_path": "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/configs/cv_splits.json"
+  },
+  "data_cohort": {
+    "development_studies": 4349,
+    "processed_volumes_available": 24033,
+    "storage_location": "/scratch/deepanthpcu/RSNA_Code/phase_c/c1/processed",
+    "cv_folds": 5,
+    "studies_per_fold": {
+      "fold_0": {
+        "train": 3477,
+        "val": 872
+      },
+      "fold_1": {
+        "train": 3479,
+        "val": 870
+      },
+      "fold_2": {
+        "train": 3479,
+        "val": 870
+      },
+      "fold_3": {
+        "train": 3480,
+        "val": 869
+      },
+      "fold_4": {
+        "train": 3481,
+        "val": 868
+      }
+    }
+  },
+  "canonical_slot_architecture": {
+    "total_slots": 6,
+    "slot_definitions": [
+      {
+        "slot_index": 0,
+        "name": "SAG_FLUID_FS",
+        "plane": "Sagittal",
+        "fluid": 1,
+        "fatsat": 1
+      },
+      {
+        "slot_index": 1,
+        "name": "COR_FLUID_FS",
+        "plane": "Coronal",
+        "fluid": 1,
+        "fatsat": 1
+      },
+      {
+        "slot_index": 2,
+        "name": "AX_FLUID_FS",
+        "plane": "Axial",
+        "fluid": 1,
+        "fatsat": 1
+      },
+      {
+        "slot_index": 3,
+        "name": "SAG_FLUID_NOFS",
+        "plane": "Sagittal",
+        "fluid": 1,
+        "fatsat": 0
+      },
+      {
+        "slot_index": 4,
+        "name": "COR_T1",
+        "plane": "Coronal",
+        "fluid": 0,
+        "fatsat": 0
+      },
+      {
+        "slot_index": 5,
+        "name": "SAG_T1",
+        "plane": "Sagittal",
+        "fluid": 0,
+        "fatsat": 0
+      }
+    ],
+    "missing_slot_policy": "Zero tensor representation with slot_mask = 0.0",
+    "collision_policy": "Highest slice count with deterministic lexicographic tie-breaker"
+  },
+  "preprocessing_specification": {
+    "central_slice_band": [
+      0.2,
+      0.8
+    ],
+    "sampled_slice_groups": 12,
+    "slices_per_group": 3,
+    "physical_crop_target_mm": 130.0,
+    "input_resolution": [
+      224,
+      224
+    ],
+    "intensity_normalization": "Percentile [P1, P99] clipping to [0, 1] followed by ImageNet mean/std normalization"
+  },
+  "model_architecture": {
+    "backbone": "facebook/dinov2-small",
+    "pretraining": "Meta LVD-142M",
+    "feature_dimensions": {
+      "dino_hidden": 384,
+      "cls_token": 384,
+      "patch_mean": 384,
+      "concatenated_slot_dim": 768
+    },
+    "freezing_schedule": {
+      "embeddings": "frozen",
+      "blocks_0_to_5": "frozen (6 blocks, 11,404,416 parameters)",
+      "blocks_6_to_11": "trainable (6 blocks, 10,613,760 parameters)",
+      "layernorm": "trainable (768 parameters)"
+    },
+    "slothead": {
+      "slot_projection": "LayerNorm(768) -> Linear(768, 256) -> GELU()",
+      "slot_embeddings": [
+        1,
+        6,
+        256
+      ],
+      "pathology_queries": [
+        1,
+        12,
+        256
+      ],
+      "dropout": 0.2,
+      "inductive_priors": "+0.55 on indicated clinical slots via SLOT_PRIOR_TABLE",
+      "attention_mask": "-10000.0 on missing slots",
+      "output_logits": 12
+    },
+    "parameter_counts": {
+      "total_parameters": 22262668,
+      "trainable_parameters": 10858252,
+      "frozen_parameters": 11404416,
+      "trainable_percentage": 48.77
+    }
+  },
+  "training_specification": {
+    "optimizer": "AdamW",
+    "backbone_learning_rate": 8e-06,
+    "slothead_learning_rate": 0.001,
+    "weight_decay": 0.02,
+    "scheduler": "CosineAnnealingLR / OneCycleLR",
+    "effective_batch_size": 8,
+    "microbatch_size": 2,
+    "gradient_accumulation_steps": 4,
+    "precision": "Mixed Precision (torch.amp.autocast, FP16/BF16)",
+    "loss": "Weighted Soft-BCE Loss (continuous Phase B targets and sample weights)"
+  },
+  "authoritative_phase_c_control_baseline": {
+    "development_global_oof_macro_roc_auc": 0.6198,
+    "locked_gold58_macro_roc_auc": 0.5986,
+    "metric_definition": "Unranked Macro ROC-AUC across 12 pathologies on active non-abstention studies"
+  },
+  "d1_1_production_results": {
+    "global_macro_roc_auc_unweighted": 0.751,
+    "global_macro_roc_auc_weighted": 0.7573,
+    "global_macro_pr_auc": 0.2212,
+    "phase_c_baseline_macro_auc": 0.6198,
+    "absolute_delta_unweighted": 0.1312,
+    "relative_improvement_pct_unweighted": 21.17,
+    "per_fold_metrics": {
+      "fold_0": {
+        "fold": 0,
+        "study_count": 872,
+        "macro_roc_auc_unweighted": 0.7512,
+        "macro_roc_auc_weighted": 0.7566,
+        "phase_c_baseline": 0.6146,
+        "delta_unweighted": 0.1366,
+        "delta_weighted": 0.142
+      },
+      "fold_1": {
+        "fold": 1,
+        "study_count": 871,
+        "macro_roc_auc_unweighted": 0.7277,
+        "macro_roc_auc_weighted": 0.7323,
+        "phase_c_baseline": 0.64,
+        "delta_unweighted": 0.0877,
+        "delta_weighted": 0.0923
+      },
+      "fold_2": {
+        "fold": 2,
+        "study_count": 870,
+        "macro_roc_auc_unweighted": 0.8067,
+        "macro_roc_auc_weighted": 0.8115,
+        "phase_c_baseline": 0.6603,
+        "delta_unweighted": 0.1464,
+        "delta_weighted": 0.1512
+      },
+      "fold_3": {
+        "fold": 3,
+        "study_count": 869,
+        "macro_roc_auc_unweighted": 0.8161,
+        "macro_roc_auc_weighted": 0.8303,
+        "phase_c_baseline": 0.6647,
+        "delta_unweighted": 0.1514,
+        "delta_weighted": 0.1656
+      },
+      "fold_4": {
+        "fold": 4,
+        "study_count": 867,
+        "macro_roc_auc_unweighted": 0.8252,
+        "macro_roc_auc_weighted": 0.8336,
+        "phase_c_baseline": 0.6122,
+        "delta_unweighted": 0.213,
+        "delta_weighted": 0.2214
+      }
+    },
+    "integrity_audit": {
+      "total_rows": 4349,
+      "unique_studies": 4349,
+      "duplicates_count": 0,
+      "missing_studies_count": 0,
+      "gold58_leakage_count": 0,
+      "nan_count": 0,
+      "inf_count": 0,
+      "fold_provenance_distribution": {
+        "0": 872,
+        "1": 871,
+        "2": 870,
+        "3": 869,
+        "4": 867
+      },
+      "audit_passed": true
+    }
+  },
+  "checkpoint_sha256_hashes": {
+    "fold_0": "7a8e0dc4f04da352ba6290e63ac7446315fd498b3557c5f35c561687f920e07f",
+    "fold_1": "7151140eab4000f22061868b41c5bbfe72eb6804c66dadf205e803a3e528cd09",
+    "fold_2": "28331fca01b232f4629660441c7e7db95a242eba4061d484726b9a0b924ff4f6",
+    "fold_3": "55220321d615c959c8735238d5dc14cf254495a1088a952a7fc96fec659da60d",
+    "fold_4": "7253b1069a4efea902d674d9e60b396780c1e010391a609179c1be726c34c382"
+  },
+  "phase_d1_2_calibration_experiments": {
+    "status": "COMPLETED",
+    "completion_timestamp": "2026-09-13T14:45:00+05:30",
+    "retraining_required": false,
+    "gold58_leakage_detected": 0,
+    "baseline_d1_1": {
+      "unweighted_macro_roc_auc": 0.7510,
+      "weighted_macro_roc_auc": 0.7573,
+      "macro_pr_auc": 0.2212
+    },
+    "winning_configuration": {
+      "experiment_id": "D1.2-B2_HFLIP_RANK_MEAN",
+      "method": "Horizontal-Flip TTA with Within-Fold Percentile Rank Normalization",
+      "unweighted_macro_roc_auc": 0.7592,
+      "weighted_macro_roc_auc": 0.7658,
+      "macro_pr_auc": 0.2276,
+      "absolute_gain_unweighted": 0.0082,
+      "relative_gain_unweighted_pct": 1.09,
+      "absolute_gain_weighted": 0.0085,
+      "relative_gain_weighted_pct": 1.12,
+      "predictions_path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d1/predictions/d1_2_b_hflip/d1_2_b_hflip_global_oof.csv"
+    },
+    "evaluated_experiments": [
+      {
+        "id": "D1.2-A",
+        "description": "Baseline Reproduction Gate",
+        "unweighted_auc": 0.7510,
+        "weighted_auc": 0.7573,
+        "delta": 0.0000,
+        "decision": "PASS"
+      },
+      {
+        "id": "D1.2-B1",
+        "description": "Horizontal-Flip TTA (Probability Mean)",
+        "unweighted_auc": 0.7521,
+        "weighted_auc": 0.7588,
+        "delta": 0.0011,
+        "decision": "POSITIVE"
+      },
+      {
+        "id": "D1.2-B2",
+        "description": "Horizontal-Flip TTA (Within-Fold Rank Mean)",
+        "unweighted_auc": 0.7592,
+        "weighted_auc": 0.7658,
+        "delta": 0.0082,
+        "decision": "ADOPTED_WINNER"
+      },
+      {
+        "id": "D1.2-C_3WIN_PROB",
+        "description": "3-Window Slice TTA (Probability Mean)",
+        "unweighted_auc": 0.7516,
+        "weighted_auc": 0.7580,
+        "delta": 0.0006,
+        "decision": "MINOR_GAIN"
+      },
+      {
+        "id": "D1.2-D1_4STREAM",
+        "description": "4-Stream Multi-Axis TTA (Probability Mean)",
+        "unweighted_auc": 0.7525,
+        "weighted_auc": 0.7591,
+        "delta": 0.0015,
+        "decision": "REJECTED_DILUTIVE"
+      },
+      {
+        "id": "D1.2-E_BASE_RANK",
+        "description": "D1.1 Baseline + Within-Fold Rank Norm",
+        "unweighted_auc": 0.7576,
+        "weighted_auc": 0.7638,
+        "delta": 0.0066,
+        "decision": "BENCHMARK_OBSERVATION"
+      }
+    ]
+  },
+  "d1_2_script_sha256_hashes": {
+    "d1_2_eval_utils.py": "8ce5c881141e324f9664b5eb65d0b52c532aa29d3e5dce1e64b122ddbc55a300",
+    "d1_2_inference_engine.py": "22cdaf418b65efd5fdb5daeaf43b725b0657868bea5984dd56296713747afa32",
+    "d1_2_hflip_experiment.py": "cdbd7cafa414a67c6003376cf43803293767206115b92ef72135ce6f30bd0f12",
+    "d1_2_multiwindow_experiment.py": "314b272237bf812a3a2e957eed47e71fe2615ef0b5b6953d30ae853d7535b02d",
+    "d1_2_combined_tta.py": "7f940b4dc67b91e7efd79a73d9abb2e4670810d17783003be98f31a4b017dfb5",
+    "d1_2_blend_experiments.py": "fc2265d88d2011eab1ddb22ecf68c48555b62ee63e970853aa571c3f04d2225c",
+    "d1_gold58_benchmark.py": "afa81bff6bb6c3f22df3d59fc6f6d8dffc1b88741a7048c30664ebd32100b492"
+  },
+  "stage_b_gold58_evaluation": {
+    "status": "COMPLETED_LOCKED_BENCHMARK",
+    "authorization": "USER_EXPLICIT_AUTHORIZATION_STAGE_B",
+    "timestamp": "2026-09-13T14:59:24+05:30",
+    "gold_studies_evaluated": 58,
+    "development_leakage": 0,
+    "candidate_evaluated": "D1.2-B2_HFLIP_RANK_MEAN",
+    "rank_averaged_ensemble": {
+      "macro_roc_auc": 0.6174,
+      "macro_pr_auc": 0.4938,
+      "macro_f1": 0.4661,
+      "macro_accuracy": 0.5474,
+      "phase_c_baseline_auc": 0.5986,
+      "absolute_gain_vs_phase_c": 0.0188,
+      "relative_gain_pct": 3.14,
+      "development_oof_auc": 0.7592,
+      "generalization_gap": -0.1418
+    },
+    "score_averaged_ensemble_reference": {
+      "macro_roc_auc": 0.6147,
+      "macro_pr_auc": 0.4902
+    },
+    "per_fold_gold_macro_auc": {
+      "fold_0": 0.6033,
+      "fold_1": 0.6189,
+      "fold_2": 0.6353,
+      "fold_3": 0.6017,
+      "fold_4": 0.6025
+    },
+    "prediction_artifacts": {
+      "rank_averaged": "/scratch/deepanthpcu/RSNA_Code/phase_d/d1/predictions/gold58/d1_gold58_rank_averaged_predictions.csv",
+      "score_averaged": "/scratch/deepanthpcu/RSNA_Code/phase_d/d1/predictions/gold58/d1_gold58_score_averaged_predictions.csv",
+      "summary_json": "/scratch/deepanthpcu/RSNA_Code/phase_d/d1/predictions/gold58/d1_gold58_evaluation_summary.json",
+      "report_markdown": "/scratch/deepanthpcu/RSNA_Code/phase_d/d1/reports/D1_GOLD58_FINAL_BENCHMARK_REPORT.md"
+    },
+    "governance_audit": {
+      "gold_labels_used_in_training": false,
+      "gold_labels_used_for_tuning": false,
+      "post_hoc_optimization": false,
+      "audit_verdict": "PASS"
+    }
+  }
+}

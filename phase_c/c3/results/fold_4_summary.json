@@ -1,0 +1,14 @@
+{
+  "fold": 4,
+  "timestamp": "2026-09-12T10:59:44.689016+00:00",
+  "epochs": 5,
+  "batch_size_per_gpu": 2,
+  "world_size": 2,
+  "best_val_loss": 0.45632967352867126,
+  "final_val_loss": 0.45632967352867126,
+  "best_macro_auc": 0.6122295698856964,
+  "best_macro_f1": 0.007716049382716049,
+  "total_runtime_sec": 837.0623693466187,
+  "checkpoint_path": "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/checkpoints/fold_4/best_model.pt",
+  "status": "COMPLETED"
+}

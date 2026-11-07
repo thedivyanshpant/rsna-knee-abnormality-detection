@@ -1,0 +1,717 @@
+<USER_REQUEST>
+# STORAGE FORENSIC INVENTORY — RSNA KNEE ABNORMALITY DETECTION
+
+You are operating on the RSNA Knee Abnormality Detection HPC environment.
+
+## OBJECTIVE
+
+The `/scratch` quota is approaching its 200 GB hard limit.
+
+Current observed usage:
+
+```text
+/scratch/deepanthpcu
+~176 GB used / 200 GB quota
+```
+
+Current `/scratch/deepanthpcu/RSNA_Code` breakdown:
+
+```text
+archive       154M
+csv            18M
+docs          340K
+docs_backup   144K
+labels         52M
+manifests     120K
+phase_c       146G
+phase_d        31G
+README.md      48K
+results       2.7M
+src           488K
+validation    208K
+```
+
+The purpose of this task is to produce a COMPLETE storage/provenance inventory before any data is transferred back from the workstation.
+
+### CRITICAL:
+
+DO NOT DELETE ANYTHING.
+
+DO NOT MOVE ANYTHING.
+
+DO NOT COMPRESS ANYTHING.
+
+DO NOT MODIFY PROJECT FILES.
+
+DO NOT SCANCEL ANY SLURM JOB.
+
+This is an INVENTORY ONLY.
+
+The final report will be reviewed before any cleanup or transfer is performed.
+
+============================================================
+
+## 1. PROJECT ROOT
+
+============================================================
+
+Inventory:
+
+```text
+/scratch/deepanthpcu/RSNA_Code/
+```
+
+Recursively determine:
+
+* directory size
+* file count
+* regular-file count
+* symlink count
+* largest files
+* largest directories
+* file extensions
+* modification dates
+* likely role in the project
+
+Produce both:
+
+### Level 1
+
+Top-level directory summary.
+
+### Level 2
+
+Recursive breakdown of every large directory.
+
+For every directory larger than 1 GB, continue recursively until the major storage consumers are identified.
+
+============================================================
+
+## 2. PRIORITY: FIND THE ~72–74 GB TRAINING DATA
+
+============================================================
+
+The user believes there is approximately 72 GB of training/processed data that does NOT need to remain on HPC and can instead remain on the workstation.
+
+Find the exact dataset.
+
+Search especially within:
+
+```text
+/scratch/deepanthpcu/RSNA_Code/phase_c/
+/scratch/deepanthpcu/RSNA_Code/phase_d/
+```
+
+and any other RSNA_Code locations.
+
+Identify every candidate large training/processed corpus.
+
+For each candidate report:
+
+* absolute path
+* total size
+* number of files
+* file types
+* approximate number of studies
+* whether Gold-58 is present
+* whether it contains development studies
+* whether it is reconstructible
+* whether it is required for current inference
+* whether it is required for future R/B forensic analysis
+* whether it is a frozen authoritative asset
+* whether it can safely remain on the workstation
+* whether it can be regenerated
+* checksum/manifest if available
+
+DO NOT infer that a dataset is disposable merely because it is large.
+
+Trace its provenance.
+
+============================================================
+
+## 3. PHASE C INVENTORY
+
+============================================================
+
+Inventory:
+
+```text
+/scratch/deepanthpcu/RSNA_Code/phase_c/
+```
+
+The known C1 processed corpus is approximately 73.66 GB historically.
+
+Determine its CURRENT exact size.
+
+Identify:
+
+* processed `.npz`
+* manifests
+* C1 metadata
+* C3 models
+* CV configuration
+* reports
+* logs
+* temporary/intermediate data
+* duplicate datasets
+* obsolete experimental artifacts
+
+For the large processed corpus, explicitly report:
+
+```text
+PATH:
+SIZE:
+STUDY COUNT:
+FILE COUNT:
+FORMAT:
+FROZEN?:
+RECONSTRUCTIBLE?:
+NEEDED FOR R/B?:
+NEEDED FOR FUTURE INFERENCE?:
+SAFE TO LEAVE ON WORKSTATION?:
+```
+
+DO NOT delete it.
+
+============================================================
+
+## 4. PHASE D INVENTORY
+
+============================================================
+
+Inventory:
+
+```text
+/scratch/deepanthpcu/RSNA_Code/phase_d/
+```
+
+Break down:
+
+```text
+d1
+d2
+d3
+d4
+d5
+d6
+d7
+d8
+```
+
+or whatever actual structure exists.
+
+For each phase report:
+
+* total size
+* checkpoints
+* OOF predictions
+* metrics
+* logs
+* reports
+* configs
+* temporary files
+* duplicated files
+* Gold evaluation outputs
+* whether historically authoritative
+* whether needed for future audit
+* whether safely archivable
+
+Especially identify the largest Phase D subdirectories.
+
+============================================================
+
+## 5. GOLD-58 — ABSOLUTE PROTECTION
+
+============================================================
+
+Locate all Gold-58-related files.
+
+Known concepts include:
+
+```text
+gold_studies.csv
+marked_train_series
+gold58
+gold_studies
+Gold DICOM
+Gold predictions
+Gold evaluation reports
+```
+
+Do NOT modify anything.
+
+Do NOT move anything.
+
+Do NOT delete anything.
+
+For each Gold-related asset report:
+
+* path
+* size
+* role
+* whether raw or derived
+* whether it contains labels
+* whether it contains images
+* whether it is an evaluation artifact
+
+Explicitly mark:
+
+```text
+PROTECTED — DO NOT TOUCH
+```
+
+Gold-58 remains permanently quarantined from development.
+
+============================================================
+
+## 6. FROZEN AUTHORITATIVE ASSETS
+
+============================================================
+
+Verify the locations and sizes of:
+
+### Canonical train_series
+
+```text
+/scratch/deepanthpcu/RSNA_Code/csv/train_series.csv
+```
+
+Expected SHA256:
+
+```text
+573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3
+```
+
+### Frozen CV
+
+```text
+/scratch/deepanthpcu/RSNA_Code/phase_c/c3/configs/cv_splits.json
+```
+
+Expected SHA256:
+
+```text
+648ab88d9bb2484ed49dcfae826cfb51efdc7b8f56bdf218803ee46f1d451db8
+```
+
+### D3 supervision
+
+```text
+/scratch/deepanthpcu/RSNA_Code/phase_d/d3/labels/phase_d3_candidate_label_corpus.csv
+```
+
+### Phase B production corpus
+
+```text
+/scratch/deepanthpcu/RSNA_Code/labels/production/phase_b_step3_remediated_training_corpus.csv
+```
+
+Do not modify any of these.
+
+============================================================
+
+## 7. FIND DUPLICATES
+
+============================================================
+
+Search for duplicate or near-duplicate large files.
+
+Use:
+
+* filename comparison
+* size comparison
+* SHA256 where practical
+* manifests
+* directory structure
+
+Pay particular attention to:
+
+* duplicated processed `.npz`
+* duplicate checkpoints
+* copied OOF predictions
+* duplicate archives
+* old D7/D8 intermediate files
+* backup copies
+* repeated training corpora
+
+For exact duplicates report:
+
+```text
+FILE A
+FILE B
+SIZE
+SHA256
+LIKELY ORIGIN
+```
+
+Do NOT delete them.
+
+============================================================
+
+## 8. FIND RECONSTRUCTIBLE DATA
+
+============================================================
+
+Classify large assets according to:
+
+### A — Irreplaceable / must remain
+
+Examples:
+
+* authoritative labels
+* final OOF results
+* final model checkpoints
+* frozen CV
+* project manifests
+
+### B — Important but archivable
+
+Can be moved to `/home` or workstation after verification.
+
+### C — Reconstructible
+
+Can be regenerated from existing source data/code.
+
+### D — Temporary/intermediate
+
+Potential cleanup candidates.
+
+### E — Duplicate
+
+Potential cleanup candidate after verification.
+
+Do NOT perform cleanup.
+
+============================================================
+
+## 9. WORKSTATION TRANSFER REQUIREMENTS
+
+============================================================
+
+The workstation contains the original development raw DICOM corpus (~523 GB).
+
+The workstation cannot be used as the main model-training environment.
+
+Therefore:
+
+DO NOT recommend transferring the entire raw corpus.
+
+Instead identify the exact minimum data that should remain on the workstation.
+
+In particular determine whether the approximately 72–74 GB processed/training dataset can be safely retained there and removed from the HPC working copy after a verified transfer/archive.
+
+The final report must explicitly answer:
+
+> "Which exact ~72–74 GB dataset is the user referring to?"
+
+If no exact ~72–74 GB dataset exists, state that clearly and identify the closest candidates.
+
+============================================================
+
+## 10. FUTURE PHASE R/B REQUIREMENTS
+
+============================================================
+
+We are preparing a Representation/Bottleneck Forensic Audit.
+
+Determine what data R/B can operate on without raw DICOM.
+
+Classify each R/B requirement:
+
+| Analysis                    | Existing HPC data sufficient? | Raw DICOM required? |
+| --------------------------- | ----------------------------- | ------------------- |
+| D3/Gold label agreement     | ?                             | ?                   |
+| OOF error analysis          | ?                             | ?                   |
+| D6/D7/D8 model disagreement | ?                             | ?                   |
+| Sequence ablation           | ?                             | ?                   |
+| Slice-density analysis      | ?                             | ?                   |
+| Resolution analysis         | ?                             | ?                   |
+| DICOM metadata audit        | ?                             | ?                   |
+| Discarded-series audit      | ?                             | ?                   |
+| Original acquisition audit  | ?                             | ?                   |
+| Full preprocessing audit    | ?                             | ?                   |
+
+The objective is to determine how much of R/B can be performed using existing HPC assets.
+
+============================================================
+
+## 11. GLOBAL /SCRATCH INVENTORY
+
+============================================================
+
+The user currently has approximately:
+
+```text
+176 GB / 200 GB
+```
+
+in `/scratch`.
+
+Inventory all large directories outside:
+
+```text
+/scratch/deepanthpcu/RSNA_Code/
+```
+
+including:
+
+```text
+/scratch/deepanthpcu/ml/
+```
+
+and any other large project directories.
+
+Identify:
+
+* size
+* purpose
+* owner
+* age
+* project association
+* whether active
+* whether duplicated
+* whether archived
+* whether potentially removable
+
+Again:
+
+DO NOT DELETE.
+
+============================================================
+
+## 12. /HOME INVENTORY
+
+============================================================
+
+Inventory relevant large files in:
+
+```text
+/home/deepanthpcu/
+```
+
+Determine whether there are already archives or copies of:
+
+* RSNA data
+* DICOM
+* processed datasets
+* ML datasets
+* project artifacts
+
+Do not modify anything.
+
+============================================================
+
+## 13. STORAGE PRIORITY TABLE
+
+============================================================
+
+Produce a final table:
+
+| Priority | Path | Size | Purpose | Keep HPC? | Workstation OK? | Archive OK? | Reconstructible? | Protected? |
+| -------- | ---- | ---: | ------- | --------- | --------------- | ----------- | ---------------- | ---------- |
+
+Use:
+
+### RED
+
+Must remain on HPC / protected
+
+### YELLOW
+
+Can potentially be archived or transferred
+
+### GREEN
+
+Potential cleanup candidate
+
+Do not use actual colors if the terminal/report cannot support them; use RED/YELLOW/GREEN labels.
+
+============================================================
+
+## 14. EXACT SPACE-RECOVERY OPPORTUNITIES
+
+============================================================
+
+Calculate potential storage recovery WITHOUT deleting anything.
+
+For example:
+
+```text
+Candidate A: 17.2 GB
+Candidate B: 9.8 GB
+Candidate C: 4.1 GB
+--------------------------------
+Potential recovery: 31.1 GB
+```
+
+Separate:
+
+### Safe after verification
+
+from:
+
+### Requires user approval
+
+from:
+
+### DO NOT TOUCH
+
+Do not perform the cleanup.
+
+============================================================
+
+## 15. REPORT FILE
+
+============================================================
+
+Write:
+
+```text
+/scratch/deepanthpcu/RSNA_Code/reports/
+```
+
+if it exists, otherwise create ONLY the reports directory.
+
+Create:
+
+```text
+RSNA_STORAGE_FORENSIC_INVENTORY_20260915.md
+```
+
+Also create:
+
+```text
+RSNA_STORAGE_FORENSIC_INVENTORY_20260915.json
+```
+
+The Markdown report must be human-readable.
+
+The JSON must contain machine-readable records for:
+
+* paths
+* sizes
+* file counts
+* classifications
+* protection status
+* recommendations
+
+============================================================
+
+## 16. NO DESTRUCTIVE ACTION
+
+============================================================
+
+This task ends after inventory.
+
+Absolutely forbidden:
+
+```text
+rm
+rm -rf
+mv
+rsync --remove-source-files
+truncate
+find ... -delete
+scancel
+```
+
+Do not modify existing project assets.
+
+Do not alter permissions.
+
+Do not alter ownership.
+
+Do not compress existing files.
+
+Do not transfer anything yet.
+
+============================================================
+
+## 17. FINAL RESPONSE
+
+============================================================
+
+Return:
+
+### 1. Current storage
+
+Exact:
+
+```text
+/scratch usage:
+quota:
+free:
+RSNA_Code usage:
+phase_c:
+phase_d:
+other:
+```
+
+### 2. The exact ~72–74 GB dataset
+
+State:
+
+```text
+FOUND / NOT FOUND
+
+PATH:
+SIZE:
+CONTENTS:
+STUDIES:
+ROLE:
+WHY IT CAN/CANNOT REMAIN ON WORKSTATION:
+```
+
+### 3. Largest 20 storage consumers
+
+Sorted descending.
+
+### 4. Protected assets
+
+Explicit list.
+
+### 5. Transfer candidates
+
+Exact paths and sizes.
+
+### 6. Cleanup candidates
+
+Exact paths and sizes.
+
+### 7. R/B data requirements
+
+Clearly state what R/B can do without raw DICOM.
+
+### 8. Raw DICOM requirement
+
+Clearly state what specifically requires raw DICOM.
+
+### 9. Recommended transfer strategy
+
+Do NOT execute it.
+
+Provide only the recommended transfer plan after the inventory.
+
+### 10. Report paths
+
+Provide exact paths to:
+
+```text
+RSNA_STORAGE_FORENSIC_INVENTORY_20260915.md
+RSNA_STORAGE_FORENSIC_INVENTORY_20260915.json
+```
+
+### 11. SHA256
+
+Provide hashes of the two generated reports.
+
+END.
+
+DO NOT DELETE OR MOVE ANY DATA.
+DO NOT START MODEL TRAINING.
+DO NOT TOUCH GOLD-58.
+DO NOT CANCEL SLURM.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-15T23:38:42+05:30.
+</ADDITIONAL_METADATA>

@@ -1,0 +1,6 @@
+target,total_positives,d6_incorrect_d9a_correct,d6_correct_d9a_incorrect,net_recovery,both_correct,both_incorrect,jaccard_error_overlap
+MCL,109,0,0,0,4240,109,109.0
+Fracture,101,0,0,0,4248,101,101.0
+ACL,137,2,4,-2,4209,134,134.0
+Lateral Meniscus,99,5,2,3,4248,94,94.0
+Contusion,387,56,60,-4,3874,359,359.0

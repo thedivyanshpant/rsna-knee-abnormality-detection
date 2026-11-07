@@ -1,0 +1,736 @@
+{
+  "timestamp": "2026-09-15T23:59:00+05:30",
+  "auditor": "Autonomous Agentic AI (Google DeepMind Antigravity)",
+  "scratch_quota": {
+    "filesystem": "/scratch",
+    "user": "deepanthpcu",
+    "uid": 52588,
+    "used_gb": 175.7,
+    "quota_gb": 190.0,
+    "limit_gb": 200.0,
+    "free_to_quota_gb": 14.3,
+    "free_to_limit_gb": 24.3,
+    "usage_pct": 87.85,
+    "file_count": 29900
+  },
+  "home_quota": {
+    "filesystem": "/home",
+    "user": "deepanthpcu",
+    "uid": 52588,
+    "used_gb": 32.05,
+    "quota_gb": 48.0,
+    "limit_gb": 50.0,
+    "free_to_quota_gb": 15.95,
+    "free_to_limit_gb": 17.95,
+    "usage_pct": 64.1,
+    "file_count": 147121
+  },
+  "authoritative_hashes": {
+    "csv/train_series.csv": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/csv/train_series.csv",
+      "size_bytes": 3458834,
+      "sha256": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3"
+    },
+    "phase_c/c3/configs/cv_splits.json": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/configs/cv_splits.json",
+      "size_bytes": 1653606,
+      "sha256": "648ab88d9bb2484ed49dcfae826cfb51efdc7b8f56bdf218803ee46f1d451db8"
+    },
+    "phase_d/d3/labels/phase_d3_candidate_label_corpus.csv": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d3/labels/phase_d3_candidate_label_corpus.csv",
+      "size_bytes": 23191014,
+      "sha256": "a90cd5c0e44da3256ecad118a0e69ad52aa38a1193b3cb35a084657323958ac1"
+    },
+    "labels/production/phase_b_step3_remediated_training_corpus.csv": {
+      "path": "/scratch/deepanthpcu/RSNA_Code/labels/production/phase_b_step3_remediated_training_corpus.csv",
+      "size_bytes": 23787696,
+      "sha256": "bd064fc882ee9c344fc46adedaef2e592071ab032a632bcba9e2fc699a741c30"
+    }
+  },
+  "level1_inventory": {
+    "README.md": {
+      "type": "file",
+      "apparent_bytes": 24068,
+      "apparent_gb": 2.2e-05,
+      "block_bytes": 49152,
+      "block_gb": 4.6e-05,
+      "total_files": 1,
+      "regular_files": 1,
+      "symlinks": 0
+    },
+    "archive": {
+      "type": "directory",
+      "apparent_bytes": 81331473,
+      "apparent_gb": 0.0757,
+      "block_bytes": 83005440,
+      "block_gb": 0.08,
+      "total_files": 84,
+      "regular_files": 84,
+      "symlinks": 0
+    },
+    "csv": {
+      "type": "directory",
+      "apparent_bytes": 12704194,
+      "apparent_gb": 0.0118,
+      "block_bytes": 18427904,
+      "block_gb": 0.02,
+      "total_files": 9,
+      "regular_files": 9,
+      "symlinks": 0
+    },
+    "docs": {
+      "type": "directory",
+      "apparent_bytes": 178601,
+      "apparent_gb": 0.0002,
+      "block_bytes": 348160,
+      "block_gb": 0.0,
+      "total_files": 10,
+      "regular_files": 10,
+      "symlinks": 0
+    },
+    "docs_backup_20260914_1825": {
+      "type": "directory",
+      "apparent_bytes": 132230,
+      "apparent_gb": 0.0001,
+      "block_bytes": 147456,
+      "block_gb": 0.0,
+      "total_files": 8,
+      "regular_files": 8,
+      "symlinks": 0
+    },
+    "labels": {
+      "type": "directory",
+      "apparent_bytes": 28602058,
+      "apparent_gb": 0.0266,
+      "block_bytes": 29962240,
+      "block_gb": 0.03,
+      "total_files": 7,
+      "regular_files": 7,
+      "symlinks": 0
+    },
+    "manifests": {
+      "type": "directory",
+      "apparent_bytes": 59124,
+      "apparent_gb": 0.0001,
+      "block_bytes": 122880,
+      "block_gb": 0.0,
+      "total_files": 3,
+      "regular_files": 3,
+      "symlinks": 0
+    },
+    "phase_c": {
+      "type": "directory",
+      "apparent_bytes": 80506304078,
+      "apparent_gb": 74.9773,
+      "block_bytes": 152022310912,
+      "block_gb": 141.58,
+      "total_files": 24489,
+      "regular_files": 24489,
+      "symlinks": 0
+    },
+    "phase_d": {
+      "type": "directory",
+      "apparent_bytes": 20480138661,
+      "apparent_gb": 19.0736,
+      "block_bytes": 24871755776,
+      "block_gb": 23.16,
+      "total_files": 492,
+      "regular_files": 486,
+      "symlinks": 6
+    },
+    "reports": {
+      "type": "directory",
+      "apparent_bytes": 0,
+      "apparent_gb": 0.0,
+      "block_bytes": 4096,
+      "block_gb": 0.0,
+      "total_files": 0,
+      "regular_files": 0,
+      "symlinks": 0
+    },
+    "results": {
+      "type": "directory",
+      "apparent_bytes": 1505552,
+      "apparent_gb": 0.0014,
+      "block_bytes": 2801664,
+      "block_gb": 0.0,
+      "total_files": 23,
+      "regular_files": 23,
+      "symlinks": 0
+    },
+    "src": {
+      "type": "directory",
+      "apparent_bytes": 339811,
+      "apparent_gb": 0.0003,
+      "block_bytes": 499712,
+      "block_gb": 0.0,
+      "total_files": 33,
+      "regular_files": 33,
+      "symlinks": 0
+    },
+    "validation": {
+      "type": "directory",
+      "apparent_bytes": 87479,
+      "apparent_gb": 0.0001,
+      "block_bytes": 212992,
+      "block_gb": 0.0,
+      "total_files": 9,
+      "regular_files": 9,
+      "symlinks": 0
+    }
+  },
+  "level2_large_dirs": {
+    "phase_c": {
+      "c0": {
+        "apparent_bytes": 9633218,
+        "apparent_gb": 0.009,
+        "block_bytes": 19320832,
+        "block_gb": 0.02,
+        "file_count": 15
+      },
+      "c1": {
+        "apparent_bytes": 80211700503,
+        "apparent_gb": 74.703,
+        "block_bytes": 151671021568,
+        "block_gb": 141.25,
+        "file_count": 24377
+      },
+      "c2": {
+        "apparent_bytes": 99056249,
+        "apparent_gb": 0.0923,
+        "block_bytes": 124047360,
+        "block_gb": 0.12,
+        "file_count": 28
+      },
+      "c3": {
+        "apparent_bytes": 204714748,
+        "apparent_gb": 0.1907,
+        "block_bytes": 207917056,
+        "block_gb": 0.19,
+        "file_count": 69
+      }
+    },
+    "phase_d": {
+      "d1": {
+        "apparent_bytes": 917304941,
+        "apparent_gb": 0.8543,
+        "block_bytes": 951185408,
+        "block_gb": 0.89,
+        "file_count": 95
+      },
+      "d2": {
+        "apparent_bytes": 1410852261,
+        "apparent_gb": 1.314,
+        "block_bytes": 1411645440,
+        "block_gb": 1.31,
+        "file_count": 21
+      },
+      "d3": {
+        "apparent_bytes": 906130688,
+        "apparent_gb": 0.8439,
+        "block_bytes": 908509184,
+        "block_gb": 0.85,
+        "file_count": 21
+      },
+      "d4": {
+        "apparent_bytes": 1402856652,
+        "apparent_gb": 1.3065,
+        "block_bytes": 1403678720,
+        "block_gb": 1.31,
+        "file_count": 24
+      },
+      "d5": {
+        "apparent_bytes": 6103075,
+        "apparent_gb": 0.0057,
+        "block_bytes": 8863744,
+        "block_gb": 0.01,
+        "file_count": 35
+      },
+      "d6": {
+        "apparent_bytes": 892437694,
+        "apparent_gb": 0.8311,
+        "block_bytes": 892633088,
+        "block_gb": 0.83,
+        "file_count": 56
+      },
+      "d7": {
+        "apparent_bytes": 11325252120,
+        "apparent_gb": 10.5475,
+        "block_bytes": 15669874688,
+        "block_gb": 14.59,
+        "file_count": 117
+      },
+      "d8": {
+        "apparent_bytes": 3620008126,
+        "apparent_gb": 3.3714,
+        "block_bytes": 3625095168,
+        "block_gb": 3.38,
+        "file_count": 115
+      },
+      "reports": {
+        "apparent_bytes": 45733,
+        "apparent_gb": 0.0,
+        "block_bytes": 94208,
+        "block_gb": 0.0,
+        "file_count": 6
+      },
+      "scripts": {
+        "apparent_bytes": 6434,
+        "apparent_gb": 0.0,
+        "block_bytes": 8192,
+        "block_gb": 0.0,
+        "file_count": 1
+      }
+    }
+  },
+  "training_corpus_72gb_audit": {
+    "status": "FOUND",
+    "identity": "Phase C1 Processed Multi-Series 3D Volumetric Tensor Corpus",
+    "path": "/scratch/deepanthpcu/RSNA_Code/phase_c/c1/processed",
+    "apparent_bytes": 79114765886,
+    "apparent_gb": 73.6814,
+    "apparent_gb_decimal": 79.1148,
+    "block_bytes": 150572785664,
+    "block_gb": 140.23,
+    "study_count": 4349,
+    "file_count": 24033,
+    "format": "NumPy Zipped Archive (.npz, float16 tensors)",
+    "tensor_shape": "[32, 256, 256]",
+    "voxel_spacing_mm": "[3.0, 0.5, 0.5]",
+    "gold58_present": false,
+    "gold58_overlap_count": 0,
+    "development_studies_present": true,
+    "reconstructible": true,
+    "reconstruction_source": "Workstation Raw DICOM Corpus (~523 GB) via phase_c/c1/scripts/run_c1_preprocessing.py",
+    "needed_for_current_inference": false,
+    "needed_for_future_rb": false,
+    "frozen_authoritative_asset": true,
+    "safe_to_leave_on_workstation": true,
+    "manifest_path": "/scratch/deepanthpcu/RSNA_Code/phase_c/c1/manifests/c1_study_manifest.csv",
+    "execution_summary_path": "/scratch/deepanthpcu/RSNA_Code/phase_c/c1/output/c1_execution_summary.json",
+    "quota_impact_on_removal_gb": 140.23
+  },
+  "top_20_largest_checkpoints": [
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/d7d/checkpoints/fold_2/best_model.pt",
+      "apparent_bytes": 696624047,
+      "apparent_mb": 664.35,
+      "block_bytes": 1393262592,
+      "block_mb": 1328.72
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/d7d/checkpoints/fold_4/best_model.pt",
+      "apparent_bytes": 696623983,
+      "apparent_mb": 664.35,
+      "block_bytes": 1393262592,
+      "block_mb": 1328.72
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/d7d/checkpoints/fold_3/best_model.pt",
+      "apparent_bytes": 696623855,
+      "apparent_mb": 664.35,
+      "block_bytes": 696631296,
+      "block_mb": 664.36
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/d7d/checkpoints/fold_0/best_model.pt",
+      "apparent_bytes": 696623855,
+      "apparent_mb": 664.35,
+      "block_bytes": 696631296,
+      "block_mb": 664.36
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/d7d/checkpoints/fold_1/best_model.pt",
+      "apparent_bytes": 696623855,
+      "apparent_mb": 664.35,
+      "block_bytes": 696631296,
+      "block_mb": 664.36
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/d7c/checkpoints/fold_4/best_model.pt",
+      "apparent_bytes": 694039467,
+      "apparent_mb": 661.89,
+      "block_bytes": 1388093440,
+      "block_mb": 1323.79
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/d7c/checkpoints/fold_2/best_model.pt",
+      "apparent_bytes": 694039403,
+      "apparent_mb": 661.89,
+      "block_bytes": 694046720,
+      "block_mb": 661.89
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/d7c/checkpoints/fold_3/best_model.pt",
+      "apparent_bytes": 694039211,
+      "apparent_mb": 661.89,
+      "block_bytes": 694046720,
+      "block_mb": 661.89
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/d7c/checkpoints/fold_0/best_model.pt",
+      "apparent_bytes": 694039211,
+      "apparent_mb": 661.89,
+      "block_bytes": 694046720,
+      "block_mb": 661.89
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/d7c/checkpoints/fold_1/best_model.pt",
+      "apparent_bytes": 694039211,
+      "apparent_mb": 661.89,
+      "block_bytes": 694046720,
+      "block_mb": 661.89
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/d7a/checkpoints/fold_4/best_model.pt",
+      "apparent_bytes": 691672155,
+      "apparent_mb": 659.63,
+      "block_bytes": 691679232,
+      "block_mb": 659.64
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/d7a/checkpoints/fold_2/best_model.pt",
+      "apparent_bytes": 691672155,
+      "apparent_mb": 659.63,
+      "block_bytes": 691679232,
+      "block_mb": 659.64
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/d7a/checkpoints/fold_3/best_model.pt",
+      "apparent_bytes": 691672091,
+      "apparent_mb": 659.63,
+      "block_bytes": 1383358464,
+      "block_mb": 1319.27
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/d7a/checkpoints/fold_0/best_model.pt",
+      "apparent_bytes": 691671963,
+      "apparent_mb": 659.63,
+      "block_bytes": 1383358464,
+      "block_mb": 1319.27
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/d7a/checkpoints/fold_1/best_model.pt",
+      "apparent_bytes": 691671899,
+      "apparent_mb": 659.63,
+      "block_bytes": 1383358464,
+      "block_mb": 1319.27
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/checkpoints/fold_0/best_model.pt",
+      "apparent_bytes": 279700361,
+      "apparent_mb": 266.74,
+      "block_bytes": 279707648,
+      "block_mb": 266.75
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/checkpoints/fold_1/best_model.pt",
+      "apparent_bytes": 279700361,
+      "apparent_mb": 266.74,
+      "block_bytes": 279707648,
+      "block_mb": 266.75
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/checkpoints/fold_2/best_model.pt",
+      "apparent_bytes": 279700361,
+      "apparent_mb": 266.74,
+      "block_bytes": 279703552,
+      "block_mb": 266.75
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/checkpoints/fold_3/best_model.pt",
+      "apparent_bytes": 279700297,
+      "apparent_mb": 266.74,
+      "block_bytes": 279707648,
+      "block_mb": 266.75
+    },
+    {
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/checkpoints/fold_4/best_model.pt",
+      "apparent_bytes": 279700297,
+      "apparent_mb": 266.74,
+      "block_bytes": 279707648,
+      "block_mb": 266.75
+    }
+  ],
+  "exact_duplicates": [
+    {
+      "file_a": "/scratch/deepanthpcu/RSNA_Code/csv/Copy-of-train_series.csv",
+      "file_b": "/scratch/deepanthpcu/RSNA_Code/csv/train_series.csv",
+      "size_bytes": 3462820,
+      "size_mb": 3.3,
+      "sha256": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3",
+      "origin": "Ad-hoc manual copy of canonical train_series.csv"
+    }
+  ],
+  "gold58_assets_count": 106,
+  "storage_priority_table": [
+    {
+      "priority": "RED",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_c/c1/processed_gold",
+      "size_gb": 1.1,
+      "purpose": "Gold-58 3D volumetric evaluation tensors (336 .npz)",
+      "keep_hpc": true,
+      "workstation_ok": true,
+      "archive_ok": false,
+      "reconstructible": true,
+      "protected": true
+    },
+    {
+      "priority": "RED",
+      "path": "/scratch/deepanthpcu/RSNA_Code/csv/gold_studies.csv",
+      "size_gb": 1e-05,
+      "purpose": "Gold-58 study IDs & ground truth clinical labels",
+      "keep_hpc": true,
+      "workstation_ok": true,
+      "archive_ok": false,
+      "reconstructible": false,
+      "protected": true
+    },
+    {
+      "priority": "RED",
+      "path": "/scratch/deepanthpcu/RSNA_Code/csv/train_series.csv",
+      "size_gb": 0.0033,
+      "purpose": "Canonical 24,033-series DICOM metadata table",
+      "keep_hpc": true,
+      "workstation_ok": true,
+      "archive_ok": false,
+      "reconstructible": false,
+      "protected": true
+    },
+    {
+      "priority": "RED",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/configs/cv_splits.json",
+      "size_gb": 0.0016,
+      "purpose": "Frozen 5-fold cross validation split mapping",
+      "keep_hpc": true,
+      "workstation_ok": true,
+      "archive_ok": false,
+      "reconstructible": false,
+      "protected": true
+    },
+    {
+      "priority": "RED",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d3/labels/phase_d3_candidate_label_corpus.csv",
+      "size_gb": 0.0084,
+      "purpose": "Development training supervision corpus",
+      "keep_hpc": true,
+      "workstation_ok": true,
+      "archive_ok": false,
+      "reconstructible": false,
+      "protected": true
+    },
+    {
+      "priority": "RED",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d8/d8c/checkpoints/",
+      "size_gb": 0.9,
+      "purpose": "ALL-TIME CHAMPION MODEL (CoAtNet Hybrid, Gold 0.6487 / 0.6524)",
+      "keep_hpc": true,
+      "workstation_ok": true,
+      "archive_ok": false,
+      "reconstructible": true,
+      "protected": true
+    },
+    {
+      "priority": "RED",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d6/checkpoints/",
+      "size_gb": 1.0,
+      "purpose": "DEVELOPMENT CHAMPION MODEL (ViT-S 6-Slot, OOF 0.8185)",
+      "keep_hpc": true,
+      "workstation_ok": true,
+      "archive_ok": false,
+      "reconstructible": true,
+      "protected": true
+    },
+    {
+      "priority": "RED",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/*/oof/",
+      "size_gb": 0.08,
+      "purpose": "Authoritative OOF prediction CSVs across all D phases",
+      "keep_hpc": true,
+      "workstation_ok": true,
+      "archive_ok": false,
+      "reconstructible": true,
+      "protected": true
+    },
+    {
+      "priority": "RED",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/*/predictions/gold58/",
+      "size_gb": 0.01,
+      "purpose": "One-time locked Gold-58 benchmark prediction CSVs",
+      "keep_hpc": true,
+      "workstation_ok": true,
+      "archive_ok": false,
+      "reconstructible": true,
+      "protected": true
+    },
+    {
+      "priority": "YELLOW",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_c/c1/processed",
+      "size_gb": 144.1,
+      "purpose": "Development training processed volumes (24,033 .npz, 73.66 GB apparent)",
+      "keep_hpc": false,
+      "workstation_ok": true,
+      "archive_ok": true,
+      "reconstructible": true,
+      "protected": false
+    },
+    {
+      "priority": "YELLOW",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d7/ (d7a, d7b, d7c, d7d checkpoints)",
+      "size_gb": 18.6,
+      "purpose": "Phase D7 model checkpoints (ViT-B & ViT-S multi-window, 20 .pt files)",
+      "keep_hpc": false,
+      "workstation_ok": true,
+      "archive_ok": true,
+      "reconstructible": true,
+      "protected": false
+    },
+    {
+      "priority": "YELLOW",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d8/ (d8a, d8b, d8d checkpoints)",
+      "size_gb": 2.7,
+      "purpose": "Phase D8 non-champion checkpoints (15 .pt files)",
+      "keep_hpc": false,
+      "workstation_ok": true,
+      "archive_ok": true,
+      "reconstructible": true,
+      "protected": false
+    },
+    {
+      "priority": "YELLOW",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d4/checkpoints/",
+      "size_gb": 2.1,
+      "purpose": "Phase D4 ResNet-50 checkpoints (5 .pt files)",
+      "keep_hpc": false,
+      "workstation_ok": true,
+      "archive_ok": true,
+      "reconstructible": true,
+      "protected": false
+    },
+    {
+      "priority": "YELLOW",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d2/checkpoints/",
+      "size_gb": 1.9,
+      "purpose": "Phase D2 ResNet-50 checkpoints (5 .pt files)",
+      "keep_hpc": false,
+      "workstation_ok": true,
+      "archive_ok": true,
+      "reconstructible": true,
+      "protected": false
+    },
+    {
+      "priority": "YELLOW",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d1/checkpoints/",
+      "size_gb": 1.8,
+      "purpose": "Phase D1 baseline checkpoints (5 .pt files)",
+      "keep_hpc": false,
+      "workstation_ok": true,
+      "archive_ok": true,
+      "reconstructible": true,
+      "protected": false
+    },
+    {
+      "priority": "YELLOW",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d3/checkpoints/",
+      "size_gb": 1.7,
+      "purpose": "Phase D3 baseline checkpoints (5 .pt files)",
+      "keep_hpc": false,
+      "workstation_ok": true,
+      "archive_ok": true,
+      "reconstructible": true,
+      "protected": false
+    },
+    {
+      "priority": "YELLOW",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/checkpoints/",
+      "size_gb": 0.38,
+      "purpose": "Phase C3 SmallResNet-3D checkpoints (8 .pt files)",
+      "keep_hpc": false,
+      "workstation_ok": true,
+      "archive_ok": true,
+      "reconstructible": true,
+      "protected": false
+    },
+    {
+      "priority": "YELLOW",
+      "path": "/scratch/deepanthpcu/RSNA_Code/archive/phase_c3_pre_reset_archive/",
+      "size_gb": 0.15,
+      "purpose": "Archived pre-reset Phase C3 checkpoints and outputs",
+      "keep_hpc": false,
+      "workstation_ok": true,
+      "archive_ok": true,
+      "reconstructible": true,
+      "protected": false
+    },
+    {
+      "priority": "GREEN",
+      "path": "/scratch/deepanthpcu/RSNA_Code/csv/Copy-of-train_series.csv",
+      "size_gb": 0.0033,
+      "purpose": "Exact byte-for-byte duplicate of train_series.csv",
+      "keep_hpc": false,
+      "workstation_ok": false,
+      "archive_ok": false,
+      "reconstructible": true,
+      "protected": false
+    },
+    {
+      "priority": "GREEN",
+      "path": "/scratch/deepanthpcu/RSNA_Code/docs_backup_20260914_1825/",
+      "size_gb": 0.0001,
+      "purpose": "Outdated ad-hoc documentation backup",
+      "keep_hpc": false,
+      "workstation_ok": true,
+      "archive_ok": true,
+      "reconstructible": true,
+      "protected": false
+    },
+    {
+      "priority": "GREEN",
+      "path": "/scratch/deepanthpcu/RSNA_Code/phase_c/c0/visual_samples/",
+      "size_gb": 0.017,
+      "purpose": "Phase C0 temporary slice visualization PNG images",
+      "keep_hpc": false,
+      "workstation_ok": true,
+      "archive_ok": true,
+      "reconstructible": true,
+      "protected": false
+    },
+    {
+      "priority": "GREEN",
+      "path": "/scratch/deepanthpcu/RSNA_Code/archive/intermediate/",
+      "size_gb": 0.0018,
+      "purpose": "Temporary NLP intermediate extraction files",
+      "keep_hpc": false,
+      "workstation_ok": true,
+      "archive_ok": true,
+      "reconstructible": true,
+      "protected": false
+    }
+  ],
+  "space_recovery_opportunities": {
+    "candidate_1_processed_corpus": {
+      "description": "Remove or archive phase_c/c1/processed after verifying workstation copy",
+      "apparent_gb": 73.66,
+      "quota_recovery_gb": 144.1,
+      "status": "Safe after verification"
+    },
+    "candidate_2_archivable_checkpoints": {
+      "description": "Archive intermediate non-champion checkpoints (D1, D2, D3, D4, D7, D8 non-champion, C2, C3)",
+      "apparent_gb": 17.6,
+      "quota_recovery_gb": 29.5,
+      "status": "Requires user approval"
+    },
+    "candidate_3_duplicates_and_temp": {
+      "description": "Clean up exact duplicate csv, c0 visual samples, and docs backup",
+      "apparent_gb": 0.02,
+      "quota_recovery_gb": 0.03,
+      "status": "Safe after approval"
+    },
+    "do_not_touch": {
+      "description": "All Gold-58 assets, D8-C champion, D6 champion, OOF predictions, and authoritative CSVs",
+      "apparent_gb": 3.7,
+      "quota_recovery_gb": 4.5,
+      "status": "DO NOT TOUCH \u2014 MUST REMAIN ON HPC"
+    }
+  }
+}

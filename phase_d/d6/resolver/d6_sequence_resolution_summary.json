@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-09-14T14:47:26.906459+00:00",
+  "total_dev_studies": 4349,
+  "total_available_npz_series": 24033,
+  "canonical_slots": [
+    "SAG_FLUID_FS",
+    "COR_FLUID_FS",
+    "AX_FLUID_FS",
+    "SAG_FLUID_NOFS",
+    "COR_T1",
+    "SAG_T1"
+  ],
+  "per_slot_coverage": {
+    "SAG_FLUID_FS": {
+      "populated_studies": 4094,
+      "missing_studies": 255,
+      "coverage_pct": 94.14
+    },
+    "COR_FLUID_FS": {
+      "populated_studies": 4191,
+      "missing_studies": 158,
+      "coverage_pct": 96.37
+    },
+    "AX_FLUID_FS": {
+      "populated_studies": 4348,
+      "missing_studies": 1,
+      "coverage_pct": 99.98
+    },
+    "SAG_FLUID_NOFS": {
+      "populated_studies": 852,
+      "missing_studies": 3497,
+      "coverage_pct": 19.59
+    },
+    "COR_T1": {
+      "populated_studies": 3361,
+      "missing_studies": 988,
+      "coverage_pct": 77.28
+    },
+    "SAG_T1": {
+      "populated_studies": 4209,
+      "missing_studies": 140,
+      "coverage_pct": 96.78
+    }
+  },
+  "slot_3_activation": {
+    "d1_baseline_studies": 0,
+    "d6_activated_studies": 852,
+    "d6_activation_pct": 19.59
+  },
+  "populated_slots_histogram": {
+    "0_of_6_slots": 0,
+    "1_of_6_slots": 0,
+    "2_of_6_slots": 0,
+    "3_of_6_slots": 2,
+    "4_of_6_slots": 1260,
+    "5_of_6_slots": 2513,
+    "6_of_6_slots": 574
+  },
+  "collision_statistics": {
+    "total_collision_entries": 5227,
+    "studies_with_collisions": 1737,
+    "collision_rate_pct": 39.94,
+    "collisions_by_slot": {
+      "SAG_FLUID_FS": 503,
+      "COR_FLUID_FS": 349,
+      "AX_FLUID_FS": 293,
+      "SAG_FLUID_NOFS": 852,
+      "COR_T1": 561,
+      "SAG_T1": 852
+    },
+    "policy": "physical_tissue_quality_score_and_intensity_bifurcation"
+  },
+  "status": "PASS"
+}

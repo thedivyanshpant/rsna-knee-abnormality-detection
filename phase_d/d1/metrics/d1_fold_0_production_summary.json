@@ -1,0 +1,81 @@
+{
+  "experiment_id": "D1.1-FOLD-0-PRODUCTION",
+  "timestamp": "2026-09-12T18:17:58.058305+00:00",
+  "fold": 0,
+  "epochs_trained": 9,
+  "hardware": "2 x NVIDIA A100 PCIe 80GB (NCCL DDP)",
+  "effective_batch_size": 8,
+  "backbone_lr": 8e-06,
+  "head_lr": 0.001,
+  "weight_decay": 0.02,
+  "d1_fold0_macro_roc_auc": 0.7566,
+  "phase_c_fold0_macro_roc_auc": 0.5895,
+  "absolute_delta": 0.1671,
+  "relative_improvement_pct": 28.35,
+  "checkpoint_path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d1/checkpoints/fold_0/best_model.pt",
+  "val_predictions_path": "/scratch/deepanthpcu/RSNA_Code/phase_d/d1/results/val/fold_0_val_predictions.csv",
+  "per_target_comparison": {
+    "ACL": {
+      "phase_c": 0.6085,
+      "d1_1": 0.7834,
+      "delta": 0.1749
+    },
+    "MCL": {
+      "phase_c": 0.4534,
+      "d1_1": 0.5454,
+      "delta": 0.092
+    },
+    "Medial Meniscus": {
+      "phase_c": 0.7608,
+      "d1_1": 0.8551,
+      "delta": 0.0943
+    },
+    "Lateral Meniscus": {
+      "phase_c": 0.5686,
+      "d1_1": 0.711,
+      "delta": 0.1424
+    },
+    "Medial OA": {
+      "phase_c": 0.0103,
+      "d1_1": 0.1665,
+      "delta": 0.1561
+    },
+    "Lateral OA": {
+      "phase_c": 0.5124,
+      "d1_1": 0.9207,
+      "delta": 0.4083
+    },
+    "PF OA": {
+      "phase_c": null,
+      "d1_1": null,
+      "delta": null
+    },
+    "Effusion": {
+      "phase_c": 0.8194,
+      "d1_1": 0.912,
+      "delta": 0.0926
+    },
+    "Synovitis": {
+      "phase_c": 0.7096,
+      "d1_1": 0.8691,
+      "delta": 0.1595
+    },
+    "Baker's": {
+      "phase_c": 0.6886,
+      "d1_1": 0.8512,
+      "delta": 0.1626
+    },
+    "Contusion": {
+      "phase_c": 0.6992,
+      "d1_1": 0.8249,
+      "delta": 0.1257
+    },
+    "Fracture": {
+      "phase_c": 0.6534,
+      "d1_1": 0.8239,
+      "delta": 0.1705
+    }
+  },
+  "decision_tree_verdict": "AUC_SUBSTANTIALLY_IMPROVED",
+  "status": "PASS"
+}

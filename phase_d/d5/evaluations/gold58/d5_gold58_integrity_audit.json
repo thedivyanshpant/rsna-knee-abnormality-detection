@@ -1,0 +1,15 @@
+{
+  "audit_timestamp": "2026-09-14 19:51:17",
+  "gold_studies_evaluated": 58,
+  "gold_studies_duplicated": 0,
+  "gold_studies_missing": 0,
+  "development_studies_included": 0,
+  "gold_labels_used_in_training": false,
+  "gold_labels_used_for_threshold_tuning": false,
+  "gold_labels_used_for_checkpoint_selection": false,
+  "gold_labels_used_for_model_selection": false,
+  "pre_specified_protocol": "D5-B2 H-Flip TTA + 5-Fold Normalized Rank Averaging",
+  "nan_inf_predictions": 0,
+  "predictions_in_range_0_1": true,
+  "integrity_verdict": "PASS - 100% UNCOMPROMISED LOCKED EVALUATION"
+}

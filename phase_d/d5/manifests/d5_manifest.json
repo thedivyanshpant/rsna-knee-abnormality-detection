@@ -1,0 +1,139 @@
+{
+  "phase": "D5",
+  "objective": "D3 ViT Inference-Time Calibration & TTA Study",
+  "governance": {
+    "gold_58_accessed": false,
+    "d3_model_retraining": false,
+    "d3_label_modification": false,
+    "phase_b_production_corpus_modification": false,
+    "cv_split_modification": false,
+    "scancel_invoked": false
+  },
+  "execution": {
+    "hostname": "rpgpu007",
+    "slurm_job_id": "653724",
+    "gpu_count": 2,
+    "gpu_models": "NVIDIA A100-PCIE-80GB",
+    "pytorch_version": "2.4.0",
+    "cuda_version": "12.4",
+    "runtime_seconds": 301.8,
+    "inference_batch_size": 4,
+    "slice_band": [
+      0.2,
+      0.8
+    ],
+    "n_groups": 12
+  },
+  "artifacts": {
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d3/checkpoints/fold_0/best_model.pt": {
+      "size_bytes": 176111451,
+      "sha256": "52eaf45a0934c6d86a32a34f0fa8ef1fac2a8713363b484c7c735bb1b186d1cc",
+      "mtime": 1789313562.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d3/checkpoints/fold_1/best_model.pt": {
+      "size_bytes": 176111451,
+      "sha256": "f600d29f8b0cbfb9d0c32ba9e3f736b0289e15725a3eaf45d447d19a2211ef5b",
+      "mtime": 1789317527.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d3/checkpoints/fold_2/best_model.pt": {
+      "size_bytes": 176111451,
+      "sha256": "cf1cdea350850aea17a878220e7a5cf12dd271b6deff9e8437dec84669f0914c",
+      "mtime": 1789320159.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d3/checkpoints/fold_3/best_model.pt": {
+      "size_bytes": 176111451,
+      "sha256": "b48ce28a0442723565795739eed3b0fe51e9d79b925c95eb51ecbc9feebc6cff",
+      "mtime": 1789324103.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d3/checkpoints/fold_4/best_model.pt": {
+      "size_bytes": 176111451,
+      "sha256": "9d29143c6d6f43bf6f4745044ec4997bc696bb95a218492e9ac209f2a068ce3b",
+      "mtime": 1789326400.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d3/labels/phase_d3_candidate_label_corpus.csv": {
+      "size_bytes": 23191014,
+      "sha256": "a90cd5c0e44da3256ecad118a0e69ad52aa38a1193b3cb35a084657323958ac1",
+      "mtime": 1789294703.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d3/labels/phase_d3_candidate_manifest.json": {
+      "size_bytes": 1486,
+      "sha256": "05134744f93c2f9332285a4d3fbc8a18833efba5894b37c2c06830da1ae02041",
+      "mtime": 1789294703.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/labels/production/phase_b_step3_remediated_training_corpus.csv": {
+      "size_bytes": 23787696,
+      "sha256": "bd064fc882ee9c344fc46adedaef2e592071ab032a632bcba9e2fc699a741c30",
+      "mtime": 1789147184.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_c/c3/configs/cv_splits.json": {
+      "size_bytes": 1653606,
+      "sha256": "648ab88d9bb2484ed49dcfae826cfb51efdc7b8f56bdf218803ee46f1d451db8",
+      "mtime": 1789200308.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d1/manifests/d1_slot_mapping_manifest.csv": {
+      "size_bytes": 1671697,
+      "sha256": "3e314c84200cf3b0b7023ca17f9c4e76c353aef00f69fcfe4ac1aad1a56ea883",
+      "mtime": 1789233090.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d1/scripts/model_d1.py": {
+      "size_bytes": 9727,
+      "sha256": "d12985d6f6ed92cd3a26baf34813deba174ad7e72db25cbe21f7ff18d9f05742",
+      "mtime": 1789233318.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d1/scripts/dataset_d1.py": {
+      "size_bytes": 10616,
+      "sha256": "c0159486e1cefe4ec06d519426847b2da0c5ac5564d2e842777d07c449721b7a",
+      "mtime": 1789233297.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d1/scripts/d1_2_eval_utils.py": {
+      "size_bytes": 8345,
+      "sha256": "8ce5c881141e324f9664b5eb65d0b52c532aa29d3e5dce1e64b122ddbc55a300",
+      "mtime": 1789289605.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/scripts/run_d5_inference.py": {
+      "size_bytes": 18858,
+      "sha256": "48744f1cbeadd561b61e083b7ec8a3bd3816cc7496921647362eca3611fcadf9",
+      "mtime": 1789392172.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/predictions/d5_standard_oof_predictions.csv": {
+      "size_bytes": 861176,
+      "sha256": "82c4e90830c17117da98c6eace43cafed24038daeb4f6cfa0a3be793b4082881",
+      "mtime": 1789392493.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/predictions/d5_flip_tta_oof_predictions.csv": {
+      "size_bytes": 860977,
+      "sha256": "b965fc34be6056923f444fcdb63de04ea56c81d5511bfd1cb147dff49656aed7",
+      "mtime": 1789392493.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/predictions/d5_ranknorm_oof_predictions.csv": {
+      "size_bytes": 845030,
+      "sha256": "c9e4971e604f444f905dadbb1a07211b961928523938115f18a190424823d1a6",
+      "mtime": 1789392493.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/predictions/d5_b2_oof_predictions.csv": {
+      "size_bytes": 845043,
+      "sha256": "30c774a28be316bb291e7964d81da83bd61904adb219d42166a1687a1d3dd41e",
+      "mtime": 1789392493.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/predictions/d5_b2_alt_rank_avg_oof_predictions.csv": {
+      "size_bytes": 845947,
+      "sha256": "b36b02c16882b6f29de0fae0578375aa363e7470e3a56c09b71cbd2c1716f624",
+      "mtime": 1789392493.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/predictions/d5_diagnostic_flip_alone_oof_predictions.csv": {
+      "size_bytes": 860867,
+      "sha256": "8b31815971035b91459f0843fb1d2897338002ddeed49fc3ba1efe26ac7ad612",
+      "mtime": 1789392493.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/evaluations/d5_oof_evaluation_summary.json": {
+      "size_bytes": 48799,
+      "sha256": "0c6f2ac23e3485ec83dca6fe5953722f8fecbf38a43d5fa40238275c9aaab963",
+      "mtime": 1789392495.0
+    },
+    "/scratch/deepanthpcu/RSNA_Code/phase_d/d5/evaluations/d5_per_target_metrics.csv": {
+      "size_bytes": 1205,
+      "sha256": "3d8a887c841e20ba9b872331922a887c290eca3431982925028a509cc09a3cb9",
+      "mtime": 1789392495.0
+    }
+  }
+}

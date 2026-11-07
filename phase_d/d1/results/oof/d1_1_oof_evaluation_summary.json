@@ -1,0 +1,215 @@
+{
+  "experiment_id": "D1.1-5FOLD-PRODUCTION-CV",
+  "timestamp": "2026-09-12T22:00:56.199006+00:00",
+  "total_development_studies": 4349,
+  "integrity_audit": {
+    "total_rows": 4349,
+    "unique_studies": 4349,
+    "duplicates_count": 0,
+    "missing_studies_count": 0,
+    "gold58_leakage_count": 0,
+    "nan_count": 0,
+    "inf_count": 0,
+    "fold_provenance_distribution": {
+      "0": 872,
+      "1": 871,
+      "2": 870,
+      "3": 869,
+      "4": 867
+    },
+    "audit_passed": true
+  },
+  "headline_metrics": {
+    "d1_1_global_macro_roc_auc_unweighted": 0.751,
+    "d1_1_global_macro_roc_auc_weighted": 0.7573,
+    "d1_1_global_macro_pr_auc": 0.2212,
+    "phase_c_global_oof_macro_auc": 0.6198,
+    "absolute_delta_unweighted": 0.1312,
+    "absolute_delta_weighted": 0.1375,
+    "relative_improvement_pct_unweighted": 21.17,
+    "relative_improvement_pct_weighted": 22.18
+  },
+  "per_fold_metrics": {
+    "fold_0": {
+      "fold": 0,
+      "study_count": 872,
+      "macro_roc_auc_unweighted": 0.7512,
+      "macro_roc_auc_weighted": 0.7566,
+      "phase_c_baseline": 0.6146,
+      "delta_unweighted": 0.1366,
+      "delta_weighted": 0.142
+    },
+    "fold_1": {
+      "fold": 1,
+      "study_count": 871,
+      "macro_roc_auc_unweighted": 0.7277,
+      "macro_roc_auc_weighted": 0.7323,
+      "phase_c_baseline": 0.64,
+      "delta_unweighted": 0.0877,
+      "delta_weighted": 0.0923
+    },
+    "fold_2": {
+      "fold": 2,
+      "study_count": 870,
+      "macro_roc_auc_unweighted": 0.8067,
+      "macro_roc_auc_weighted": 0.8115,
+      "phase_c_baseline": 0.6603,
+      "delta_unweighted": 0.1464,
+      "delta_weighted": 0.1512
+    },
+    "fold_3": {
+      "fold": 3,
+      "study_count": 869,
+      "macro_roc_auc_unweighted": 0.8161,
+      "macro_roc_auc_weighted": 0.8303,
+      "phase_c_baseline": 0.6647,
+      "delta_unweighted": 0.1514,
+      "delta_weighted": 0.1656
+    },
+    "fold_4": {
+      "fold": 4,
+      "study_count": 867,
+      "macro_roc_auc_unweighted": 0.8252,
+      "macro_roc_auc_weighted": 0.8336,
+      "phase_c_baseline": 0.6122,
+      "delta_unweighted": 0.213,
+      "delta_weighted": 0.2214
+    }
+  },
+  "per_target_metrics": {
+    "ACL": {
+      "pos_count": 137,
+      "neg_count": 4212,
+      "prevalence_pct": 3.15,
+      "phase_c_oof_auc": 0.6096,
+      "d1_1_oof_auc_unweighted": 0.7674,
+      "d1_1_oof_auc_weighted": 0.7588,
+      "d1_1_oof_prauc": 0.125,
+      "delta_vs_phase_c_unweighted": 0.1578,
+      "delta_vs_phase_c_weighted": 0.1492
+    },
+    "MCL": {
+      "pos_count": 109,
+      "neg_count": 4240,
+      "prevalence_pct": 2.51,
+      "phase_c_oof_auc": 0.5126,
+      "d1_1_oof_auc_unweighted": 0.6148,
+      "d1_1_oof_auc_weighted": 0.6201,
+      "d1_1_oof_prauc": 0.048,
+      "delta_vs_phase_c_unweighted": 0.1022,
+      "delta_vs_phase_c_weighted": 0.1075
+    },
+    "Medial Meniscus": {
+      "pos_count": 206,
+      "neg_count": 4143,
+      "prevalence_pct": 4.74,
+      "phase_c_oof_auc": 0.6839,
+      "d1_1_oof_auc_unweighted": 0.8198,
+      "d1_1_oof_auc_weighted": 0.8345,
+      "d1_1_oof_prauc": 0.2314,
+      "delta_vs_phase_c_unweighted": 0.1359,
+      "delta_vs_phase_c_weighted": 0.1506
+    },
+    "Lateral Meniscus": {
+      "pos_count": 99,
+      "neg_count": 4250,
+      "prevalence_pct": 2.28,
+      "phase_c_oof_auc": 0.5861,
+      "d1_1_oof_auc_unweighted": 0.7234,
+      "d1_1_oof_auc_weighted": 0.7144,
+      "d1_1_oof_prauc": 0.0634,
+      "delta_vs_phase_c_unweighted": 0.1373,
+      "delta_vs_phase_c_weighted": 0.1283
+    },
+    "Medial OA": {
+      "pos_count": 15,
+      "neg_count": 4334,
+      "prevalence_pct": 0.34,
+      "phase_c_oof_auc": 0.5571,
+      "d1_1_oof_auc_unweighted": 0.8617,
+      "d1_1_oof_auc_weighted": 0.8617,
+      "d1_1_oof_prauc": 0.0689,
+      "delta_vs_phase_c_unweighted": 0.3046,
+      "delta_vs_phase_c_weighted": 0.3046
+    },
+    "Lateral OA": {
+      "pos_count": 3,
+      "neg_count": 4346,
+      "prevalence_pct": 0.07,
+      "phase_c_oof_auc": 0.6419,
+      "d1_1_oof_auc_unweighted": 0.9025,
+      "d1_1_oof_auc_weighted": 0.9025,
+      "d1_1_oof_prauc": 0.0065,
+      "delta_vs_phase_c_unweighted": 0.2606,
+      "delta_vs_phase_c_weighted": 0.2606
+    },
+    "PF OA": {
+      "pos_count": 1,
+      "neg_count": 4348,
+      "prevalence_pct": 0.02,
+      "phase_c_oof_auc": 0.4449,
+      "d1_1_oof_auc_unweighted": 0.2282,
+      "d1_1_oof_auc_weighted": 0.2282,
+      "d1_1_oof_prauc": 0.0003,
+      "delta_vs_phase_c_unweighted": -0.2167,
+      "delta_vs_phase_c_weighted": -0.2167
+    },
+    "Effusion": {
+      "pos_count": 489,
+      "neg_count": 3860,
+      "prevalence_pct": 11.24,
+      "phase_c_oof_auc": 0.7666,
+      "d1_1_oof_auc_unweighted": 0.8962,
+      "d1_1_oof_auc_weighted": 0.9034,
+      "d1_1_oof_prauc": 0.6996,
+      "delta_vs_phase_c_unweighted": 0.1296,
+      "delta_vs_phase_c_weighted": 0.1368
+    },
+    "Synovitis": {
+      "pos_count": 413,
+      "neg_count": 3936,
+      "prevalence_pct": 9.5,
+      "phase_c_oof_auc": 0.7398,
+      "d1_1_oof_auc_unweighted": 0.8754,
+      "d1_1_oof_auc_weighted": 0.8784,
+      "d1_1_oof_prauc": 0.5871,
+      "delta_vs_phase_c_unweighted": 0.1356,
+      "delta_vs_phase_c_weighted": 0.1386
+    },
+    "Baker's": {
+      "pos_count": 385,
+      "neg_count": 3964,
+      "prevalence_pct": 8.85,
+      "phase_c_oof_auc": 0.6777,
+      "d1_1_oof_auc_unweighted": 0.8408,
+      "d1_1_oof_auc_weighted": 0.8486,
+      "d1_1_oof_prauc": 0.4356,
+      "delta_vs_phase_c_unweighted": 0.1631,
+      "delta_vs_phase_c_weighted": 0.1709
+    },
+    "Contusion": {
+      "pos_count": 387,
+      "neg_count": 3962,
+      "prevalence_pct": 8.9,
+      "phase_c_oof_auc": 0.6365,
+      "d1_1_oof_auc_unweighted": 0.7715,
+      "d1_1_oof_auc_weighted": 0.7945,
+      "d1_1_oof_prauc": 0.3023,
+      "delta_vs_phase_c_unweighted": 0.135,
+      "delta_vs_phase_c_weighted": 0.158
+    },
+    "Fracture": {
+      "pos_count": 101,
+      "neg_count": 4248,
+      "prevalence_pct": 2.32,
+      "phase_c_oof_auc": 0.5811,
+      "d1_1_oof_auc_unweighted": 0.7108,
+      "d1_1_oof_auc_weighted": 0.7428,
+      "d1_1_oof_prauc": 0.087,
+      "delta_vs_phase_c_unweighted": 0.1297,
+      "delta_vs_phase_c_weighted": 0.1617
+    }
+  },
+  "conclusion": "SUBSTANTIALLY_SUPERIOR",
+  "status": "PASS"
+}

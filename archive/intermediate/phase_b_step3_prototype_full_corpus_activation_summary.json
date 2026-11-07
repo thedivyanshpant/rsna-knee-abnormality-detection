@@ -1,0 +1,412 @@
+{
+  "audit_name": "AUDIT 1: Full 4,407-Report Activation Analysis",
+  "dataset_path": "/mnt/data/RSNA_Knee_Data/train.csv",
+  "total_reports_evaluated": 4407,
+  "total_evaluations_run": 52884,
+  "unique_concepts_in_lexicon": 15,
+  "active_concept_language_pairs": 144,
+  "multi_concept_reports_histogram": {
+    "0_concepts": 989,
+    "1_concepts": 1239,
+    "2_concepts": 1073,
+    "3_concepts": 719,
+    "4_concepts": 278,
+    "5_concepts": 83,
+    "6_concepts": 21,
+    "7_concepts": 5
+  },
+  "target_prevalence_comparison": [
+    {
+      "target": "ACL",
+      "base_positive_count": 24,
+      "base_positive_pct": 0.54,
+      "step1_positive_count": 23,
+      "step1_positive_pct": 0.52,
+      "step2_positive_count": 23,
+      "step2_positive_pct": 0.52,
+      "step3_positive_count": 183,
+      "step3_positive_pct": 4.15,
+      "delta_s3_s2_pct": 3.63,
+      "delta_s3_base_pct": 3.61,
+      "flagged_substantial_shift": true
+    },
+    {
+      "target": "MCL",
+      "base_positive_count": 9,
+      "base_positive_pct": 0.2,
+      "step1_positive_count": 8,
+      "step1_positive_pct": 0.18,
+      "step2_positive_count": 8,
+      "step2_positive_pct": 0.18,
+      "step3_positive_count": 59,
+      "step3_positive_pct": 1.34,
+      "delta_s3_s2_pct": 1.16,
+      "delta_s3_base_pct": 1.13,
+      "flagged_substantial_shift": false
+    },
+    {
+      "target": "Medial Meniscus",
+      "base_positive_count": 26,
+      "base_positive_pct": 0.59,
+      "step1_positive_count": 25,
+      "step1_positive_pct": 0.57,
+      "step2_positive_count": 24,
+      "step2_positive_pct": 0.54,
+      "step3_positive_count": 397,
+      "step3_positive_pct": 9.01,
+      "delta_s3_s2_pct": 8.46,
+      "delta_s3_base_pct": 8.42,
+      "flagged_substantial_shift": true
+    },
+    {
+      "target": "Lateral Meniscus",
+      "base_positive_count": 23,
+      "base_positive_pct": 0.52,
+      "step1_positive_count": 18,
+      "step1_positive_pct": 0.41,
+      "step2_positive_count": 18,
+      "step2_positive_pct": 0.41,
+      "step3_positive_count": 169,
+      "step3_positive_pct": 3.83,
+      "delta_s3_s2_pct": 3.43,
+      "delta_s3_base_pct": 3.31,
+      "flagged_substantial_shift": true
+    },
+    {
+      "target": "Medial OA",
+      "base_positive_count": 15,
+      "base_positive_pct": 0.34,
+      "step1_positive_count": 15,
+      "step1_positive_pct": 0.34,
+      "step2_positive_count": 15,
+      "step2_positive_pct": 0.34,
+      "step3_positive_count": 67,
+      "step3_positive_pct": 1.52,
+      "delta_s3_s2_pct": 1.18,
+      "delta_s3_base_pct": 1.18,
+      "flagged_substantial_shift": false
+    },
+    {
+      "target": "Lateral OA",
+      "base_positive_count": 11,
+      "base_positive_pct": 0.25,
+      "step1_positive_count": 9,
+      "step1_positive_pct": 0.2,
+      "step2_positive_count": 9,
+      "step2_positive_pct": 0.2,
+      "step3_positive_count": 38,
+      "step3_positive_pct": 0.86,
+      "delta_s3_s2_pct": 0.66,
+      "delta_s3_base_pct": 0.61,
+      "flagged_substantial_shift": false
+    },
+    {
+      "target": "PF OA",
+      "base_positive_count": 21,
+      "base_positive_pct": 0.48,
+      "step1_positive_count": 14,
+      "step1_positive_pct": 0.32,
+      "step2_positive_count": 14,
+      "step2_positive_pct": 0.32,
+      "step3_positive_count": 155,
+      "step3_positive_pct": 3.52,
+      "delta_s3_s2_pct": 3.2,
+      "delta_s3_base_pct": 3.04,
+      "flagged_substantial_shift": true
+    },
+    {
+      "target": "Effusion",
+      "base_positive_count": 35,
+      "base_positive_pct": 0.79,
+      "step1_positive_count": 29,
+      "step1_positive_pct": 0.66,
+      "step2_positive_count": 29,
+      "step2_positive_pct": 0.66,
+      "step3_positive_count": 614,
+      "step3_positive_pct": 13.93,
+      "delta_s3_s2_pct": 13.27,
+      "delta_s3_base_pct": 13.14,
+      "flagged_substantial_shift": true
+    },
+    {
+      "target": "Synovitis",
+      "base_positive_count": 27,
+      "base_positive_pct": 0.61,
+      "step1_positive_count": 21,
+      "step1_positive_pct": 0.48,
+      "step2_positive_count": 21,
+      "step2_positive_pct": 0.48,
+      "step3_positive_count": 433,
+      "step3_positive_pct": 9.83,
+      "delta_s3_s2_pct": 9.35,
+      "delta_s3_base_pct": 9.21,
+      "flagged_substantial_shift": true
+    },
+    {
+      "target": "Baker's",
+      "base_positive_count": 12,
+      "base_positive_pct": 0.27,
+      "step1_positive_count": 10,
+      "step1_positive_pct": 0.23,
+      "step2_positive_count": 9,
+      "step2_positive_pct": 0.2,
+      "step3_positive_count": 481,
+      "step3_positive_pct": 10.91,
+      "delta_s3_s2_pct": 10.71,
+      "delta_s3_base_pct": 10.64,
+      "flagged_substantial_shift": true
+    },
+    {
+      "target": "Contusion",
+      "base_positive_count": 19,
+      "base_positive_pct": 0.43,
+      "step1_positive_count": 16,
+      "step1_positive_pct": 0.36,
+      "step2_positive_count": 16,
+      "step2_positive_pct": 0.36,
+      "step3_positive_count": 171,
+      "step3_positive_pct": 3.88,
+      "delta_s3_s2_pct": 3.52,
+      "delta_s3_base_pct": 3.45,
+      "flagged_substantial_shift": true
+    },
+    {
+      "target": "Fracture",
+      "base_positive_count": 18,
+      "base_positive_pct": 0.41,
+      "step1_positive_count": 17,
+      "step1_positive_pct": 0.39,
+      "step2_positive_count": 17,
+      "step2_positive_pct": 0.39,
+      "step3_positive_count": 72,
+      "step3_positive_pct": 1.63,
+      "delta_s3_s2_pct": 1.25,
+      "delta_s3_base_pct": 1.23,
+      "flagged_substantial_shift": false
+    }
+  ],
+  "substantial_shifts_flagged": [
+    {
+      "target": "ACL",
+      "base_pct": 0.54,
+      "s2_pct": 0.52,
+      "s3_pct": 4.15,
+      "delta_s3_s2": 3.63,
+      "delta_s3_base": 3.61
+    },
+    {
+      "target": "Medial Meniscus",
+      "base_pct": 0.59,
+      "s2_pct": 0.54,
+      "s3_pct": 9.01,
+      "delta_s3_s2": 8.46,
+      "delta_s3_base": 8.42
+    },
+    {
+      "target": "Lateral Meniscus",
+      "base_pct": 0.52,
+      "s2_pct": 0.41,
+      "s3_pct": 3.83,
+      "delta_s3_s2": 3.43,
+      "delta_s3_base": 3.31
+    },
+    {
+      "target": "PF OA",
+      "base_pct": 0.48,
+      "s2_pct": 0.32,
+      "s3_pct": 3.52,
+      "delta_s3_s2": 3.2,
+      "delta_s3_base": 3.04
+    },
+    {
+      "target": "Effusion",
+      "base_pct": 0.79,
+      "s2_pct": 0.66,
+      "s3_pct": 13.93,
+      "delta_s3_s2": 13.27,
+      "delta_s3_base": 13.14
+    },
+    {
+      "target": "Synovitis",
+      "base_pct": 0.61,
+      "s2_pct": 0.48,
+      "s3_pct": 9.83,
+      "delta_s3_s2": 9.35,
+      "delta_s3_base": 9.21
+    },
+    {
+      "target": "Baker's",
+      "base_pct": 0.27,
+      "s2_pct": 0.2,
+      "s3_pct": 10.91,
+      "delta_s3_s2": 10.71,
+      "delta_s3_base": 10.64
+    },
+    {
+      "target": "Contusion",
+      "base_pct": 0.43,
+      "s2_pct": 0.36,
+      "s3_pct": 3.88,
+      "delta_s3_s2": 3.52,
+      "delta_s3_base": 3.45
+    }
+  ],
+  "step3_active_rules_summary": [
+    {
+      "rule_name": "RULE_MULTILINGUAL_SIGNIFICANT_EFFUSION",
+      "target": "Effusion",
+      "language": "NL",
+      "firing_count": 585,
+      "unique_studies": 585,
+      "pct_of_corpus": 13.274,
+      "example_spans": [
+        "\u041c\u0420 \u043d\u0430\u0445\u043e\u0434\u043a\u0430: \u041c\u0420 \u0434\u0430\u043d\u043d\u0438 \u0437\u0430 \u0441\u0442\u0430\u0432\u0435\u043d \u0438\u0437\u043b\u0438\u0432",
+        "\u0395\u03a5\u03a1\u0397\u039c\u0391\u03a4\u0391 - \u03a0\u03b1\u03c1\u03b1\u03c4\u03b7\u03c1\u03b5\u03af\u03c4\u03b1\u03b9 \u03b9\u03ba\u03b1\u03bd\u03ae\u03c2 \u03ad\u03ba\u03c4\u03b1\u03c3\u03b7\u03c2 \u03b5\u03bd\u03b4\u03b1\u03c1\u03b8\u03c1\u03b9\u03ba\u03ae \u03c3\u03c5\u03bb\u03bb\u03bf\u03b3\u03ae \u03c5\u03b3\u03c1\u03bf\u03cd",
+        "Leve derrame articular"
+      ]
+    },
+    {
+      "rule_name": "RULE_MULTILINGUAL_BAKERS_CYST",
+      "target": "Baker's",
+      "language": "DE",
+      "firing_count": 472,
+      "unique_studies": 472,
+      "pct_of_corpus": 10.71,
+      "example_spans": [
+        "Sitna Baker cista",
+        "Poplitealna cista veli\u010dine 20x6x5 mm",
+        "\u0395\u03c0\u03b1\u03bd\u03b5\u03bb\u03ad\u03b3\u03c7\u03b5\u03c4\u03b1\u03b9 \u03bc\u03b5 \u03ae\u03c0\u03b9\u03b1 \u03bc\u03b5\u03b9\u03c9\u03bc\u03ad\u03bd\u03b5\u03c2 \u03b4\u03b9\u03b1\u03c3\u03c4\u03ac\u03c3\u03b5\u03b9\u03c2 \u03b7 \u03ba\u03cd\u03c3\u03c4\u03b7 Baker \u03c0\u03b1\u03c1\u03ac \u03c4\u03b7\u03bd \u03ad\u03c3\u03c9 \u03ba\u03b5\u03c6\u03b1\u03bb\u03ae \u03c4\u03bf\u03c5 \u03ad\u03c3\u03c9 \u03b3\u03b1\u03c3\u03c4\u03c1\u03bf\u03ba\u03bd\u03b7\u03bc\u03af\u03bf\u03c5 \u03bc\u03c5\u03cc\u03c2"
+      ]
+    },
+    {
+      "rule_name": "RULE_MULTILINGUAL_SYNOVIAL_PROLIFERATION",
+      "target": "Synovitis",
+      "language": "DE",
+      "firing_count": 412,
+      "unique_studies": 412,
+      "pct_of_corpus": 9.349,
+      "example_spans": [
+        "hypertrophy of the synovium, indicative of synovitis",
+        "Mild synovitis of the knee and PF joint",
+        "Sinovitis"
+      ]
+    },
+    {
+      "rule_name": "RULE_MULTILINGUAL_MEDIAL_MENISCUS_TEAR",
+      "target": "Medial Meniscus",
+      "language": "ES",
+      "firing_count": 373,
+      "unique_studies": 373,
+      "pct_of_corpus": 8.464,
+      "example_spans": [
+        "Resultados: Rotura de menisco interno",
+        "Medial menisk\u00fcs posterior hornunda minimal horizontal y\u0131rt\u0131k ve posterior kom\u015fulu\u011funda yakla\u015f\u0131k 25x16 mm boyutlar\u0131nda pa",
+        "Kompleksna degenerativna ruptura medijalnog meniska sa horizontalnom rupturom stra\u017enjeg roga te kosom rupturom prednjeg "
+      ]
+    },
+    {
+      "rule_name": "RULE_MULTILINGUAL_ACL_TEAR",
+      "target": "ACL",
+      "language": "NL",
+      "firing_count": 160,
+      "unique_studies": 160,
+      "pct_of_corpus": 3.631,
+      "example_spans": [
+        "Kompletna ruptura prednjeg kri\u017enog ligamenta u proksimalnoj te\u0107ini",
+        "\u0395\u03c0\u03b1\u03bd\u03b5\u03bb\u03ad\u03b3\u03c7\u03b5\u03c4\u03b1\u03b9 \u03b7 \u03b5\u03c0\u03b9\u03c0\u03ad\u03b4\u03c9\u03c3\u03b7 \u03c4\u03c9\u03bd \u03b9\u03bd\u03ce\u03bd \u03c4\u03b7\u03c2 \u03ac\u03c0\u03c9 \u03bc\u03bf\u03b9\u03c1\u03b1\u03c2 \u03c4\u03bf\u03c5 \u03c0\u03c1\u03cc\u03c3\u03b8\u03b9\u03bf\u03c5 \u03c7\u03b9\u03b1\u03c3\u03c4\u03bf\u03cd \u03c3\u03c5\u03bd\u03b4\u03ad\u03c3\u03bc\u03bf\u03c5 \u03ba\u03b1\u03b8\u03ce\u03c2 \u03ba\u03b1\u03b9 \u03c4\u03bf \u03c0\u03b1\u03b8\u03bf\u03bb\u03bf\u03b3\u03b9\u03ba\u03cc \u03c3\u03ae\u03bc\u03b1 \u03ba\u03b1\u03b9 \u03b4\u03b9\u03b1\u03ba\u03bf\u03c0",
+        "Parcijalna ruptura prednjeg kri\u017enog ligamenta"
+      ]
+    },
+    {
+      "rule_name": "RULE_MULTILINGUAL_BONE_CONTUSION",
+      "target": "Contusion",
+      "language": "ES",
+      "firing_count": 155,
+      "unique_studies": 155,
+      "pct_of_corpus": 3.517,
+      "example_spans": [
+        "[DATE]: MR Knie Rechts 15ch AA: Klinische inlichtingen: pijn patellair, aldaar ook eerder captatie op SPECT Diagnostisch",
+        "Denudatie van het kraakbeen mediaal femorotibiaal met osteofyten en subchondraal botoedeem",
+        "Resultados: Contusi\u00f3n \u00f3sea tibial"
+      ]
+    },
+    {
+      "rule_name": "RULE_MULTILINGUAL_LATERAL_MENISCUS_TEAR",
+      "target": "Lateral Meniscus",
+      "language": "TR",
+      "firing_count": 151,
+      "unique_studies": 151,
+      "pct_of_corpus": 3.426,
+      "example_spans": [
+        "Lateral menisk\u00fcs\u00fcn korpus kesiminde serbest kenardaki y\u0131rt\u0131k p\u00fcsk\u00fcllenme bi\u00e7iminde olabilir",
+        "Bulgular: Lateral menisk\u00fcste grade I dejenerasyon, medial menisk\u00fcste grade III dejenerasyon ve posterior hornunda  radiy",
+        "Rotura menisco externo"
+      ]
+    },
+    {
+      "rule_name": "RULE_MULTILINGUAL_PF_OA",
+      "target": "PF OA",
+      "language": "ES",
+      "firing_count": 141,
+      "unique_studies": 141,
+      "pct_of_corpus": 3.199,
+      "example_spans": [
+        "Antecedentes Cl\u00ednicos: Condromalacia rotuliana",
+        "Condromalacia rotuliana",
+        "Condropat\u00eda patelar grado 3-4 y troclear grado 2-3"
+      ]
+    },
+    {
+      "rule_name": "RULE_MULTILINGUAL_CORTICAL_FRACTURE",
+      "target": "Fracture",
+      "language": "HR/SR",
+      "firing_count": 55,
+      "unique_studies": 55,
+      "pct_of_corpus": 1.248,
+      "example_spans": [
+        "\u03a3\u03c5\u03bd\u03bf\u03bb\u03b9\u03ba\u03ac \u03c4\u03b1 \u03b5\u03c5\u03c1\u03ae\u03bc\u03b1\u03c4\u03b1 \u03c3\u03c5\u03bd\u03b7\u03b3\u03bf\u03c1\u03bf\u03cd\u03bd \u03c5\u03c0\u03ad\u03c1 \u03b5\u03ba\u03c6\u03c5\u03bb\u03b9\u03c3\u03c4\u03b9\u03ba\u03ae\u03c2 \u03bf\u03c3\u03c4\u03b5\u03bf\u03b1\u03c1\u03b8\u03c1\u03af\u03c4\u03b9\u03b4\u03b1\u03c2 \u03bc\u03b5 \u03bc\u03b9\u03ba\u03c1\u03bf\u03b4\u03bf\u03ba\u03b9\u03b4\u03ce\u03b4\u03b5\u03c2 \u03ba\u03ac\u03c4\u03b1\u03b3\u03bc\u03b1 \u03b1\u03bd\u03b5\u03c0\u03ac\u03c1\u03ba\u03b5\u03b9\u03b1\u03c2 \u03c3\u03c4\u03b7\u03bd \u03ad\u03c3\u03c9 \u03b5\u03b3\u03b3\u03cd\u03c2 \u03ba",
+        "\u0417\u0430\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435:  \u041c\u0420 \u0434\u0430\u043d\u043d\u0438 \u0437\u0430 \u0441\u0443\u0431\u0445\u043e\u043d\u0434\u0440\u0430\u043b\u043d\u0430 \u0438\u043d\u0441\u0443\u0444\u0438\u0446\u0438\u0435\u043d\u0442\u043d\u0430 \u0444\u0440\u0430\u043a\u0442\u0443\u0440\u0430 (SIF) \u0432 \u043e\u0431\u043b\u0430\u0441\u0442\u0442\u0430 \u043d\u0430 \u043b\u0430\u0442\u0435\u0440\u0430\u043b\u043d\u0438\u044f \u043a\u043e\u043d\u0434\u0438\u043b \u043d\u0430 \u0444\u0435\u043c\u0443\u0440\u0430",
+        "\u041d\u0430 \u0444\u043e\u043d\u0430 \u043d\u0430 \u0435\u0434\u0435\u043c\u0430 \u0441\u0435 \u0438\u0437\u043e\u0431\u0440\u0430\u0437\u044f\u0432\u0430 \u0444\u0440\u0430\u043a\u0442\u0443\u0440\u043d\u0430 \u043b\u0438\u043d\u0438\u044f, \u0431\u0435\u0437 \u0434\u0438\u0441\u043b\u043e\u043a\u0430\u0446\u0438\u044f \u043d\u0430 \u043a\u043e\u0441\u0442\u043d\u0438\u044f \u0444\u0440\u0430\u0433\u043c\u0435\u043d\u0442"
+      ]
+    },
+    {
+      "rule_name": "RULE_MULTILINGUAL_MEDIAL_TF_OA",
+      "target": "Medial OA",
+      "language": "ES",
+      "firing_count": 52,
+      "unique_studies": 52,
+      "pct_of_corpus": 1.18,
+      "example_spans": [
+        "Artrosis femorotibial medial",
+        "Prika\u017ee se hondromalacija III\u00b0 hrskavice oba femoralna kondila uz stanjenje zglobnih hrskavica medijalnog i lateralnog F",
+        "Prika\u017ee se iregularna hrskavica medijalnog kondila femura, zna\u010dajno reducirane debljine te promijenjenog intenziteta sig"
+      ]
+    },
+    {
+      "rule_name": "RULE_MULTILINGUAL_MCL_TEAR",
+      "target": "MCL",
+      "language": "ES",
+      "firing_count": 51,
+      "unique_studies": 51,
+      "pct_of_corpus": 1.157,
+      "example_spans": [
+        "Ve\u0107a parcijalna ruptura medijalnog kolateralnog ligamenta uz povi\u0161ene intenzitete okolnih mekih tkiva u smislu edema",
+        "Proximale, komplette Ruptur des MCL knapp distal der femoralen Insertion mit begleitender Kapselruptur",
+        "Bulgular: Diz eklemini olu\u015fturan kemik yap\u0131lar\u0131n b\u00fct\u00fcnl\u00fc\u011f\u00fc, sinyal intensiteleri do\u011fald\u0131r.Distal kuadriseps ve patellar "
+      ]
+    },
+    {
+      "rule_name": "RULE_MULTILINGUAL_LATERAL_TF_OA",
+      "target": "Lateral OA",
+      "language": "ES",
+      "firing_count": 29,
+      "unique_studies": 29,
+      "pct_of_corpus": 0.658,
+      "example_spans": [
+        "Prika\u017ee se hondromalacija III\u00b0 hrskavice oba femoralna kondila uz stanjenje zglobnih hrskavica medijalnog i lateralnog F",
+        "Hondromalacija IV\u00b0 lateralnog dijela trohlearne hrskavice paracentralno",
+        "Hondromalacija III\u00b0 lateralnog tibijalnog platoa"
+      ]
+    }
+  ]
+}
